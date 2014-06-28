@@ -1,0 +1,336 @@
+/* 
+Pixels	Ems		Ems @ 16	% of 13
+922.641	57.665	57.665	7,097.238
+615.094	38.443	38.443	4,731.492
+410.063	25.629	25.629	3,154.331
+273.375	17.086	17.086	2,102.885
+182.25	11.391	11.391	1,401.923
+121.5	7.594	7.594	934.615
+81		5.063	5.063	623.077
+54		3.375	3.375	415.385
+36		2.25	2.25	276.923
+24		1.5		1.5		184.615
+16		1		1		123.077
+10.667	0.667	0.667	82.054
+7.111	0.444	0.444	54.700
+4.741	0.296	0.296	36.469
+3.161	0.198	0.198	24.315
+2.107	0.132	0.132	16.208
+1.405	0.088	0.088	10.808
+*/
+
+@import "compass/reset";
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/leaguegothic-regular-webfont.eot');
+    src: url('../fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('../fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-size: 16px;
+$heading-font-family: 'League Gothic', 'Open Sans Condensed', sans-serif;
+
+/* For media queries */
+$info-sm: "only screen and (min-width: 480px)";
+$info-md: "only screen and (min-width: 768px)"; 
+$info-lg: "only screen and (min-width: 1024px)"; 
+$info-xl: "only screen and (min-width: 1824px)";
+
+/* Colour scheme */
+$color1: rgb(149,158,167); // grey
+$color2: rgb(213,217,220); // light grey
+$color2semitrans: rgba(213,217,220,0.6);
+$color3: rgb(90,99,108); // dark grey
+$color3semitrans: rgba(90,99,108,0.7);
+$color4: rgb(127,158,189); // blue
+$colorOpp: rgb(255,255,0); // yellow
+
+html {
+	/* Base values */
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+
+	/* Selection colour */
+	::selection {
+		color: rgb(17,17,17); // black
+		background: $color4; 
+	}
+	::-moz-selection { 
+		color: rgb(17,17,17); // blac\k
+		background: $color4; 
+	}
+}
+
+a {
+	color: $color2;
+
+	&:hover {
+		color: $color4;
+		background-color: transparent;
+		text-decoration: none;
+	}
+}
+
+h1 {
+	font-family: $heading-font-family;
+	font-size: 1.5em;
+	line-height: 1.3em;
+	text-align: center;
+	color: $color2;
+	
+	@media #{$info-sm} { font-size: 2.25em; }
+	@media #{$info-md} { font-size: 3.375em; }
+}
+
+nav {
+	position: fixed;
+	//margin-top: 15px;
+	//margin-left: 15px;
+	width: 700px;
+	left: 0;
+	right: 0;
+	margin: 15px auto;
+	font-size: 0.667em;
+	z-index: 2; // to put it above everything
+
+	@media #{$info-sm} {font-size: 1em;}	
+
+	ul li {
+		display: inline;
+		list-style: none;
+		line-height: 2.25em;
+
+		@media #{$info-md} { line-height: 1.5em; }
+	}	
+
+	li:nth-child(2) { margin-left: -100px; }
+	
+	a { text-decoration: none; }
+}
+
+// Classes to change colour of nav when scrolling
+.lightGrey {
+	a {
+		color: $color2;
+		&:hover { color: $color4; }
+	}
+
+	#logo a:hover { color: $color2; }
+}
+
+.darkGrey {
+	a {
+		color: $color3;
+		&:hover { color: $color4; }
+	}
+
+	#logo a:hover { color: $color3; }
+}
+
+#logo {
+	//margin-left: -1.5%;
+	//margin-bottom: 3%;
+	padding-left: auto;
+	padding-right: auto;
+	font-family: $heading-font-family;
+	font-size: 1.5em;
+	line-height: 0.667em;
+	
+	@media #{$info-sm} { font-size: 3.375em; }
+
+	@media #{$info-md} {
+		letter-spacing: -3px;
+		font-size: 5.063em;
+	}
+}
+
+#home {
+	background: url('../img/sunset2.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 500px;
+
+	@media #{$info-sm} {
+		min-height: 1000px;
+	}
+
+	@media only screen and (min-width: 1400px) {
+		background: url('../img/sunset2.jpg') no-repeat center -125px fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	} 
+}
+
+#portfolio {
+	min-height: 500px;
+	position: relative;
+	padding-top: 75px; // some padding at the top before images begin
+	max-width: 210px; // width of a thumbnail is ~200px
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 0;
+	a:hover { background-color: transparent }
+	
+	@media #{$info-sm} {
+		min-height: 1000px;
+		max-width: 420px; //width of two thumbnails
+	}
+
+	@media #{$info-md} {
+		padding-top: 100px;
+		max-width: 80%;
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+	@media #{$info-lg} {
+		padding-top: 75px;
+		max-width: 60%;
+	}
+}
+
+#aboutMe {
+	position: absolute;
+	top: 125px;
+	padding: 2em 0;
+	background-color: $color2semitrans;
+	max-width: 100%;
+	font-size: 0.667em;
+	line-height: 1em;
+	
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 95%;
+		padding-bottom: 0.444em;
+		text-align: center;
+	}
+	
+	@media #{$info-sm} {
+		top: 30%;
+		font-size: 1em;
+		line-height: 1.4em;
+	}
+
+	@media #{$info-lg} {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		top: 220px;
+		max-width: 70%;
+		border-radius: 0.296em;
+		
+		p {	max-width: 65%; }
+	}
+
+	@media #{$info-xl} {
+		top: 275px;
+		font-size: 1.2em;
+	}
+}
+
+/* Description label for background image on homepage */
+#bgDescLabel {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	color: $color2;
+	font-size: 0.444em;
+	
+	@media #{$info-sm} {font-size: 1em;}
+
+	.date { 
+		padding-top: 3px;
+		padding-bottom: 6px; 
+		font-size: 0.667em;
+	}
+}
+
+.toPortfolio {
+	display: none;
+
+	@media #{$info-md} { 
+		display: block; 
+		position: absolute;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		bottom: 1%;
+		width: 30px; // Change to size of icon~~~~~~~~`
+		height: auto;
+	}
+	
+	@media #{$info-lg} { bottom: 15px; }
+}
+
+.toHome {
+	display: none;
+	position: fixed;
+	transform: rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transofmr:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	bottom: 30px;
+	right: 10%;
+	width: 30px;
+	height: auto;
+	z-index: 2;
+}
+
+#instructions {
+	display: block;
+	position: absolute;
+	margin-top: -35px; // negative because I want it to go up
+	width: 200px; // approx width of 1 thumbnail (so that I can center text)
+	
+	p { 
+		text-align: center; 
+		color: $color3;
+		font-size: 0.444em;
+	}
+	
+	@media #{$info-sm} {
+		display: none; // going to fade it in with in with js
+		margin-top: -50px;
+		width: 400px; // approx width of 2 thumbnails
+		p { font-size: 1em; }
+	}
+
+	@media #{$info-md} { width: 720px; } // approx width of 3 thumbnails
+	
+	@media #{$info-lg} { 
+		position: fixed;
+		top: auto;
+		left: 15px;
+		bottom: 30px;
+		max-width: 19%; // 60% for thumbnails, then divided by 2 for width of one side 
+		
+		p { text-align: left; }
+	}
+}
+
+/* thumbnails resize automatically, with a set minimum size */
+.thumb {
+	min-width: 200px;
+	width: 32%; // max 3 images per row so each image takes up 1/3 of the div, rounded down just to make sure it doesn't go to next line
+	height: auto;
+}
+
+/* Create some padding at bottom of page */
+.lastrow {
+	margin-bottom: 100px; 
+}
