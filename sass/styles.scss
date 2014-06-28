@@ -32,7 +32,7 @@ Pixels	Ems		Ems @ 16	% of 13
     font-style: normal;
 }
 
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+// @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 
 $base-font-family: 'Open Sans', sans-serif;
 $base-font-size: 16px;
@@ -92,27 +92,25 @@ h1 {
 
 nav {
 	position: fixed;
-	//margin-top: 15px;
-	//margin-left: 15px;
+	margin-top: 15px;
+	margin-left: 15px;
 	width: 700px;
-	left: 0;
-	right: 0;
-	margin: 15px auto;
+	// left: 0;
+	// right: 0;
+	// margin: 15px auto;
 	font-size: 0.667em;
 	z-index: 2; // to put it above everything
 
 	@media #{$info-sm} {font-size: 1em;}	
 
 	ul li {
-		display: inline;
+		display: block;
 		list-style: none;
 		line-height: 2.25em;
 
 		@media #{$info-md} { line-height: 1.5em; }
 	}	
 
-	li:nth-child(2) { margin-left: -100px; }
-	
 	a { text-decoration: none; }
 }
 
