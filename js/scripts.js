@@ -25,6 +25,18 @@ $(document).ready(function() {
 	var mqBgrdImageBreak = window.matchMedia( "(min-width: 1400px)" );
 	
 
+	/********** Fade In On Load **********/
+	$('#aboutMe').hide();
+	$('nav').hide();
+	$('#bgDescLabel').hide();
+	$('.toPortfolio').hide();
+
+	$('#aboutMe').delay(300).fadeIn(900);
+	$('nav').delay(1300).fadeIn(1200);
+	$('#bgDescLabel').delay(1300).fadeIn(1200);
+	$('.toPortfolio').delay(1300).fadeIn(1200);
+
+
 	/********** Parallex scroll **********/
 	// Cache the Window object
 	$window = $(window);
