@@ -1,6 +1,29 @@
 $(document).ready(function() {
+	/********** Functions **********/
+	var parallaxScroll = function($bgobj) {
+		// scrollTop gets the current scroll value from the top i.e. how much the user has scrolled up
+		// bgobj.data('speed') refers to the data-speed you assigned in the html
+		// yPos = how much we scrolled up divided by data-speed. It's negative because we're going opposite direction of the user's scroll
+		// e.g. if user scrolls 50px down, background scrolls 5px up
+		if (mqBgrdImageBreak.matches) { // if width > 1024px
+			var yPos = -125 - ($window.scrollTop() / $bgobj.data('speed'));
+		} else {
+			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+		}
+		
+		// Put together our final background position
+		// 50% as its xPosition to keep horizontal position static and center
+		var coords = '50% ' + yPos + 'px';
+
+		// Move the background
+		$bgobj.css({backgroundPosition: coords});
+	};
+
+	
+	/********** Media Queries **********/
 	var mqSmall = window.matchMedia( "(min-width: 481px)" );
 	var mqBgrdImageBreak = window.matchMedia( "(min-width: 1400px)" );
+	
 
 	/********** Parallex scroll **********/
 	// Cache the Window object
@@ -9,41 +32,14 @@ $(document).ready(function() {
 	$('section[data-type="background"]').each(function() {
 		var $bgobj = $(this); // assigning the object
 
-		$(window).scroll(function() {
-			// scrollTop gets the current scroll value from the top i.e. how much the user has scrolled up
-			// bgobj.data('speed') refers to the data-speed you assigned in the html
-			// yPos = how much we scrolled up divided by data-speed. It's negative because we're going opposite direction of the user's scroll
-			// e.g. if user scrolls 50px down, background scrolls 5px up
-			if (mqBgrdImageBreak.matches) { // if width > 1024px
-				var yPos = -125 - ($window.scrollTop() / $bgobj.data('speed'));
-			} else {
-				var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-			}
-			
-			// Put together our final background position
-			// 50% as its xPosition to keep horizontal position static and center
-			var coords = '50% ' + yPos + 'px';
-
-			// Move the background
-			$bgobj.css({backgroundPosition: coords});
+		$(window).scroll(function(){
+			parallaxScroll($bgobj);
 		});
-	}); 
-
-	// This is so redundant omg find a way to fix it please ~~~~~~~~~
-	$('section[data-type="background"]').each(function() {
-		var $bgobj = $(this); // assigning the object
 
 		$(window).resize(function() {
-			if (mqBgrdImageBreak.matches) {
-				var yPos =  -125 - ($window.scrollTop() / $bgobj.data('speed'));
-			} else {
-				var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-			}
-			
-			var coords = '50% ' + yPos + 'px';
-			$bgobj.css({backgroundPosition: coords});
+			parallaxScroll($bgobj);
 		});
-	});
+	}); 
 
 
 	/********** Sick Fadez **********/
