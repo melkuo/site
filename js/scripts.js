@@ -117,13 +117,8 @@ $(document).ready(function() {
 		return false;
 	});
 
-	/********** On hover, change arrows and no background colour **********/
-	$(".toHome").hover(function() {
-		$(this).fadeTo('fast', '0.5');
-	}, function() {
-		$(this).fadeTo('fast', '1');
-	});
-	$(".toPortfolio").hover(function() {
+	/********** On hover, fade arrows **********/
+	$('.toHome, .toPortfolio').hover(function() {
 		$(this).fadeTo('fast', '0.5');
 	}, function() {
 		$(this).fadeTo('fast', '1');
