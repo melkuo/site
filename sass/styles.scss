@@ -19,7 +19,7 @@ Pixels	Ems		Ems @ 16	% of 13
 1.405	0.088	0.088	10.808
 */
 
-@import "compass/reset";
+// @import "compass/reset";
 
 @font-face {
     font-family: 'League Gothic';
@@ -256,7 +256,8 @@ nav {
 	display: none;
 
 	@media #{$mq-md} { 
-		display: block; 
+		display: block;
+		background-color: transparent; 
 		bottom: 1%;
 		height: auto;
 		left: 0;
@@ -276,6 +277,7 @@ nav {
 	-o-transofmr:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	transform: rotate(180deg);
+	background-color: transparent;
 	bottom: 30px;
 	display: none;
 	height: auto;

@@ -119,16 +119,14 @@ $(document).ready(function() {
 
 	/********** On hover, change arrows and no background colour **********/
 	$(".toHome").hover(function() {
-		$(this).css("background-color", "transparent");
-		$(this).attr("src", "img/ArrowDarkGrey.png");
+		$(this).fadeTo('fast', '0.5');
 	}, function() {
-		$(this).attr("src", "img/ArrowLightGrey.png");
+		$(this).fadeTo('fast', '1');
 	});
 	$(".toPortfolio").hover(function() {
-		$(this).css("background-color", "transparent");
-		$(this).attr("src", "img/ArrowDarkGrey.png");
+		$(this).fadeTo('fast', '0.5');
 	}, function() {
-		$(this).attr("src", "img/ArrowLightGrey.png");
+		$(this).fadeTo('fast', '1');
 	});
 });
 
