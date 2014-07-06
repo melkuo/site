@@ -1,5 +1,3 @@
-@import "compass/reset";
-
 $base-font-family: 'Open Sans', sans-serif;
 
 /* For media queries */
@@ -26,10 +24,6 @@ $colorcomp: rgb(255,255,0); /* yellow */
 /* Override title brightening on hover */
 .blueimp-gallery-controls .title:hover {
 	color: $color2;
-
-	@media #{$info-lg} {
-		opacity: 0.8;
-	}
 }
 
 .blueimp-gallery .description {
@@ -49,6 +43,6 @@ $colorcomp: rgb(255,255,0); /* yellow */
 }
 
 /* display description along with controls on click */
-.blueimp-gallery-controls .description {
+.blueimp-gallery-controls > .description {
 	display: block;
 }

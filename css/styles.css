@@ -1,1 +1,319 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}@font-face{font-family:'League Gothic';src:url("../fonts/leaguegothic-regular-webfont.eot");src:url("../fonts/leaguegothic-regular-webfont.eot?#iefix") format("embedded-opentype"),url("../fonts/leaguegothic-regular-webfont.woff") format("woff"),url("../fonts/leaguegothic-regular-webfont.ttf") format("truetype"),url("../fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format("svg");font-weight:normal;font-style:normal}html{font-family:"Open Sans",sans-serif;font-size:16px}html ::selection{background:#7f9ebd;color:#111}html ::-moz-selection{background:#7f9ebd;color:#111}a{color:#d5d9dc}a:hover{background-color:transparent;color:#7f9ebd;text-decoration:none}h1{color:#d5d9dc;font-family:"League Gothic","Open Sans Condensed",sans-serif;font-size:1.5em;line-height:1.3em;text-align:center}@media only screen and (min-width: 480px){h1{font-size:2.25em}}@media only screen and (min-width: 768px){h1{font-size:3.375em}}nav{font-size:0.667em;margin-top:15px;margin-left:15px;position:fixed;width:700px;z-index:2}@media only screen and (min-width: 480px){nav{font-size:1em}}nav ul li{display:block;list-style:none;line-height:2.25em}@media only screen and (min-width: 768px){nav ul li{line-height:1.5em}}nav a{text-decoration:none}.lightGrey a{color:#d5d9dc}.lightGrey a:hover{color:#7f9ebd}.lightGrey #logo a:hover{color:#d5d9dc}.darkGrey a{color:#5a636c}.darkGrey a:hover{color:#7f9ebd}.darkGrey #logo a:hover{color:#5a636c}#logo{font-family:"League Gothic","Open Sans Condensed",sans-serif;font-size:1.5em;line-height:0.667em;padding-left:auto;padding-right:auto}@media only screen and (min-width: 480px){#logo{font-size:3.375em}}@media only screen and (min-width: 768px){#logo{font-size:5.063em;letter-spacing:-3px}}#home{-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background:url("../img/sunset2.jpg") no-repeat center center fixed;background-size:cover;min-height:500px}@media only screen and (min-width: 480px){#home{min-height:1000px}}@media only screen and (min-width: 1400px){#home{-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background:url("../img/sunset2.jpg") no-repeat center -125px fixed;background-size:cover}}#portfolio{padding-top:75px;position:relative;min-height:500px;max-width:210px;margin-left:auto;margin-right:auto;z-index:0}#portfolio a:hover{background-color:transparent}@media only screen and (min-width: 480px){#portfolio{max-width:420px;min-height:1000px}}@media only screen and (min-width: 768px){#portfolio{max-width:80%;padding-top:100px;padding-left:auto;padding-right:auto}}@media only screen and (min-width: 1024px){#portfolio{max-width:60%;padding-top:75px}}#aboutMe{background-color:rgba(213,217,220,0.6);font-size:0.667em;line-height:1em;max-width:100%;padding:2em 0;position:absolute;top:125px}#aboutMe p{margin-left:auto;margin-right:auto;max-width:95%;padding-bottom:0.444em;text-align:center}@media only screen and (min-width: 480px){#aboutMe{line-height:1.4em;font-size:1em;top:30%}}@media only screen and (min-width: 1024px){#aboutMe{border-radius:0.296em;margin-left:auto;margin-right:auto;max-width:70%;position:relative;top:220px}#aboutMe p{max-width:65%}}@media only screen and (min-width: 1824px){#aboutMe{font-size:1.2em;top:275px}}#bgDescLabel{bottom:15px;color:#d5d9dc;font-size:0.444em;left:15px;position:absolute}@media only screen and (min-width: 480px){#bgDescLabel{font-size:1em}}#bgDescLabel .date{font-size:0.667em;padding-top:3px;padding-bottom:6px}.toPortfolio{display:none}@media only screen and (min-width: 768px){.toPortfolio{display:block;bottom:1%;height:auto;left:0;margin-left:auto;margin-right:auto;position:absolute;right:0;width:30px}}@media only screen and (min-width: 1024px){.toPortfolio{bottom:15px}}.toHome{-moz-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transofmr:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);bottom:30px;display:none;height:auto;position:fixed;right:10%;width:30px;z-index:2}#instructions{display:block;margin-top:-35px;position:absolute;width:200px}#instructions p{color:#5a636c;font-size:0.444em;text-align:center}@media only screen and (min-width: 480px){#instructions{display:none;margin-top:-50px;width:400px}#instructions p{font-size:1em}}@media only screen and (min-width: 768px){#instructions{width:720px}}@media only screen and (min-width: 1024px){#instructions{bottom:30px;left:15px;max-width:19%;position:fixed;top:auto}#instructions p{text-align:left}}.thumb{height:auto;min-width:200px;width:32%}.lastrow{margin-bottom:100px}
+/* 
+Pixels	Ems		Ems @ 16	% of 13
+922.641	57.665	57.665	7,097.238
+615.094	38.443	38.443	4,731.492
+410.063	25.629	25.629	3,154.331
+273.375	17.086	17.086	2,102.885
+182.25	11.391	11.391	1,401.923
+121.5	7.594	7.594	934.615
+81		5.063	5.063	623.077
+54		3.375	3.375	415.385
+36		2.25	2.25	276.923
+24		1.5		1.5		184.615
+16		1		1		123.077
+10.667	0.667	0.667	82.054
+7.111	0.444	0.444	54.700
+4.741	0.296	0.296	36.469
+3.161	0.198	0.198	24.315
+2.107	0.132	0.132	16.208
+1.405	0.088	0.088	10.808
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url("../fonts/leaguegothic-regular-webfont.eot");
+  src: url("../fonts/leaguegothic-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/leaguegothic-regular-webfont.woff") format("woff"), url("../fonts/leaguegothic-regular-webfont.ttf") format("truetype"), url("../fonts/leaguegothic-regular-webfont.svg#league_gothicregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* For media queries */
+/* Colour scheme */
+html {
+  /* Base values */
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  /* Selection colour */ }
+  html ::selection {
+    background: #7f9ebd;
+    color: #111111; }
+  html ::-moz-selection {
+    background: #7f9ebd;
+    color: #111111; }
+
+a {
+  color: #d5d9dc; }
+  a:hover {
+    background-color: transparent;
+    color: #7f9ebd;
+    text-decoration: none; }
+
+h1 {
+  color: #d5d9dc;
+  font-family: "League Gothic", "Open Sans", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  text-align: center; }
+  @media only screen and (min-width: 480px) {
+    h1 {
+      font-size: 2.25em; } }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 3.375em; } }
+
+nav {
+  font-size: 0.667em;
+  margin-top: 15px;
+  margin-left: 15px;
+  position: fixed;
+  width: 700px;
+  z-index: 2; }
+  @media only screen and (min-width: 480px) {
+    nav {
+      font-size: 1em; } }
+  nav ul li {
+    display: block;
+    list-style: none;
+    line-height: 2.25em; }
+    @media only screen and (min-width: 768px) {
+      nav ul li {
+        line-height: 1.5em; } }
+  nav a {
+    text-decoration: none; }
+
+.lightGrey a {
+  color: #d5d9dc; }
+  .lightGrey a:hover {
+    color: #7f9ebd; }
+.lightGrey .logo a:hover {
+  color: #d5d9dc; }
+
+.darkGrey a {
+  color: #5a636c; }
+  .darkGrey a:hover {
+    color: #7f9ebd; }
+.darkGrey .logo a:hover {
+  color: #5a636c; }
+
+.logo {
+  font-family: "League Gothic", "Open Sans", sans-serif;
+  font-size: 1.5em;
+  line-height: 0.667em;
+  padding-left: auto;
+  padding-right: auto; }
+  @media only screen and (min-width: 480px) {
+    .logo {
+      font-size: 3.375em; } }
+  @media only screen and (min-width: 768px) {
+    .logo {
+      font-size: 5.063em;
+      letter-spacing: -3px; } }
+
+#home {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: url("../img/sunset2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 500px; }
+  @media only screen and (min-width: 480px) {
+    #home {
+      min-height: 1000px; } }
+  @media only screen and (min-width: 1400px) {
+    #home {
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background: url("../img/sunset2.jpg") no-repeat center -125px fixed;
+      background-size: cover; } }
+
+#portfolio {
+  padding-top: 75px;
+  position: relative;
+  min-height: 500px;
+  max-width: 210px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0; }
+  #portfolio a:hover {
+    background-color: transparent; }
+  @media only screen and (min-width: 480px) {
+    #portfolio {
+      max-width: 420px;
+      min-height: 1000px; } }
+  @media only screen and (min-width: 768px) {
+    #portfolio {
+      max-width: 80%;
+      padding-top: 100px;
+      padding-left: auto;
+      padding-right: auto; } }
+  @media only screen and (min-width: 1024px) {
+    #portfolio {
+      max-width: 60%;
+      padding-top: 75px; } }
+
+.aboutMe {
+  background-color: rgba(213, 217, 220, 0.6);
+  font-size: 0.667em;
+  line-height: 1em;
+  max-width: 100%;
+  padding: 2em 0;
+  position: absolute;
+  top: 125px; }
+  .aboutMe p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%;
+    padding-bottom: 0.444em;
+    text-align: center; }
+  @media only screen and (min-width: 480px) {
+    .aboutMe {
+      line-height: 1.4em;
+      font-size: 1em;
+      top: 30%; } }
+  @media only screen and (min-width: 1024px) {
+    .aboutMe {
+      border-radius: 0.296em;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 70%;
+      position: relative;
+      top: 220px; }
+      .aboutMe p {
+        max-width: 65%; } }
+  @media only screen and (min-width: 1824px) {
+    .aboutMe {
+      font-size: 1.2em;
+      top: 275px; } }
+
+/* Description label for background image on homepage */
+.bgDescLabel {
+  bottom: 15px;
+  color: #d5d9dc;
+  font-size: 0.444em;
+  left: 15px;
+  position: absolute; }
+  @media only screen and (min-width: 480px) {
+    .bgDescLabel {
+      font-size: 1em; } }
+  .bgDescLabel .date {
+    font-size: 0.667em;
+    padding-top: 3px;
+    padding-bottom: 6px; }
+
+.toPortfolio {
+  background: url("../img/ArrowLightGrey.png") no-repeat center center;
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .toPortfolio {
+      bottom: 1%;
+      display: block;
+      height: 30px;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      right: 0;
+      width: 30px; } }
+  @media only screen and (min-width: 1024px) {
+    .toPortfolio {
+      bottom: 15px; } }
+
+.toHome {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transofmr: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: url("../img/ArrowDarkGrey.png") no-repeat center center;
+  bottom: 30px;
+  display: none;
+  height: 30px;
+  position: fixed;
+  right: 10%;
+  width: 30px;
+  z-index: 2; }
+
+.instructions {
+  display: block;
+  margin-top: -35px;
+  position: absolute;
+  width: 200px; }
+  .instructions p {
+    color: #5a636c;
+    font-size: 0.444em;
+    text-align: center; }
+  @media only screen and (min-width: 480px) {
+    .instructions {
+      display: none;
+      margin-top: -50px;
+      width: 400px; }
+      .instructions p {
+        font-size: 1em; } }
+  @media only screen and (min-width: 768px) {
+    .instructions {
+      width: 720px; } }
+  @media only screen and (min-width: 1024px) {
+    .instructions {
+      bottom: 30px;
+      left: 15px;
+      max-width: 19%;
+      position: fixed;
+      top: auto; }
+      .instructions p {
+        text-align: left; } }
+
+/* thumbnails resize automatically, with a set minimum size */
+.thumb {
+  height: auto;
+  min-width: 200px;
+  width: 32%; }
+
+/* Create some padding at bottom of page */
+.lastrow {
+  margin-bottom: 100px; }

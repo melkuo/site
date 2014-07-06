@@ -26,14 +26,14 @@ $(document).ready(function() {
 	
 
 	/********** Fade In On Load **********/
-	$('#aboutMe').hide();
+	$('.aboutMe').hide();
 	$('nav').hide();
-	$('#bgDescLabel').hide();
+	$('.bgDescLabel').hide();
 	$('.toPortfolio').hide();
 
-	$('#aboutMe').delay(300).fadeIn(900);
+	$('.aboutMe').delay(300).fadeIn(900);
 	$('nav').delay(1300).fadeIn(1200);
-	$('#bgDescLabel').delay(1300).fadeIn(1200);
+	$('.bgDescLabel').delay(1300).fadeIn(1200);
 	$('.toPortfolio').delay(1300).fadeIn(1200);
 
 
@@ -60,25 +60,25 @@ $(document).ready(function() {
 		if(mqSmall.matches) { 	// if width > 480px
 			// Parts from the bottom of home fade out early on
 			if ($(this).scrollTop() < 20) {
-				$("#bgDescLabel").fadeIn('fast');
+				$(".bgDescLabel").fadeIn('fast');
 				$(".toPortfolio").fadeIn('fast');
 			} else {
-				$("#bgDescLabel").fadeOut();
+				$(".bgDescLabel").fadeOut();
 				$(".toPortfolio").fadeOut('fast');
 			}
 
 			// Other parts from home fade out
 			if ($(this).scrollTop() < 200) {
-				$("#aboutMe").fadeIn('fast');
+				$(".aboutMe").fadeIn('fast');
 			} else {
-				$("#aboutMe").fadeOut();
+				$(".aboutMe").fadeOut();
 			}
 
 			// Instructions for portfolio fade in 
 			if ($(this).scrollTop() < 260) {
-				$("#instructions").fadeOut('fast');
+				$(".instructions").fadeOut('fast');
 			} else {
-				$("#instructions").fadeIn('fast');
+				$(".instructions").fadeIn('fast');
 			}
 
 			// Arrow to top fades in
@@ -89,9 +89,9 @@ $(document).ready(function() {
 			}
 
 		} else {	// show/hide certain parts permanently on mobile
-			$("#bgDescLabel").hide();
-			$("#aboutMe").show();
-			$("#instructions").show();
+			$(".bgDescLabel").hide();
+			$(".aboutMe").show();
+			$(".instructions").show();
 			$(".toPortfolio").hide();
 			$(".toHome").hide();
 		}

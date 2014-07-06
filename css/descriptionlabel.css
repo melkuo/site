@@ -1,1 +1,38 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}.blueimp-gallery .title{font-family:"Open Sans",sans-serif;color:#d5d9dc;text-shadow:none;background-color:rgba(90,99,108,0.7);opacity:1}.blueimp-gallery-controls .title:hover{color:#d5d9dc}@media only screen and (min-width: 1024px){.blueimp-gallery-controls .title:hover{opacity:0.8}}.blueimp-gallery .description{position:absolute;display:none;top:45px;left:15px;margin-right:35px;font-family:"Open Sans",sans-serif;line-height:1.2em;color:#d5d9dc;background-color:rgba(90,99,108,0.7)}@media only screen and (min-width: 1024px){.blueimp-gallery .description{max-width:15%}}.blueimp-gallery-controls .description{display:block}
+/* For media queries */
+/* Colour scheme */
+/* grey */
+/* light grey */
+/* dark grey */
+/* blue */
+/* yellow */
+.blueimp-gallery .title {
+  font-family: "Open Sans", sans-serif;
+  color: #d5d9dc;
+  text-shadow: none;
+  background-color: rgba(90, 99, 108, 0.7);
+  opacity: 1;
+  /* override */ }
+
+/* Override title brightening on hover */
+.blueimp-gallery-controls .title:hover {
+  color: #d5d9dc; }
+
+.blueimp-gallery .description {
+  position: absolute;
+  display: none;
+  top: 45px;
+  /* space for title */
+  left: 15px;
+  margin-right: 35px;
+  /* so that the it doesn't extend past the 'x' */
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.2em;
+  color: #d5d9dc;
+  background-color: rgba(90, 99, 108, 0.7); }
+  @media only screen and (min-width: 1024px) {
+    .blueimp-gallery .description {
+      max-width: 15%; } }
+
+/* display description along with controls on click */
+.blueimp-gallery-controls > .description {
+  display: block; }

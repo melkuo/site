@@ -10,15 +10,12 @@
 	
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 
 	<!-- CSS for image gallery -->
-	<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-	<link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+	<link rel="stylesheet" href="css/blueimp-gallery.min.css">
 	<link rel="stylesheet" href="css/descriptionlabel.css">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
 	
 	<!-- if lower than or equal to ie8 -->
@@ -42,14 +39,14 @@
 <body>
 	<nav class="lightGrey">
 		<ul>
-			<li id="logo"><a href="#home">Melody Kuo</a></li>
+			<li class="logo"><a href="#home">Melody Kuo</a></li>
 			<li><a href="Resume-Spring2014.pdf" target="_blank">Resumé</a></li>
-			<li id="contact"><a href="mailto:melody@melodykuo.com">melody@melodykuo.com</a></li>
+			<li><a href="mailto:melody@melodykuo.com">melody@melodykuo.com</a></li>
 		</ul>
 	</nav>
 
 	<section id="home" data-type="background" data-speed="10">
-		<div id="aboutMe">
+		<div class="aboutMe">
 			<h1>Hello, my name is Melody Kuo</h1>
 			<p>I'm a Systems Design Engineering student at the University of Waterloo.</p>
 			<p>I've recently set out on a mission to learn web design and development. I'm fascinated with anything design - from UI to UX, apps to product design.</p>
@@ -58,13 +55,13 @@
 
 	</section>
 
-	<div id="bgDescLabel" class="lightGrey">
+	<div class="bgDescLabel lightGrey">
 		<a href="#bgHomepage" class="title">Serenity</a>
 		<p class="date">Nov 2011</p>
 		<p class="content">Taken off the coast of Tampa, Florida. </p>
 	</div>
 	
-	<a href="#portfolio"><img src="img/ArrowLightGrey.png" alt="Down down down" class="toPortfolio" ></a>
+	<a href="#portfolio"><div class="toPortfolio"></div></a>
 	
 	<!-- Gallery controls -->
 	<div id="blueimp-gallery" class="blueimp-gallery">
@@ -78,101 +75,110 @@
 		<ol class="indicator"></ol>
 	</div>
 	
-	<a href="#portfolio"><img src="img/ArrowDarkGrey.png" alt="To The Top!" class="toHome"></a>
+	<a href="#portfolio"><div class="toHome"></div></a>
 
 	<!-- Links to image files -->
 	<div id="portfolio">
-
-	<div id="instructions">
-		<p>Click images to view in fullscreen. Click again to see image description.</p>
-	</div>
-	
-	<div id="links">
-		<div>
-			<a href="img/Front Page - New.jpg" title="TTC Redesign" data-gallery data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class.">
-				<img src="img/Front Page - New.jpg" class="thumb">
-			</a>
-			<a href="img/Front Page - New with Comments.jpg" title="TTC Redesign" data-gallery data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class. Here you can see the recommendations made.">
-				<img src="img/Front Page - New with Comments.jpg" class="thumb">
-			</a>
-			<a href="img/Front Page - Current.jpg" title="TTC Redesign" data-gallery data-description="June 2013. Current website for reference.">
-				<img src="img/Front Page - Current.jpg" class="thumb">
-			</a>
+		<div class="instructions">
+			<p>Click images to view in fullscreen. Click again to see image description.</p>
 		</div>
-		<div>			
-			<a href="img/robot1.jpg" title="Robot" data-gallery data-description="Nov 2011. Created out of toy cars for an art course. Robot can be launched forward and its arms are free-moving.">
-				<img src="img/robot1.jpg" class="thumb">
-			</a>
-			<a href="img/robot2.jpg" title="Robot" data-gallery data-description="Nov 2011. Created out of toy cars for an art course. Robot can be launched forward and its arms are free-moving.">
-				<img src="img/robot2.jpg" class="thumb">
-			</a>
-			<a href="img/robot3.jpg" title="Robot" data-gallery data-description="Nov 2011. Created out of toy cars for an art course. Robot can be launched forward and its arms are free-moving.">
-				<img src="img/robot3.jpg" class="thumb">
-			</a>
-		</div>	
-		<div>
-			<a href="img/toskyline1.jpg" title="Toronto Skyline" data-gallery data-description="Jan 2012. Designed using AutoCAD and cut from wood using a CNC machine for a technological design course.">
-				<img src="img/toskyline1.jpg" class="thumb">
-			</a>
-			<a href="img/toskyline2.jpg" title="Toronto Skyline" data-gallery data-description="Jan 2012. Designed using AutoCAD and cut from wood using a CNC machine for a technological design course.">
-				<img src="img/toskyline2.jpg" class="thumb">
-			</a>
-		</div>
-		<div>
-			<a href="img/thread1.jpg" title="Thread" data-gallery data-description="April 2012. This geometric picture was completely created using thread. All curves are comprised of straight lines.">
-				<img src="img/thread1.jpg" class="thumb">
-			</a>
-			<a href="img/thread2.jpg" title="Thread" data-gallery data-description="April 2012. This geometric picture was completely created using thread. All curves are comprised of straight lines.">
-				<img src="img/thread2.jpg" class="thumb">
-			</a>
-			<a href="img/thread3.jpg" title="Thread" data-gallery data-description="April 2012. This geometric picture was completely created using thread. All curves are comprised of straight lines.">
-				<img src="img/thread3.jpg" class="thumb">
-			</a>
-		</div>
-		<div>
-			<a href="img/red2.jpg" title="Red" data-gallery data-description="Sept 2011. Made with a homemade screen printing technique. Stencils were created out of wax paper and acrylic paint was spread on.">
-				<img src="img/red2.jpg" class="thumb">
-			</a>
-			<a href="img/red1.jpg" title="Red" data-gallery data-description="Sept 2011. Made with a homemade screen printing technique. Stencils were created out of wax paper and acrylic paint was spread on.">
-				<img src="img/red1.jpg" class="thumb">
-			</a>
-			<a href="img/red3.jpg" title="Red" data-gallery data-description="Sept 2011. Made with a homemade screen printing technique. Stencils were created out of wax paper and acrylic paint was spread on.">
-				<img src="img/red3.jpg" class="thumb">
-			</a>
-		</div>
-		<div>
-			<a href="img/treecutout1.jpg" title="Paper Tree" data-gallery data-description="Sept 2011. Silhouette of tree cut from a sketchbook and background painted with watercolour.">
-				<img src="img/treecutout1.jpg" class="thumb">
-			</a>
-			<a href="img/treecutout2.jpg" title="Paper Tree" data-gallery data-description="Sept 2011. Silhouette of tree cut from a sketchbook and background painted with watercolour.">
-				<img src="img/treecutout2.jpg" class="thumb">
-			</a>
-		</div>
-		<div>
-			<a href="img/marchingband1.jpg" title="Marching Band" data-gallery data-description="Oct 2011. Marching band characters created using Illustrator.">
-				<img src="img/marchingband1.jpg" class="thumb">
-			</a>
-			<a href="img/marchingband2.jpg" title="Marching Band" data-gallery data-description="Oct 2011. Marching band characters created using Illustrator.">
-				<img src="img/marchingband2.jpg" class="thumb">
-			</a>
-			<a href="img/marchingband3.jpg" title="Marching Band" data-gallery data-description="Oct 2011. Marching band characters created using Illustrator.">
-				<img src="img/marchingband3.jpg" class="thumb">
-			</a>
-		</div>
-		<div id="bgHomepage" class="lastrow">
-			<a href="img/sunset2.jpg" title="Serenity" data-gallery data-description="Nov 2011. Taken off the coast of Tampa, Florida.">
-				<img src="img/sunset2.jpg" class="thumb">
-			</a>
-		</div>
-	</div> <!-- /#links -->	
+		
+		<div id="links">
+			<div>
+				<a href="img/Front Page - New.jpg" title="TTC Redesign" data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class.">
+					<img src="img/Front Page - New.jpg" class="thumb">
+				</a>
+				<a href="img/Front Page - New with Comments.jpg" title="TTC Redesign" data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class. Here you can see the recommendations made.">
+					<img src="img/Front Page - New with Comments.jpg" class="thumb">
+				</a>
+				<a href="img/Front Page - Current.jpg" title="TTC Redesign" data-description="June 2013. Current website for reference.">
+					<img src="img/Front Page - Current.jpg" class="thumb">
+				</a>
+			</div>
+			<div>			
+				<a href="img/robot1.jpg" title="Robot" data-description="Nov 2011. Created out of toy cars for an art course. Robot can be launched forward and its arms are free-moving.">
+					<img src="img/robot1.jpg" class="thumb">
+				</a>
+				<a href="img/robot2.jpg" title="Robot" data-description="Nov 2011. Created out of toy cars for an art course. Robot can be launched forward and its arms are free-moving.">
+					<img src="img/robot2.jpg" class="thumb">
+				</a>
+				<a href="img/robot3.jpg" title="Robot" data-description="Nov 2011. Created out of toy cars for an art course. Robot can be launched forward and its arms are free-moving.">
+					<img src="img/robot3.jpg" class="thumb">
+				</a>
+			</div>	
+			<div>
+				<a href="img/toskyline1.jpg" title="Toronto Skyline" data-description="Jan 2012. Designed using AutoCAD and cut from wood using a CNC machine for a technological design course.">
+					<img src="img/toskyline1.jpg" class="thumb">
+				</a>
+				<a href="img/toskyline2.jpg" title="Toronto Skyline" data-description="Jan 2012. Designed using AutoCAD and cut from wood using a CNC machine for a technological design course.">
+					<img src="img/toskyline2.jpg" class="thumb">
+				</a>
+			</div>
+			<div>
+				<a href="img/thread1.jpg" title="Thread" data-description="April 2012. This geometric picture was completely created using thread. All curves are comprised of straight lines.">
+					<img src="img/thread1.jpg" class="thumb">
+				</a>
+				<a href="img/thread2.jpg" title="Thread" data-description="April 2012. This geometric picture was completely created using thread. All curves are comprised of straight lines.">
+					<img src="img/thread2.jpg" class="thumb">
+				</a>
+				<a href="img/thread3.jpg" title="Thread" data-description="April 2012. This geometric picture was completely created using thread. All curves are comprised of straight lines.">
+					<img src="img/thread3.jpg" class="thumb">
+				</a>
+			</div>
+			<div>
+				<a href="img/red2.jpg" title="Red" data-description="Sept 2011. Made with a homemade screen printing technique. Stencils were created out of wax paper and acrylic paint was spread on.">
+					<img src="img/red2.jpg" class="thumb">
+				</a>
+				<a href="img/red1.jpg" title="Red" data-description="Sept 2011. Made with a homemade screen printing technique. Stencils were created out of wax paper and acrylic paint was spread on.">
+					<img src="img/red1.jpg" class="thumb">
+				</a>
+				<a href="img/red3.jpg" title="Red" data-description="Sept 2011. Made with a homemade screen printing technique. Stencils were created out of wax paper and acrylic paint was spread on.">
+					<img src="img/red3.jpg" class="thumb">
+				</a>
+			</div>
+			<div>
+				<a href="img/treecutout1.jpg" title="Paper Tree" data-description="Sept 2011. Silhouette of tree cut from a sketchbook and background painted with watercolour.">
+					<img src="img/treecutout1.jpg" class="thumb">
+				</a>
+				<a href="img/treecutout2.jpg" title="Paper Tree" data-description="Sept 2011. Silhouette of tree cut from a sketchbook and background painted with watercolour.">
+					<img src="img/treecutout2.jpg" class="thumb">
+				</a>
+			</div>
+			<div>
+				<a href="img/marchingband1.jpg" title="Marching Band" data-description="Oct 2011. Marching band characters created using Illustrator.">
+					<img src="img/marchingband1.jpg" class="thumb">
+				</a>
+				<a href="img/marchingband2.jpg" title="Marching Band" data-description="Oct 2011. Marching band characters created using Illustrator.">
+					<img src="img/marchingband2.jpg" class="thumb">
+				</a>
+				<a href="img/marchingband3.jpg" title="Marching Band" data-description="Oct 2011. Marching band characters created using Illustrator.">
+					<img src="img/marchingband3.jpg" class="thumb">
+				</a>
+			</div>
+			<div id="bgHomepage" class="lastrow">
+				<a href="img/sunset2.jpg" title="Serenity" data-description="Nov 2011. Taken off the coast of Tampa, Florida.">
+					<img src="img/sunset2.jpg" class="thumb">
+				</a>
+			</div>
+		</div> <!-- /#links -->	
 	</div> <!-- /#portfolio -->
 
 
-	
+	<!-- jQuery -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+
 	<!-- Image gallery script -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-	<!--<script src="js/blueimp-image-gallery.min.js"></script> -->
+	<script src="js/blueimp-gallery.min.js"></script>
+	<script>
+	document.getElementById('links').onclick = function (event) {
+	    event = event || window.event;
+	    var target = event.target || event.srcElement,
+	        link = target.src ? target.parentNode : target,
+	        options = {index: link, event: event},
+	        links = this.getElementsByTagName('a');
+	    blueimp.Gallery(links, options);
+	};
+	</script>
 	<script src="js/descriptionlabel.js"></script>
 		
 	<!-- Custom scripts -->

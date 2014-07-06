@@ -19,7 +19,7 @@ Pixels	Ems		Ems @ 16	% of 13
 1.405	0.088	0.088	10.808
 */
 
-// @import "compass/reset";
+@import "compass/reset";
 
 @font-face {
     font-family: 'League Gothic';
@@ -34,7 +34,7 @@ Pixels	Ems		Ems @ 16	% of 13
 
 $base-font-family: 'Open Sans', sans-serif;
 $base-font-size: 16px;
-$heading-font-family: 'League Gothic', 'Open Sans Condensed', sans-serif;
+$heading-font-family: 'League Gothic', 'Open Sans', sans-serif;
 
 /* For media queries */
 $mq-sm: "only screen and (min-width: 480px)";
@@ -118,7 +118,7 @@ nav {
 		&:hover { color: $color4; }
 	}
 
-	#logo a:hover { color: $color2; }
+	.logo a:hover { color: $color2; }
 }
 
 .darkGrey {
@@ -127,10 +127,10 @@ nav {
 		&:hover { color: $color4; }
 	}
 
-	#logo a:hover { color: $color3; }
+	.logo a:hover { color: $color3; }
 }
 
-#logo {
+.logo {
 	font-family: $heading-font-family;
 	font-size: 1.5em;
 	line-height: 0.667em;
@@ -195,7 +195,7 @@ nav {
 	}
 }
 
-#aboutMe {
+.aboutMe {
 	background-color: $color2semitrans;
 	font-size: 0.667em;
 	line-height: 1em;
@@ -236,7 +236,7 @@ nav {
 }
 
 /* Description label for background image on homepage */
-#bgDescLabel {
+.bgDescLabel {
 	bottom: 15px;
 	color: $color2;
 	font-size: 0.444em;
@@ -253,13 +253,13 @@ nav {
 }
 
 .toPortfolio {
+	background: url("../img/ArrowLightGrey.png") no-repeat center center;
 	display: none;
 
 	@media #{$mq-md} { 
-		display: block;
-		background-color: transparent; 
 		bottom: 1%;
-		height: auto;
+		display: block;
+		height: 30px;
 		left: 0;
 		margin-left: auto;
 		margin-right: auto;
@@ -277,17 +277,17 @@ nav {
 	-o-transofmr:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	transform: rotate(180deg);
-	background-color: transparent;
+	background: url("../img/ArrowDarkGrey.png") no-repeat center center;
 	bottom: 30px;
 	display: none;
-	height: auto;
+	height: 30px;
 	position: fixed;
 	right: 10%;
 	width: 30px;
 	z-index: 2;
 }
 
-#instructions {
+.instructions {
 	display: block;
 	margin-top: -35px; // negative because I want it to go up
 	position: absolute;
