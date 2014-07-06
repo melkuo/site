@@ -126,18 +126,18 @@ nav {
   nav a {
     text-decoration: none; }
 
-.lightGrey a {
+.lightColor a {
   color: #d5d9dc; }
-  .lightGrey a:hover {
+  .lightColor a:hover {
     color: #7f9ebd; }
-.lightGrey .logo a:hover {
+.lightColor .logo a:hover {
   color: #d5d9dc; }
 
-.darkGrey a {
+.darkColor a {
   color: #5a636c; }
-  .darkGrey a:hover {
+  .darkColor a:hover {
     color: #7f9ebd; }
-.darkGrey .logo a:hover {
+.darkColor .logo a:hover {
   color: #5a636c; }
 
 .logo {
@@ -173,12 +173,12 @@ nav {
       background-size: cover; } }
 
 #portfolio {
-  padding-top: 75px;
-  position: relative;
   min-height: 500px;
   max-width: 210px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 75px;
+  position: relative;
   z-index: 0; }
   #portfolio a:hover {
     background-color: transparent; }

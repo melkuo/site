@@ -60,51 +60,51 @@ $(document).ready(function() {
 		if(mqSmall.matches) { 	// if width > 480px
 			// Parts from the bottom of home fade out early on
 			if ($(this).scrollTop() < 20) {
-				$(".bgDescLabel").fadeIn('fast');
-				$(".toPortfolio").fadeIn('fast');
+				$('.bgDescLabel').fadeIn('fast');
+				$('.toPortfolio').fadeIn('fast');
 			} else {
-				$(".bgDescLabel").fadeOut();
-				$(".toPortfolio").fadeOut('fast');
+				$('.bgDescLabel').fadeOut();
+				$('.toPortfolio').fadeOut('fast');
 			}
 
 			// Other parts from home fade out
 			if ($(this).scrollTop() < 200) {
-				$(".aboutMe").fadeIn('fast');
+				$('.aboutMe').fadeIn('fast');
 			} else {
-				$(".aboutMe").fadeOut();
+				$('.aboutMe').fadeOut();
 			}
 
 			// Instructions for portfolio fade in 
 			if ($(this).scrollTop() < 260) {
-				$(".instructions").fadeOut('fast');
+				$('.instructions').fadeOut('fast');
 			} else {
-				$(".instructions").fadeIn('fast');
+				$('.instructions').fadeIn('fast');
 			}
 
 			// Arrow to top fades in
 			if ($(this).scrollTop() < 1100) {
-				$(".toHome").fadeOut('fast');
+				$('.toHome').fadeOut('fast');
 			} else {
-				$(".toHome").fadeIn('fast');
+				$('.toHome').fadeIn('fast');
 			}
 
 		} else {	// show/hide certain parts permanently on mobile
-			$(".bgDescLabel").hide();
-			$(".aboutMe").show();
-			$(".instructions").show();
-			$(".toPortfolio").hide();
-			$(".toHome").hide();
+			$('.bgDescLabel').hide();
+			$('.aboutMe').show();
+			$('.instructions').show();
+			$('.toPortfolio').hide();
+			$('.toHome').hide();
 		}
 
 		// Change colour of nav	for different sections
 		if(mqSmall.matches) { 	// if width > 480px
 			if ($(this).scrollTop() < 950) {
-				$("nav").removeClass().addClass("lightGrey");
+				$('nav').removeClass().addClass('lightColor');
 			} else {
-				$("nav").removeClass("lightGrey").addClass("darkGrey");
+				$('nav').removeClass('lightColor').addClass('darkColor');
 			}
 		} else {
-			$("nav").removeClass("darkGrey").addClass("lightGrey");
+			$('nav').removeClass('darkColor').addClass('lightColor');
 		}
 		
 	});

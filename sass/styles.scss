@@ -112,7 +112,7 @@ nav {
 }
 
 // Classes to change colour of nav when scrolling
-.lightGrey {
+.lightColor {
 	a {
 		color: $color2;
 		&:hover { color: $color4; }
@@ -121,7 +121,7 @@ nav {
 	.logo a:hover { color: $color2; }
 }
 
-.darkGrey {
+.darkColor {
 	a {
 		color: $color3;
 		&:hover { color: $color4; }
@@ -167,12 +167,12 @@ nav {
 }
 
 #portfolio {
-	padding-top: 75px; // some padding at the top before images begin
-	position: relative;
 	min-height: 500px;
 	max-width: 210px; // width of a thumbnail is ~200px
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 75px; // some padding at the top before images begin
+	position: relative;
 	z-index: 0;
 	
 	a:hover { background-color: transparent }
