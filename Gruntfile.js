@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 						'css/*.css',
 						'fonts/*.{eot,svg,ttf,woff}',
 						'js/*.js',
-						'img/*',
+						'img/**',
 						'*.html'
 					],
 					dest: '<%= paths.temp %>'
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 						'css/*.css',
 						'fonts/*.{eot,svg,ttf,woff}',
 						'js/*.js',
-						'img/*',
+						'img/**',
 						'*.html'
 					],
 					dest: '<%= paths.dist %>'
@@ -115,29 +115,19 @@ module.exports = function(grunt) {
 			options: {
 				livereload: true
 			},
-			css: {
-				files: ['<%= paths.src %>/css/**/*.css'],
-				tasks: ['sync']
-			},
-			fonts: {
-				files: ['<%= paths.src %>/fonts/**/*.{eot,svg,ttf,woff}'],
-				tasks: ['sync']
-			},
-			img: {
-				files: ['<%= paths.src %>/img/**/*.{eot,svg,ttf,woff}'],
-				tasks: ['sync']
-			},
-			js: {
-				files: ['<%= paths.src %>/js/**/*.js'],
+			sync: {
+				files: [
+					'<%= paths.src %>/css/**/*.css',
+					'<%= paths.src %>/fonts/**/*.{eot,svg,ttf,woff}',
+					'<%= paths.src %>/img/**',
+					'<%= paths.src %>/js/**/*.js',
+					'<%= paths.src %>/*.html'
+				],
 				tasks: ['sync']
 			},
 			sass: {
 				files: ['<%= paths.src %>/sass/**/*.{css,scss}'],
 				tasks: ['sass:temp']
-			},
-			html: {
-				files: ['<%= paths.src %>/*.html'],
-				tasks: ['sync']
 			}
 		}
 	});
