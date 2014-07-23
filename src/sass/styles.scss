@@ -19,6 +19,10 @@ Pixels	Ems		Ems @ 16	% of 13
 1.405	0.088	0.088	10.808
 */
 
+/***********************
+********* Fonts ********
+***********************/
+
 @font-face {
     font-family: 'League Gothic';
     src: url('../fonts/leaguegothic-regular-webfont.eot');
@@ -29,6 +33,11 @@ Pixels	Ems		Ems @ 16	% of 13
     font-weight: normal;
     font-style: normal;
 }
+
+
+/***********************
+****** Variables *******
+***********************/
 
 $base-font-family: 'Open Sans', sans-serif;
 $base-font-size: 16px;
@@ -50,6 +59,10 @@ $color4: rgb(127,158,189); // blue
 $color5: rgb(17,17,17); //black
 $colorOpp: rgb(255,255,0); // yellow
 
+
+/***********************
+**** Global Styles *****
+***********************/
 
 html {
 	/* Base values */
@@ -87,6 +100,11 @@ h1 {
 	@media #{$mq-sm} { font-size: 2.25em; }
 	@media #{$mq-md} { font-size: 3.375em; }
 }
+
+
+/***********************
+********* Nav **********
+***********************/
 
 nav {
 	font-size: 0.667em;
@@ -143,6 +161,11 @@ nav {
 	}
 }
 
+
+/***********************
+********* Home *********
+***********************/
+
 #home {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -162,35 +185,6 @@ nav {
 		background: url('../img/sunset2.jpg') no-repeat center -125px fixed;
 		background-size: cover;
 	} 
-}
-
-#portfolio {
-	min-height: 500px;
-	max-width: 210px; // width of a thumbnail is ~200px
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 75px; // some padding at the top before images begin
-	position: relative;
-	z-index: 0;
-	
-	a:hover { background-color: transparent }
-	
-	@media #{$mq-sm} {
-		max-width: 420px; //width of two thumbnails
-		min-height: 1000px;
-	}
-
-	@media #{$mq-md} {
-		max-width: 80%;
-		padding-top: 100px;
-		padding-left: auto;
-		padding-right: auto;
-	}
-
-	@media #{$mq-lg} {
-		max-width: 60%;
-		padding-top: 75px;
-	}
 }
 
 .aboutMe {
@@ -233,7 +227,7 @@ nav {
 	}
 }
 
-/* Description label for background image on homepage */
+// Description label for background image on homepage 
 .bgDescLabel {
 	bottom: 15px;
 	color: $color2;
@@ -249,6 +243,11 @@ nav {
 		padding-bottom: 6px; 
 	}
 }
+
+
+/***********************
+******** Arrows ********
+***********************/
 
 .toPortfolio {
 	background: url("../img/ArrowLightGrey.png") no-repeat center center;
@@ -283,6 +282,40 @@ nav {
 	right: 10%;
 	width: 30px;
 	z-index: 2;
+}
+
+
+/***********************
+****** Portfolio *******
+***********************/
+
+#portfolio {
+	min-height: 500px;
+	max-width: 210px; // width of a thumbnail is ~200px
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 75px; // some padding at the top before images begin
+	position: relative;
+	z-index: 0;
+	
+	a:hover { background-color: transparent }
+	
+	@media #{$mq-sm} {
+		max-width: 420px; //width of two thumbnails
+		min-height: 1000px;
+	}
+
+	@media #{$mq-md} {
+		max-width: 80%;
+		padding-top: 100px;
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+	@media #{$mq-lg} {
+		max-width: 60%;
+		padding-top: 75px;
+	}
 }
 
 .instructions {
