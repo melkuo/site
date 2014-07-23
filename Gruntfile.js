@@ -7,8 +7,7 @@ module.exports = function(grunt) {
 		},
 
 		clean: {
-			all: ['<%= paths.temp %>', '<%= paths.dist %>'],
-			temp: ['<%= paths.temp %>']
+			all: ['<%= paths.temp %>', '<%= paths.dist %>']
 		},
 
 		connect: {
@@ -34,7 +33,8 @@ module.exports = function(grunt) {
 						'fonts/*.{eot,svg,ttf,woff}',
 						'js/*.js',
 						'img/**',
-						'*.html'
+						'*.html',
+						'*.pdf'
 					],
 					dest: '<%= paths.temp %>'
 				}]
@@ -48,7 +48,8 @@ module.exports = function(grunt) {
 						'fonts/*.{eot,svg,ttf,woff}',
 						'js/*.js',
 						'img/**',
-						'*.html'
+						'*.html',
+						'*.pdf'
 					],
 					dest: '<%= paths.dist %>'
 				}]
@@ -56,9 +57,6 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
-			options: {
-				compass: 'true'
-			},
 			temp: {	
 				options: {
 					style: 'expanded'
@@ -66,7 +64,7 @@ module.exports = function(grunt) {
 				files:[{
 					expand: true,
 					cwd: '<%= paths.src %>/sass',
-					src: '**/*.{css,scss}',
+					src: '**/*.{sass,scss}',
 					dest: '<%= paths.temp %>/css',
 					ext: '.css'
 				}]
@@ -78,7 +76,7 @@ module.exports = function(grunt) {
 				files:[{
 					expand: true,
 					cwd: '<%= paths.src %>/sass',
-					src: '**/*.{css,scss}',
+					src: '**/*.{sass,scss}',
 					dest: '<%= paths.dist %>/css',
 					ext: '.css'
 				}]
@@ -91,7 +89,7 @@ module.exports = function(grunt) {
 					cwd: '<%= paths.src %>',
 					src: [
 						'**',
-						'!sass/**/*.scss'
+						'!sass/**/*.{sass,scss}' // don't sync because grunt sass will compile
 					],
 					dest: '<%= paths.temp %>'
 				}]
@@ -126,7 +124,7 @@ module.exports = function(grunt) {
 				tasks: ['sync']
 			},
 			sass: {
-				files: ['<%= paths.src %>/sass/**/*.{css,scss}'],
+				files: ['<%= paths.src %>/sass/**/*.{sass,scss}'],
 				tasks: ['sass:temp']
 			}
 		}
