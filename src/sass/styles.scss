@@ -172,10 +172,9 @@ nav {
 	-o-background-size: cover;
 	background: url('../img/sunset2.jpg') no-repeat center center fixed;
 	background-size: cover;
-	min-height: 500px;
 
 	@media #{$mq-sm} {
-		min-height: 1000px;
+		height: 1000px;
 	}
 
 	@media only screen and (min-width: 1400px) {
