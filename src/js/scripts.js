@@ -21,6 +21,7 @@ var isMobile = {
 };
 
 $(document).ready(function() {
+	// Background image to fit whole page
 	$('#home').css('height', $(window).height());
 
 	if (isMobile.any()) { 
@@ -29,7 +30,11 @@ $(document).ready(function() {
 		$('.aboutMe').show();
 		$('.instructions').show();
 		$('.toPortfolio').hide();
-		$('.toHome').hide();		
+		$('.toHome').hide();
+
+		$('.toggleMenu').click(function() {
+			$('nav .hideOnMobile').slideToggle();
+		});	
 
 	} else { // if not mobile
 
