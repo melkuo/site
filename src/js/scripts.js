@@ -21,17 +21,13 @@ var isMobile = {
 };
 
 $(document).ready(function() {
+	/********** Media Queries **********/
+	var mqMobile = window.matchMedia( "(max-width: 768px)" );
+
 	// Background image to fit whole page
 	$('#home').css('height', $(window).height());
 
-	if (isMobile.any()) { 
-		// show/hide parts permanently on mobile
-		$('.bgDescLabel').hide();
-		$('.aboutMe').show();
-		$('.instructions').show();
-		$('.toPortfolio').hide();
-		$('.toHome').hide();
-
+	if ((isMobile.any()) || (mqMobile)) { 
 		$('.toggleMenu').click(function() {
 			$('nav .hideOnMobile').slideToggle();
 		});	
@@ -59,10 +55,6 @@ $(document).ready(function() {
 		};
 
 		
-		/********** Media Queries **********/
-		var mqBgrdImageBreak = window.matchMedia( "(min-width: 1400px)" );
-		
-
 		/********** Fade In On Load **********/
 		$('.aboutMe').hide();
 		$('nav').hide();

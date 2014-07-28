@@ -102,7 +102,16 @@ h1 {
 	@media #{$mq-md} { font-size: 3.375em; }
 }
 
-.hideOnMobile { display: none; }
+.hideOnMobile { 
+	display: none; 
+	@media #{$mq-sm} { display: block; }
+}
+
+.hideOnDesktop { 
+	display: block; 
+	@media #{$mq-sm} { display: none; }
+}
+
 
 /***********************
 ********* Nav **********
@@ -120,7 +129,7 @@ nav {
 		background-color: $color3;
 		border-bottom: 1px solid $color2;
 		list-style: none;
-		padding: 15px 10px;
+		padding: 10px 10px;
 
 		@media #{$mq-md} { line-height: 1.5em; }
 	}	
@@ -130,8 +139,6 @@ nav {
 	float: right;
 	height: 100%;
 	margin-right: 10px;
-
-	@media #{$mq-md} { display: none; }
 }
 
 .logo {
