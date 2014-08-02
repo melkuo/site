@@ -20,14 +20,19 @@ var isMobile = {
     }
 };
 
+// Hide everything until page is loaded
+$('html').hide();
+
 $(document).ready(function() {
 	/********** Media Queries **********/
 	var mqMobile = window.matchMedia( "(max-width: 768px)" );
 
+	$('html').show();
+
 	// Background image to fit whole page
 	$('#home').css('height', $(window).height());
 
-	if ((isMobile.any()) || (mqMobile)) { 
+	if ((isMobile.any()) || (mqMobile.matches)) { 
 		$('.toggleMenu').click(function() {
 			$('nav .hideOnMobile').slideToggle();
 		});	
