@@ -25,14 +25,15 @@ $('html').hide();
 
 $(document).ready(function() {
 	/********** Media Queries **********/
-	var mqMobile = window.matchMedia( "(max-width: 768px)" );
+	var maxMobile = 768;
+	var minDesktop = 1024;
 
 	$('html').show();
 
 	// Background image to fit whole page
 	$('#home').css('height', $(window).height());
 
-	if ((isMobile.any()) || (mqMobile.matches)) { 
+	if ((isMobile.any()) || ($(window).width() < maxMobile)) { 
 		$('.toggleMenu').click(function() {
 			$('nav .hideOnMobile').slideToggle();
 		});	
@@ -45,7 +46,7 @@ $(document).ready(function() {
 			// bgobj.data('speed') refers to the data-speed you assigned in the html
 			// yPos = how much we scrolled up divided by data-speed. It's negative because we're going opposite direction of the user's scroll
 			// e.g. if user scrolls 50px down, background scrolls 5px up
-			if ($(window).width() > 1400) {
+			if ($(window).width() > 1635) {
 				var yPos = -125 - ($window.scrollTop() / $bgobj.data('speed'));
 			} else {
 				var yPos = -($window.scrollTop() / $bgobj.data('speed'));
@@ -59,7 +60,9 @@ $(document).ready(function() {
 			$bgobj.css({backgroundPosition: coords});
 		};
 
-		
+		/********** Fit Text **********/
+		$('.logo a').fitText(0.7);
+
 		/********** Fade In On Load **********/
 		$('.aboutMe').hide();
 		$('nav').hide();
