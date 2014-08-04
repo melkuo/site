@@ -26,18 +26,24 @@ $('html').hide();
 $(document).ready(function() {
 	/********** Media Queries **********/
 	var maxMobile = 768;
-	var minDesktop = 1024;
 
+	// Show html once page is loaded
 	$('html').show();
 
 	// Background image to fit whole page
 	$('#home').css('height', $(window).height());
 
-	if ((isMobile.any()) || ($(window).width() < maxMobile)) { 
-		$('.toggleMenu').click(function() {
-			$('nav .hideOnMobile').slideToggle();
-		});	
+	// Toggle Menu
+	$('.toggleMenu').click(function() {
+		$('nav .hideOnMobile').slideToggle();
+	});	
 
+
+	if ((isMobile.any()) || ($(window).width() < maxMobile)) { 
+		// Don't parallax scroll and a bunch of other stuff and permanently hide stuff
+		$('.bgDescLabel').hide();
+		$('.toPortfolio').hide();
+		
 	} else { // if not mobile
 
 		/********** Functions **********/
@@ -62,6 +68,7 @@ $(document).ready(function() {
 
 		/********** Fit Text **********/
 		$('.logo a').fitText(0.7);
+
 
 		/********** Fade In On Load **********/
 		$('.aboutMe').hide();
