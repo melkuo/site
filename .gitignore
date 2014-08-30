@@ -3,3 +3,4 @@ node_modules
 temp
 dist
 config.rb
+src/img/portfolio
