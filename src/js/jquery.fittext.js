@@ -30,20 +30,11 @@
         $this.css('font-size', Math.max(Math.min($this.width() / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)));
       };
 
-      // Check width
-      var checkWidth = function () {
-        if ($(window).width() > 1024) {
-          resizer();
-        } else {
-          $this.removeAttr('style');
-        }
-      }
-
       // Call once to set.
       resizer();
 
       // Call on resize. Opera debounces their resize by default.
-      $(window).on('resize.fittext orientationchange.fittext', checkWidth);
+      $(window).on('resize.fittext orientationchange.fittext', resizer);
 
     });
 

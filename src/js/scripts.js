@@ -67,7 +67,7 @@ $(document).ready(function() {
 		};
 
 		/********** Fit Text **********/
-		$('.logo a').fitText(0.7);
+		$('.logo.lgDisplay').fitText(0.9);
 
 
 		/********** Fade In On Load **********/
@@ -130,13 +130,6 @@ $(document).ready(function() {
 				$('.toHome').fadeOut('fast');
 			} else {
 				$('.toHome').fadeIn('fast');
-			}
-				
-			// Change colour of nav	for different sections
-			if ($(this).scrollTop() < 950) {
-				$('nav').removeClass().addClass('lightColor');
-			} else {
-				$('nav').removeClass('lightColor').addClass('darkColor');
 			}
 		});
 
