@@ -39,13 +39,7 @@ $(document).ready(function() {
 	});	
 
 
-	if ((isMobile.any()) || ($(window).width() < maxMobile)) { 
-		// Don't parallax scroll and a bunch of other stuff and permanently hide stuff
-		$('.bgDescLabel').hide();
-		$('.toPortfolio').hide();
-		
-	} else { // if not mobile
-
+	if (!(isMobile.any()) || !($(window).width() < maxMobile)) { 
 		/********** Functions **********/
 		var parallaxScroll = function($bgobj) {
 			// scrollTop gets the current scroll value from the top i.e. how much the user has scrolled up
@@ -70,18 +64,6 @@ $(document).ready(function() {
 		$('.logo.lgDisplay').fitText(0.9);
 
 
-		/********** Fade In On Load **********/
-		$('.aboutMe').hide();
-		$('nav').hide();
-		$('.bgDescLabel').hide();
-		$('.toPortfolio').hide();
-
-		$('.aboutMe').delay(300).fadeIn(900);
-		$('nav').delay(1300).fadeIn(1200);
-		$('.bgDescLabel').delay(1300).fadeIn(1200);
-		$('.toPortfolio').delay(1300).fadeIn(1200);
-
-
 		/********** Parallex scroll **********/
 		// Cache the Window object
 		$window = $(window);
@@ -104,32 +86,23 @@ $(document).ready(function() {
 			// Fade background description label and abooutMe section in/out on scroll
 			// Parts from the bottom of home fade out early on
 			if ($(this).scrollTop() < 20) {
-				$('.bgDescLabel').fadeIn('fast');
-				$('.toPortfolio').fadeIn('fast');
+				$('.bgDescLabel').removeClass('hide');
 			} else {
-				$('.bgDescLabel').fadeOut();
-				$('.toPortfolio').fadeOut('fast');
+				$('.bgDescLabel').addClass('hide');
 			}
 
 			// Other parts from home fade out
 			if ($(this).scrollTop() < 200) {
-				$('.aboutMe').fadeIn('fast');
+				$('.aboutMe').removeClass('hide');
 			} else {
-				$('.aboutMe').fadeOut();
+				$('.aboutMe').addClass('hide');
 			}
 
 			// Instructions for portfolio fade in 
 			if ($(this).scrollTop() < 260) {
-				$('.instructions').fadeOut('fast');
+				$('.instructions').addClass('hide').removeClass('show');
 			} else {
-				$('.instructions').fadeIn('fast');
-			}
-
-			// Arrow to top fades in
-			if ($(this).scrollTop() < 1100) {
-				$('.toHome').fadeOut('fast');
-			} else {
-				$('.toHome').fadeIn('fast');
+				$('.instructions').addClass('show').removeClass('hide');
 			}
 		});
 
@@ -139,13 +112,6 @@ $(document).ready(function() {
 				scrollTop: $( $.attr(this, 'href') ).offset().top
 			}, 900);
 			return false;
-		});
-
-		/********** On hover, fade arrows **********/
-		$('.toHome, .toPortfolio').hover(function() {
-			$(this).fadeTo('fast', '0.5');
-		}, function() {
-			$(this).fadeTo('fast', '1');
 		});
 	}
 });
