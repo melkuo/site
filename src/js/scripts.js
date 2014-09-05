@@ -27,16 +27,62 @@ $(document).ready(function() {
 	/********** Media Queries **********/
 	var maxMobile = 768;
 
+	/********** Variables ***********/
+	var $homeHeight = $(window).height()
+
 	// Show html once page is loaded
 	$('html').show();
 
 	// Background image to fit whole page
-	$('#home').css('height', $(window).height());
+	$('#home').css('height', $homeHeight);
 
 	// Toggle Menu
 	$('.toggleMenu').click(function() {
 		$('nav .hideOnMobile').slideToggle();
 	});	
+
+	/********** Smooth Scrolling **********/
+	$('a').click(function() {
+		$('html, body').animate({
+			scrollTop: $( $.attr(this, 'href') ).offset().top
+		}, 900);
+		return false;
+	});
+
+
+	/********** Sick Fadez While Scrolling **********/
+	$(window).scroll(function() {
+		// Fade background description label and abooutMe section in/out on scroll
+		// Parts from the bottom of home fade out early on
+		if ($(this).scrollTop() < 20) {
+			$('.bgDescLabel').removeClass('hide');
+		} else {
+			$('.bgDescLabel').addClass('hide');
+		}
+
+		// Other parts from home fade out
+		if ($(this).scrollTop() < 200) {
+			$('.aboutMe').removeClass('hide');
+		} else {
+			$('.aboutMe').addClass('hide');
+		}
+
+		// Instructions for portfolio fade in, down nav arrow fades out
+		if ($(this).scrollTop() < ($homeHeight - 450)) {
+			$('.instructions').addClass('hide').removeClass('show');
+			$('.navDown').removeClass('hide');
+		} else {
+			$('.instructions').addClass('show').removeClass('hide');
+			$('.navDown').addClass('hide');
+		}
+
+		// Up nav arrow fades in
+		if ($(this).scrollTop() < ($homeHeight + 50)) {
+			$('.navUp').addClass('hide');
+		} else {
+			$('.navUp').removeClass('hide');
+		}
+	});
 
 
 	if (!(isMobile.any()) || !($(window).width() < maxMobile)) { 
@@ -79,41 +125,8 @@ $(document).ready(function() {
 				parallaxScroll($bgobj);
 			});
 		}); 
-
-
-		/********** Sick Fadez While Scrolling **********/
-		$(window).scroll(function() {
-			// Fade background description label and abooutMe section in/out on scroll
-			// Parts from the bottom of home fade out early on
-			if ($(this).scrollTop() < 20) {
-				$('.bgDescLabel').removeClass('hide');
-			} else {
-				$('.bgDescLabel').addClass('hide');
-			}
-
-			// Other parts from home fade out
-			if ($(this).scrollTop() < 200) {
-				$('.aboutMe').removeClass('hide');
-			} else {
-				$('.aboutMe').addClass('hide');
-			}
-
-			// Instructions for portfolio fade in 
-			if ($(this).scrollTop() < 260) {
-				$('.instructions').addClass('hide').removeClass('show');
-			} else {
-				$('.instructions').addClass('show').removeClass('hide');
-			}
-		});
-
-		/********** Smooth Scrolling **********/
-		$('a').click(function() {
-			$('html, body').animate({
-				scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 900);
-			return false;
-		});
 	}
+	
 });
 
 /********** Create HTML5 Element for IE **********/
