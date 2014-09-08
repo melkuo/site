@@ -67,13 +67,15 @@ $(document).ready(function() {
 			$('.aboutMe').addClass('hide');
 		}
 
-		// Instructions for portfolio fade in, down nav arrow fades out
+		// Instructions for portfolio fade in, down nav arrow fades out, nav changes colour
 		if ($(this).scrollTop() < ($homeHeight - 450)) {
 			$('.instructions').addClass('hide').removeClass('show');
 			$('.navDown').removeClass('hide');
+			$('nav a').removeClass('textColor2');
 		} else {
 			$('.instructions').addClass('show').removeClass('hide');
 			$('.navDown').addClass('hide');
+			$('nav a').addClass('textColor2');
 		}
 
 		// Up nav arrow fades in
@@ -85,7 +87,6 @@ $(document).ready(function() {
 	});
 
 
-	if (!(isMobile.any()) || !($(window).width() < maxMobile)) { 
 		/********** Functions **********/
 		var parallaxScroll = function($bgobj) {
 			// scrollTop gets the current scroll value from the top i.e. how much the user has scrolled up
@@ -107,8 +108,7 @@ $(document).ready(function() {
 		};
 
 		/********** Fit Text **********/
-		$('.logo.lgDisplay').fitText(0.9);
-
+		$('.logo.showOnLg').fitText(0.9);
 
 		/********** Parallex scroll **********/
 		// Cache the Window object
@@ -118,14 +118,17 @@ $(document).ready(function() {
 			var $bgobj = $(this); // assigning the object
 
 			$(window).scroll(function(){
-				parallaxScroll($bgobj);
+				if ((!isMobile.any()) || !($(window).width() < maxMobile)) {
+					parallaxScroll($bgobj);
+				}
 			});
 
 			$(window).resize(function() {
-				parallaxScroll($bgobj);
+				if ((!isMobile.any()) || !($(window).width() < maxMobile)) {
+					parallaxScroll($bgobj);
+				}
 			});
 		}); 
-	}
 	
 });
 

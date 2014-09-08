@@ -210,7 +210,7 @@ h1 {
 
 .hide {
 	@include fadeOut;
-	opacity: 0;
+	opacity: 0!important;
 }
 
 .show {
@@ -228,12 +228,12 @@ h1 {
 	@media #{$mq-sm} { display: none; }
 }
 
-.lgDisplay {
+.showOnLg {
 	display: none;
 	@media #{$mq-lg} { display: block; }
 }
 
-.lgHide {
+.hideOnLg {
 	display: block;
 	@media #{$mq-lg} { display: none; }
 }
@@ -271,21 +271,21 @@ nav	ul li {
 	@media #{$mq-sm} { 
 		border: none;
 		float: left;
-		&:nth-child(n+3):not(.lgDisplay) { 
+		&:nth-child(n+3):not(.showOnLg) { 
 			display: inline;
 			padding-top: 1.4em; 
 		}
 	}
 
 	@media #{$mq-md} {
-		&:nth-child(n+3):not(.lgDisplay) { padding-top: 2em; }
+		&:nth-child(n+3):not(.showOnLg) { padding-top: 2em; }
 	}
 
 	@media #{$mq-lg} {
 		display: block;
 		text-align: center;
 		width: 100%;
-		&:nth-child(n+3):not(.lgDisplay) { padding: 10px 0; }
+		&:nth-child(n+3):not(.showOnLg) { padding: 10px 0; }
 	}
 }
 
@@ -302,8 +302,14 @@ nav	a {
 	}
 
 	@media #{$mq-lg} { 
-		color: $color1; 
+		color: $color2;
 		font-size: 1em;
+	}
+}
+
+.textColor2 {
+	@media #{$mq-lg} {
+		color: $color3; 
 	}
 }
 
@@ -320,7 +326,7 @@ nav	a {
 	@media #{$mq-md} { font-size: 3.375em; }
 }
 
-.logo.lgDisplay {
+.logo.showOnLg {
 	@include fadeInDelay;
 	margin-top: -0.5em;
 	padding: 0;
@@ -343,16 +349,17 @@ nav	a {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background: url('../img/portfolio/sunset2.jpg') no-repeat center center fixed;
 	background-size: cover;
+	background: url('../img/portfolio/sunset2.jpg') no-repeat center bottom scroll;
 	//height: 100%; // temp, will be overwritten by js
 
 	@media only screen and (min-width: 1635px) {
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background: url('../img/portfolio/sunset2.jpg') no-repeat center -125px fixed;
 		background-size: cover;
+		background-position: center -125px;
+		background-attachment: fixed;
 	} 
 }
 
@@ -406,7 +413,8 @@ nav	a {
 	font-size: 0.444em;
 	left: 15px;
 	position: absolute;
-	
+	z-index: 2;
+
 	@media #{$mq-sm} { font-size: 1em; }
 }
 
@@ -426,7 +434,7 @@ nav	a {
 	background: url("../img/ArrowDarkGrey.png") no-repeat center center;
 	bottom: 70px;
 	height: 30px;
-	left: 25px;
+	left: 26px;
 	position: absolute;
 	transition: opacity 0.5s ease-in-out;
 	width: 30px;
@@ -435,7 +443,7 @@ nav	a {
 .navDown {
 	background: url("../img/ArrowLightGrey.png") no-repeat center center;
 	height: 30px;
-	left: 25px;
+	left: 26px;
 	position: absolute;
 	top: 70px;
 	transition: opacity 0.5s ease-in-out;
