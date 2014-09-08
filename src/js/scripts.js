@@ -38,7 +38,8 @@ $(document).ready(function() {
 
 	// Toggle Menu
 	$('.toggleMenu').click(function() {
-		$('nav .hideOnMobile').slideToggle();
+		$('.mobileNav').toggleClass('mobileNavOpen');
+		
 	});	
 
 	/********** Smooth Scrolling **********/

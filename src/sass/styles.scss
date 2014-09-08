@@ -51,6 +51,14 @@ $colorOpp: rgb(255,255,0);
 	        transform: rotate($degree);
 }
 
+@mixin slideToggle {
+	-webkit-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-width .3s linear;
+	   -moz-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-width .3s linear;
+	    -ms-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-width .3s linear;
+	     -o-transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-width .3s linear;
+	        transition: height .3s linear, padding-top .3s linear, padding-bottom .3s linear, border-width .3s linear;
+}
+
 @mixin fadeIn {
 	-webkit-animation: fadein 2s;
        -moz-animation: fadein 2s;
@@ -317,6 +325,29 @@ nav	a {
 	float: right;
 	height: 100%;
 	margin-right: 10px;
+}
+
+.mobileNav {
+	@include slideToggle;
+	border: 0;
+	height: 0;
+	opacity: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	@media #{$mq-sm} {
+		opacity: 1;
+		height: auto;
+		padding: 10px;
+	}
+}
+
+.mobileNavOpen {
+	border-bottom: 1px solid $color2;
+	height: auto;
+	opacity: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .logo {
