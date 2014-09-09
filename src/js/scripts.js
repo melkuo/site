@@ -119,13 +119,13 @@ $(document).ready(function() {
 			var $bgobj = $(this); // assigning the object
 
 			$(window).scroll(function(){
-				if ((!isMobile.any()) || !($(window).width() < maxMobile)) {
+				if ((!isMobile.any()) && ($(window).width() > 1635)) {
 					parallaxScroll($bgobj);
 				}
 			});
 
 			$(window).resize(function() {
-				if ((!isMobile.any()) || !($(window).width() < maxMobile)) {
+				if ((!isMobile.any()) && ($(window).width() > 1635)) {
 					parallaxScroll($bgobj);
 				}
 			});
