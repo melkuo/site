@@ -203,7 +203,7 @@ a {
 	text-decoration: none;
 	transition: all 0.5s ease-in-out;
 	
-	&:hover { color: $color1; }
+	&:hover { opacity: 0.5; }
 }
 
 h1 {
@@ -359,7 +359,9 @@ nav	a {
 
 .logo.showOnLg {
 	@include fadeInDelay;
-	margin-top: -0.5em;
+	bottom: 0;
+	color: $color2semitrans;
+	margin-bottom: -0.45em;
 	padding: 0;
 	position: fixed;
 	text-align: center;
@@ -367,8 +369,13 @@ nav	a {
 	z-index: 2;
 
 	&:hover {
-		color: $color2;
+		opacity: 1;
 	}
+}
+
+.logo.showOnLg.logoColor2 {
+	color: $color3semitrans;
+	transition: color 0.5s ease-in-out;
 }
 
 
@@ -389,7 +396,7 @@ nav	a {
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-		background-position: center -125px;
+		background-position: center -200px;
 		background-attachment: fixed;
 	} 
 }
@@ -415,11 +422,12 @@ nav	a {
 		margin-right: auto;
 		max-width: 60%;
 		position: relative;
+		top: 20%;
 	}
 
 	@media #{$mq-xl} {
 		font-size: 1.2em;
-		top: 275px;
+		top: 30%;
 	}
 }
 
@@ -519,7 +527,7 @@ nav	a {
 
 	@media #{$mq-lg} {
 		max-width: 60%;
-		padding-top: 120px;
+		padding-top: 75px;
 	}
 }
 
@@ -568,5 +576,5 @@ nav	a {
 
 /* Create some padding at bottom of page */
 .lastrow {
-	margin-bottom: 100px; 
+	margin-bottom: 150px; 
 }

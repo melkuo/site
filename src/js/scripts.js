@@ -64,8 +64,10 @@ $(document).ready(function() {
 		// Other parts from home fade out
 		if ($(this).scrollTop() < 200) {
 			$('.aboutMe').removeClass('hide');
+			$('.logo.showOnLg').removeClass('logoColor2');
 		} else {
 			$('.aboutMe').addClass('hide');
+			$('.logo.showOnLg').addClass('logoColor2');
 		}
 
 		// Instructions for portfolio fade in, down nav arrow fades out, nav changes colour
@@ -88,48 +90,48 @@ $(document).ready(function() {
 	});
 
 
-		/********** Functions **********/
-		var parallaxScroll = function($bgobj) {
-			// scrollTop gets the current scroll value from the top i.e. how much the user has scrolled up
-			// bgobj.data('speed') refers to the data-speed you assigned in the html
-			// yPos = how much we scrolled up divided by data-speed. It's negative because we're going opposite direction of the user's scroll
-			// e.g. if user scrolls 50px down, background scrolls 5px up
-			if ($(window).width() > 1635) {
-				var yPos = -125 - ($window.scrollTop() / $bgobj.data('speed'));
-			} else {
-				var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-			}
-			
-			// Put together our final background position
-			// 50% as its xPosition to keep horizontal position static and center
-			var coords = '50% ' + yPos + 'px';
+	/********** Fit Text **********/
+	$('.logo.showOnLg').fitText(1.1);
 
-			// Move the background
-			$bgobj.css({backgroundPosition: coords});
-		};
 
-		/********** Fit Text **********/
-		$('.logo.showOnLg').fitText(0.9);
-
-		/********** Parallex scroll **********/
-		// Cache the Window object
-		$window = $(window);
+	/********** Parallex scroll **********/
+	var parallaxScroll = function($bgobj) {
+		// scrollTop gets the current scroll value from the top i.e. how much the user has scrolled up
+		// bgobj.data('speed') refers to the data-speed you assigned in the html
+		// yPos = how much we scrolled up divided by data-speed. It's negative because we're going opposite direction of the user's scroll
+		// e.g. if user scrolls 50px down, background scrolls 5px up
+		if ($(window).width() > 1635) {
+			var yPos = -200 - ($window.scrollTop() / $bgobj.data('speed'));
+		} else {
+			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+		}
 		
-		$('section[data-type="background"]').each(function() {
-			var $bgobj = $(this); // assigning the object
+		// Put together our final background position
+		// 50% as its xPosition to keep horizontal position static and center
+		var coords = '50% ' + yPos + 'px';
 
-			$(window).scroll(function(){
-				if ((!isMobile.any()) && ($(window).width() > 1635)) {
-					parallaxScroll($bgobj);
-				}
-			});
+		// Move the background
+		$bgobj.css({backgroundPosition: coords});
+	};
 
-			$(window).resize(function() {
-				if ((!isMobile.any()) && ($(window).width() > 1635)) {
-					parallaxScroll($bgobj);
-				}
-			});
-		}); 
+	// Cache the Window object
+	$window = $(window);
+	
+	$('section[data-type="background"]').each(function() {
+		var $bgobj = $(this); // assigning the object
+
+		$(window).scroll(function(){
+			if ((!isMobile.any()) && ($(window).width() > 1635)) {
+				parallaxScroll($bgobj);
+			}
+		});
+
+		$(window).resize(function() {
+			if ((!isMobile.any()) && ($(window).width() > 1635)) {
+				parallaxScroll($bgobj);
+			}
+		});
+	}); 
 	
 });
 

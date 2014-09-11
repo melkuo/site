@@ -14,11 +14,11 @@ $color4: rgb(127,158,189); /* blue */
 $colorcomp: rgb(255,255,0); /* yellow */
 
 .blueimp-gallery .title {
-	font-family: $base-font-family;
 	color: $color2;
-	text-shadow: none;
 	background-color: $color3semitrans;
+	font-family: $base-font-family;
 	opacity: 1; /* override */
+	text-shadow: none;
 }
 
 /* Override title brightening on hover */
@@ -27,18 +27,19 @@ $colorcomp: rgb(255,255,0); /* yellow */
 }
 
 .blueimp-gallery .description {
-	position: absolute;
-	display: none;
-	top: 45px; /* space for title */
-	left: 15px;
-	margin-right: 35px; /* so that the it doesn't extend past the 'x' */
-	font-family: $base-font-family;
-	line-height: 1.2em;
-	color: $color2;
 	background-color: $color3semitrans;
+	color: $color2;
+	display: none;
+	font-family: $base-font-family;
+	left: 15px;
+	line-height: 1.2em;
+	margin-right: 35px; /* so that the it doesn't extend past the 'x' */
+	position: absolute;
+	top: 45px; /* space for title */
 
 	@media #{$info-lg} {
-		max-width: 15%;	
+		min-width: 200px;
+		width: 15%;	
 	}
 }
 
