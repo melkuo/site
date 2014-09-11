@@ -53,15 +53,7 @@ $(document).ready(function() {
 
 	/********** Sick Fadez While Scrolling **********/
 	$(window).scroll(function() {
-		// Fade background description label and abooutMe section in/out on scroll
-		// Parts from the bottom of home fade out early on
-		if ($(this).scrollTop() < 20) {
-			$('.bgDescLabel').removeClass('hide');
-		} else {
-			$('.bgDescLabel').addClass('hide');
-		}
-
-		// Other parts from home fade out
+		// Parts from home fade out
 		if ($(this).scrollTop() < 200) {
 			$('.aboutMe').removeClass('hide');
 			$('.logo.showOnLg').removeClass('logoColor2');

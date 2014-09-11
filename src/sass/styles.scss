@@ -444,25 +444,6 @@ nav	a {
 	}
 }
 
-// Description label for background image on homepage 
-.bgDescLabel {
-	@include fadeInDelay;
-	bottom: 15px;
-	color: $color2;
-	font-size: 0.444em;
-	left: 15px;
-	position: absolute;
-	z-index: 2;
-
-	@media #{$mq-sm} { font-size: 1em; }
-}
-
-.bgDescLabel .date {
-	font-size: 0.667em;
-	padding-top: 3px;
-	padding-bottom: 6px; 	
-}
-
 
 /***********************
 ******** Arrows ********
