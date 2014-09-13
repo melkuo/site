@@ -31,7 +31,7 @@ $mq-xl: "only screen and (min-width: 1824px)";
 /* Colour scheme */
 $color1: rgb(149,158,167);
 $color2: rgb(213,217,220);
-$color2semitrans: rgba(213,217,220,0.6);
+$color2semitrans: rgba(213,217,220,0.7);
 $color3: rgb(90,99,108); 
 $color3semitrans: rgba(90,99,108,0.7);
 $color4: rgb(127,158,189);
@@ -207,7 +207,7 @@ a {
 }
 
 h1 {
-	color: $color2;
+	color: $color3;
 	font-family: $heading-font-family;
 	font-size: 1.5em;
 	line-height: 1.3em;
@@ -310,14 +310,8 @@ nav	a {
 	}
 
 	@media #{$mq-lg} { 
-		color: $color2;
+		color: $color3;
 		font-size: 1em;
-	}
-}
-
-.textColor2 {
-	@media #{$mq-lg} {
-		color: $color3; 
 	}
 }
 
@@ -365,6 +359,7 @@ nav	a {
 	padding: 0;
 	position: fixed;
 	text-align: center;
+	transition: color 0.5s ease-in-out;
 	width: 100%;
 	z-index: 2;
 
@@ -375,7 +370,6 @@ nav	a {
 
 .logo.showOnLg.logoColor2 {
 	color: $color3semitrans;
-	transition: color 0.5s ease-in-out;
 }
 
 
@@ -388,15 +382,17 @@ nav	a {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background: url('../img/portfolio/sunset2.jpg') no-repeat center bottom scroll;
-	//height: 100%; // temp, will be overwritten by js
+	background: url('../img/portfolio/robot1.jpg') no-repeat -300px -100px scroll;
+	
+	@media #{$mq-sm} {
+		background-position: center top;
+	}
 
-	@media only screen and (min-width: 1635px) {
+	@media only screen and (min-width: 1510px) {
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-		background-position: center -200px;
 		background-attachment: fixed;
 	} 
 }
@@ -461,7 +457,7 @@ nav	a {
 }
 
 .navDown {
-	background: url("../img/ArrowLightGrey.png") no-repeat center center;
+	background: url("../img/ArrowDarkGrey.png") no-repeat center center;
 	height: 30px;
 	left: 26px;
 	position: absolute;

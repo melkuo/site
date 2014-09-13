@@ -24,17 +24,12 @@ var isMobile = {
 $('html').hide();
 
 $(document).ready(function() {
-	/********** Media Queries **********/
-	var maxMobile = 768;
-
-	/********** Variables ***********/
-	var $homeHeight = $(window).height()
 
 	// Show html once page is loaded
 	$('html').show();
 
 	// Background image to fit whole page
-	$('#home').css('height', $homeHeight);
+	$('#home').css('height', $(window).height());
 
 	// Toggle Menu
 	$('.toggleMenu').click(function() {
@@ -53,6 +48,8 @@ $(document).ready(function() {
 
 	/********** Sick Fadez While Scrolling **********/
 	$(window).scroll(function() {
+		var homeHeight = $(window).height();
+		
 		// Parts from home fade out
 		if ($(this).scrollTop() < 200) {
 			$('.aboutMe').removeClass('hide');
@@ -63,7 +60,7 @@ $(document).ready(function() {
 		}
 
 		// Instructions for portfolio fade in, down nav arrow fades out, nav changes colour
-		if ($(this).scrollTop() < ($homeHeight - 450)) {
+		if ($(this).scrollTop() < (homeHeight - 450)) {
 			$('.instructions').addClass('hide').removeClass('show');
 			$('.navDown').removeClass('hide');
 			$('nav a').removeClass('textColor2');
@@ -74,7 +71,7 @@ $(document).ready(function() {
 		}
 
 		// Up nav arrow fades in
-		if ($(this).scrollTop() < ($homeHeight + 50)) {
+		if ($(this).scrollTop() < (homeHeight + 50)) {
 			$('.navUp').addClass('hide');
 		} else {
 			$('.navUp').removeClass('hide');
@@ -92,11 +89,11 @@ $(document).ready(function() {
 		// bgobj.data('speed') refers to the data-speed you assigned in the html
 		// yPos = how much we scrolled up divided by data-speed. It's negative because we're going opposite direction of the user's scroll
 		// e.g. if user scrolls 50px down, background scrolls 5px up
-		if ($(window).width() > 1635) {
-			var yPos = -200 - ($window.scrollTop() / $bgobj.data('speed'));
-		} else {
+		//if ($(window).width() > 1635) {
+		//	var yPos = -200 - ($window.scrollTop() / $bgobj.data('speed'));
+		//} else {
 			var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-		}
+		//}
 		
 		// Put together our final background position
 		// 50% as its xPosition to keep horizontal position static and center
