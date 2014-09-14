@@ -219,6 +219,8 @@ h1 {
 .hide {
 	@include fadeOut;
 	opacity: 0!important;
+
+	a { cursor: default; } // faking it
 }
 
 .show {
@@ -352,7 +354,7 @@ nav	a {
 	@media #{$mq-md} { font-size: 3.375em; }
 }
 
-.logo.showOnLg {
+.showOnLg .logo {
 	@include fadeInDelay;
 	bottom: 0;
 	color: $color2semitrans;
@@ -369,7 +371,7 @@ nav	a {
 	}
 }
 
-.logo.showOnLg.logoColor2 {
+.showOnLg .logo.logoColor2 {
 	color: $color3semitrans;
 }
 

@@ -53,10 +53,10 @@ $(document).ready(function() {
 		// Parts from home fade out
 		if ($(this).scrollTop() < 200) {
 			$('.aboutMe').removeClass('hide');
-			$('.logo.showOnLg').removeClass('logoColor2');
+			$('.showOnLg .logo').removeClass('logoColor2');
 		} else {
 			$('.aboutMe').addClass('hide');
-			$('.logo.showOnLg').addClass('logoColor2');
+			$('.showOnLg .logo').addClass('logoColor2');
 		}
 
 		// Instructions for portfolio fade in, down nav arrow fades out, nav changes colour
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 
 	/********** Fit Text **********/
-	$('.logo.showOnLg').fitText(1.1);
+	$('.showOnLg .logo').fitText(1.1);
 
 
 	/********** Parallex scroll **********/
