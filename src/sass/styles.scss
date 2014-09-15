@@ -266,7 +266,7 @@ nav {
 	@media #{$mq-lg} {
 		background-color: transparent;
 		top: 40%;
-		right: 0;
+		right: -15px;
 		width: auto;
 	}
 }
@@ -453,7 +453,7 @@ nav	a {
 	background: url("../img/ArrowDarkGrey.png") no-repeat center center;
 	bottom: 70px;
 	height: 30px;
-	left: 26px;
+	left: 84px; //50% of <a> - 25px
 	position: absolute;
 	transition: opacity 0.5s ease-in-out;
 	width: 30px;
@@ -462,7 +462,7 @@ nav	a {
 .navDown {
 	background: url("../img/ArrowDarkGrey.png") no-repeat center center;
 	height: 30px;
-	left: 26px;
+	left: 84px;
 	position: absolute;
 	top: 70px;
 	transition: opacity 0.5s ease-in-out;

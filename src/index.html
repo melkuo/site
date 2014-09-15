@@ -46,8 +46,8 @@
 		<ul>
 			<li class="showOnLg navUp hide"><a href="#portfolio"></a></li>
 			<li class="logo hideOnLg"><a href="#home">Melody Kuo</a></li>
-			<li class="mobileNav"><a href="Resume-Spring2014.pdf" target="_blank">Resumé</a></li>
-			<li class="mobileNav"><a href="mailto:melody@melodykuo.com">Email</a></li>
+			<li class="mobileNav"><a href="melodykuo.pdf" target="_blank">Resumé</a></li>
+			<li class="mobileNav"><a href="mailto:me@melodykuo.com">me@melodykuo.com</a></li>
 			<li class="showOnLg navDown"><a href="#portfolio"></a></li>
 		</ul>
 	</nav>
@@ -56,8 +56,8 @@
 		<div class="aboutMe">
 			<h1>Hello, my name is <span class="noWrap">Melody Kuo</span></h1>
 			<p>I'm a 2nd year Systems Design Engineering student at the <span class="noWrap">University of Waterloo.</span></p>
-			<p>I'm super interested web design and development. I like being creative and making pretty things, but I also enjoy the technical challenges that come with the field. But having said that, I'm still searching for my little niche in the world, so I'm always trying to learn new things and dive into different fields.</p>
-			<p>I built this site to put up some of my work, but really it's a place for me to experiment with cool things. So <span class="noWrap">check 'er out.</span></p>
+			<p>I'm really interested web design and development. I like being creative and making pretty things, but I also enjoy the technical challenges that come with the field. But, having said that, I'm still searching for my little niche in the world, so I'm always open to learning new things and love diving into different fields.</p>
+			<p>I originally built this site to put up some of my work, but it's kinda become a place for me to experiment with cool things I've learnt. <span class="noWrap">So check 'er out.</span></p>
 		</div>
 	</section>
 	
@@ -81,14 +81,14 @@
 		
 		<div id="links">
 			<div>
-				<a href="img/portfolio/Front Page - New.jpg" title="TTC Redesign" data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class.">
-					<img src="img/portfolio/Front Page - New.jpg" class="thumb">
+				<a href="img/portfolio/ttc-new.jpg" title="TTC Redesign" data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class.">
+					<img src="img/portfolio/ttc-new.jpg" class="thumb">
 				</a>
-				<a href="img/portfolio/Front Page - New with Comments.png" title="TTC Redesign" data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class. Here you can see the recommendations made.">
-					<img src="img/portfolio/Front Page - New with Comments.png" class="thumb">
+				<a href="img/portfolio/ttc-new-comments.png" title="TTC Redesign" data-description="June 2013. Redesigned TTC's (Toronto Transit Commission) website for a school project using design methodologies learned in class. Here you can see the recommendations made.">
+					<img src="img/portfolio/ttc-new-comments.png" class="thumb">
 				</a>
-				<a href="img/portfolio/Front Page - Current.jpg" title="TTC Redesign" data-description="June 2013. Current website for reference.">
-					<img src="img/portfolio/Front Page - Current.jpg" class="thumb">
+				<a href="img/portfolio/ttc-current.jpg" title="TTC Redesign" data-description="June 2013. Current website for reference.">
+					<img src="img/portfolio/ttc-current.jpg" class="thumb">
 				</a>
 			</div>
 			<div>			
@@ -164,17 +164,7 @@
 	<script src="js/jquery-1.11.1.min.js"></script>
 
 	<!-- Image gallery script -->
-	<script src="js/blueimp-gallery.min.js"></script>
-	<script>
-	document.getElementById('links').onclick = function (event) {
-	    event = event || window.event;
-	    var target = event.target || event.srcElement,
-	        link = target.src ? target.parentNode : target,
-	        options = {index: link, event: event},
-	        links = this.getElementsByTagName('a');
-	    blueimp.Gallery(links, options);
-	};
-	</script>
+	<script src="js/jquery.blueimp-gallery.min.js"></script>
 	<script src="js/descriptionlabel.js"></script>
 	
 	<!-- Fit Text -->
