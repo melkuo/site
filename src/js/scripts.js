@@ -45,42 +45,56 @@ $(document).ready(function() {
 		return false;
 	});
 
-
 	/********** Sick Fadez While Scrolling **********/
+	var lastScroll = 0;
+
 	$(window).scroll(function() {
 		var homeHeight = $(window).height();
-		
+		var currentScroll = $(this).scrollTop();
+
 		// Parts from home fade out
-		if ($(this).scrollTop() < 200) {
+		if (currentScroll < 200) {
+			$('.showOnLg.logo').removeClass('logoColor2');
 			$('.aboutMe').removeClass('hide');
-			$('.showOnLg .logo').removeClass('logoColor2');
 		} else {
+			$('.showOnLg.logo').addClass('logoColor2');
 			$('.aboutMe').addClass('hide');
-			$('.showOnLg .logo').addClass('logoColor2');
 		}
 
 		// Instructions for portfolio fade in, down nav arrow fades out, nav changes colour
-		if ($(this).scrollTop() < (homeHeight - 450)) {
+		if (currentScroll < (homeHeight - 450)) {		
 			$('.instructions').addClass('hide').removeClass('show');
 			$('.navDown').removeClass('hide');
-			$('nav a').removeClass('textColor2');
 		} else {
 			$('.instructions').addClass('show').removeClass('hide');
 			$('.navDown').addClass('hide');
-			$('nav a').addClass('textColor2');
 		}
 
 		// Up nav arrow fades in
-		if ($(this).scrollTop() < (homeHeight + 50)) {
+		if (currentScroll < (homeHeight + 50)) {
 			$('.navUp').addClass('hide');
 		} else {
 			$('.navUp').removeClass('hide');
 		}
+
+		// Nav nudges
+		if (currentScroll > lastScroll) { // scroll down
+			$('.showOnLg.logo').addClass('moveLogoUp').addClass('logoColor2');
+		} else {
+			$('.showOnLg.logo').removeClass('moveLogoUp').removeClass('logoColor2');
+		}
+
+		lastScroll = currentScroll;
+	});
+
+	// nudge nav up if navUp arrow is clicked
+	$('.navUp a').click(function() { 
+		$('.showOnLg.logo').addClass('moveLogoUp');
 	});
 
 
 	/********** Fit Text **********/
-	$('.showOnLg .logo').fitText(1.1);
+	$('.showOnLg.logo').fitText(4);
 
 
 	/********** Parallex scroll **********/
