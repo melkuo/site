@@ -20,21 +20,22 @@ var isMobile = {
     }
 };
 
-// Hide everything until page is loaded
-$('html').hide();
-
 $(document).ready(function() {
 
 	// Show html once page is loaded
-	$('html').show();
+	$('html').removeClass('hide');
 
 	// Background image to fit whole page
 	$('#home').css('height', $(window).height());
 
+	if ($('.aboutMe').height() > $('#home').height()) {
+		$("#home").css('height', ($('.aboutMe').outerHeight() + $('nav').outerHeight())); // temp fix for mobile landscape
+	}
+
 	// Toggle Menu
 	$('.toggleMenu').click(function() {
 		$('.mobileNav').toggleClass('mobileNavOpen');
-		
+		$(this).toggleClass('toggleMenuOpen');
 	});	
 
 	/********** Smooth Scrolling **********/

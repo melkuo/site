@@ -23,6 +23,7 @@ $base-font-size: 16px;
 $heading-font-family: 'Chunk', 'Open Sans', sans-serif;
 
 /* For media queries */
+$mq-mobileBreak: "only screen and (min-width: 538px)";
 $mq-sm: "only screen and (min-width: 480px)";
 $mq-md: "only screen and (min-width: 768px)"; 
 $mq-lg: "only screen and (min-width: 1024px)"; 
@@ -286,7 +287,7 @@ nav	ul li {
 	line-height: 0.444em;
 	padding: 10px;
 
-	@media #{$mq-sm} { 
+	@media #{$mq-mobileBreak} { 
 		border: none;
 		display: inline;
 		float: left;
@@ -313,7 +314,7 @@ nav	a {
 	font-size: 0.667em;
 	line-height: 0.444em;
 
-	@media #{$mq-sm} {
+	@media #{$mq-mobileBreak} {
 		display: inline-block;
 		font-size: 1em;
 		line-height: 1em;
@@ -327,11 +328,21 @@ nav	a {
 }
 
 .toggleMenu {
+	display: block;
 	float: right;
 	height: 100%;
 	margin: 10px 15px 0 0;
 
 	&:hover { opacity: 1; }
+
+	@media #{$mq-mobileBreak} {
+		display: none;
+	}
+}
+
+.toggleMenuOpen img {
+	@include transform(-90deg);
+	transition: transform 0.3s ease-in-out;
 }
 
 .mobileNav {
@@ -342,7 +353,7 @@ nav	a {
 	padding-top: 0;
 	padding-bottom: 0;
 
-	@media #{$mq-sm} {
+	@media #{$mq-mobileBreak} {
 		opacity: 1;
 		height: auto;
 		padding: 10px;
@@ -361,6 +372,8 @@ nav	a {
 	color: $color3semitrans;
 	font-family: $heading-font-family;
 	font-size: 2.25em;
+	transition-property: none; // resetting <a> transition all
+	transition: color 0.5s ease-in-out;
 
 	&:hover { opacity: 1; }
 	
@@ -373,7 +386,6 @@ nav	a {
 	position: fixed;
 	text-align: center;	
 	top: 3.5%;
-	transition: color 0.5s ease-in-out;
 	transition: top 0.5s ease-in-out;
 	width: 100%;
 	z-index: 3;
@@ -517,10 +529,6 @@ nav	a {
 		max-width: 60%;
 		padding-top: 120px;
 	}
-}
-
-#portfolio a:hover {
-	background-color: transparent;
 }
 
 .instructions {
