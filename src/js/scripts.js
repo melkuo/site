@@ -25,18 +25,16 @@ $(document).ready(function() {
 	// Show html once page is loaded
 	$('html').removeClass('hide');
 
-	// Background image to fit whole page
+	/********** Background Image to Fit Whole Page **********/
 	$('#home').css('height', $(window).height());
 
-	if ($('.aboutMe').height() > $('#home').height()) {
-		$("#home").css('height', ($('.aboutMe').outerHeight() + $('nav').outerHeight())); // temp fix for mobile landscape
-	}
 
-	// Toggle Menu
+	/********** Toggle Menu for Mobile Nav **********/
 	$('.toggleMenu').click(function() {
 		$('.mobileNav').toggleClass('mobileNavOpen');
 		$(this).toggleClass('toggleMenuOpen');
 	});	
+
 
 	/********** Smooth Scrolling **********/
 	$('a').click(function() {
@@ -45,6 +43,7 @@ $(document).ready(function() {
 		}, 900);
 		return false;
 	});
+
 
 	/********** Sick Fadez While Scrolling **********/
 	var lastScroll = 0;

@@ -32,7 +32,7 @@ $mq-xl: "only screen and (min-width: 1824px)";
 /* Colour scheme */
 $color1: rgb(149,158,167);
 $color2: rgb(213,217,220);
-$color2semitrans: rgba(213,217,220,0.8);
+$color2semitrans: rgba(227,227,232,0.8);
 $color3: rgb(90,99,108); 
 $color3semitrans: rgba(90,99,108,0.7);
 $color4: rgb(127,158,189);
@@ -312,7 +312,7 @@ nav	ul li {
 nav	a {	
 	color: $color3;	
 	font-size: 0.667em;
-	line-height: 0.444em;
+	line-height: 0.667em;
 
 	@media #{$mq-mobileBreak} {
 		display: inline-block;
