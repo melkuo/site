@@ -58,6 +58,11 @@ module.exports = function(grunt) {
 
     jade: {
       temp: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
         files: [{
           expand: true,
           cwd: '<%= paths.src %>/views',
@@ -67,6 +72,11 @@ module.exports = function(grunt) {
         }]
       },
       dist: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
         files: [{
           expand: true,
           cwd: '<%= paths.src %>/views',
