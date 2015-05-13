@@ -23,7 +23,6 @@ $base-font-size: 16px;
 $heading-font-family: 'Chunk', 'Open Sans', sans-serif;
 
 /* For media queries */
-$mq-mobileBreak: "only screen and (min-width: 538px)";
 $mq-sm: "only screen and (min-width: 480px)";
 $mq-md: "only screen and (min-width: 768px)";
 $mq-lg: "only screen and (min-width: 1024px)";
@@ -196,13 +195,12 @@ html {
   width: 100%;
 
 	::selection {
-		background: $colorOpp;
-		color: $color5;
-	}
+    color: $color5;
+  }
+
 	::-moz-selection {
-		background: $colorOpp;
-		color: $color5;
-	}
+    color: $color5;
+  }
 }
 
 body {
@@ -251,22 +249,22 @@ p {
 	opacity: 1;
 }
 
-.hideOnMobile {
+.hide-b-sm {
 	display: none;
 	@media #{$mq-sm} { display: initial; }
 }
 
-.hideOnDesktop {
+.hide-a-sm {
 	display: initial;
 	@media #{$mq-sm} { display: none; }
 }
 
-.showOnLg {
+.hide-b-lg {
 	display: none;
 	@media #{$mq-lg} { display: initial; }
 }
 
-.hideOnLg {
+.hide-a-lg {
 	display: initial;
 	@media #{$mq-lg} { display: none; }
 }
@@ -282,31 +280,57 @@ p {
 nav {
   background-color: $color4;
   color: white;
-  height: 100%;
-  width: 2em;
+  transition: width 0.5s; /* improve */
+  width: 6em;
+
+  @media #{$mq-lg} { height: 100%; }
 }
 
-nav.expand { width: 50%; }
+nav.expand {
+  width: 100%;
+
+  @media #{$mq-lg} { width: 50%; }
+}
+
+nav:not(.expand) {
+  .about,
+  .link-desc { display: none; }
+
+  h1,
+  li { text-align: center; }
+}
 
 nav .container {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  margin: 0 15%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
 
   * { color: white; }
 
-  > * {
-    margin: 1em 0;
-    width: 100%;
+  li {
+    display: inline-block;
+    margin-left: 1em;
+
+    &:first-child { margin-left: 0; }
   }
 
-  li { padding: 0.5em 0; }
-}
+  @media #{$mq-lg} {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 0 15%;
 
+    > * {
+      margin: 1em 0;
+      width: 100%;
+    }
 
-section {
-  width: 50%;
+    li {
+      display: list-item;
+      margin: 0;
+      padding: 0.5em 0;
+    }
+  }
 }
