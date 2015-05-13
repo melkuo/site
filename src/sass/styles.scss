@@ -192,6 +192,7 @@ $colorOpp: rgb(255,255,0);
 
 html {
   height: 100%;
+  min-width: 320px;
   width: 100%;
 
 	::selection {
@@ -209,6 +210,8 @@ body {
   height: 100%;
   line-height: normal;
   width: 100%;
+
+  @media #{$mq-lg} { display: flex; }
 }
 
 a {
@@ -273,6 +276,10 @@ p {
 	white-space: nowrap;
 }
 
+.container {
+  padding: 1em;
+}
+
 /***********************
 ********* Nav **********
 ***********************/
@@ -283,7 +290,11 @@ nav {
   transition: width 0.5s; /* improve */
   width: 6em;
 
-  @media #{$mq-lg} { height: 100%; }
+  @media #{$mq-lg} {
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
 }
 
 nav.expand {
@@ -305,7 +316,6 @@ nav .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em;
 
   * { color: white; }
 
@@ -318,7 +328,6 @@ nav .container {
 
   @media #{$mq-lg} {
     flex-direction: column;
-    height: 100%;
     justify-content: center;
     margin: 0 15%;
 
@@ -334,3 +343,45 @@ nav .container {
     }
   }
 }
+
+/***********************
+****** Portfolio *******
+***********************/
+
+.portfolio {
+  padding: 2em;
+
+  @media #{$mq-lg} {
+    overflow: auto;
+    padding: 3em;
+    width: 50%;
+  }
+}
+
+.thumb {
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 200px;
+  margin-bottom: 1em;
+  min-width: 200px;
+  transition: all 0.25s;
+  width: 100%;
+
+  @media #{$mq-sm} {
+    margin: 0.5em;
+    width: 46%;
+  }
+
+  @media #{$mq-md} { height: 250px; }
+}
+
+/***********************
+****** Thumbnails ******
+***********************/
+
+.thumb1 { background-image: url("../img/portfolio/ttc-new.jpg"); }
+.thumb2 { background-image: url("../img/portfolio/robot1.jpg"); }
+.thumb3 { background-image: url("../img/portfolio/toskyline1.jpg"); }
+.thumb4 { background-image: url("../img/portfolio/thread1.jpg"); }
+.thumb5 { background-image: url("../img/portfolio/red2.jpg"); }
