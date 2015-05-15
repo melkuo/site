@@ -25,7 +25,7 @@ $heading-font-family: 'Chunk', 'Open Sans', sans-serif;
 $mq-sm: "only screen and (min-width: 480px)";
 $mq-md: "only screen and (min-width: 768px)";
 $mq-lg: "only screen and (min-width: 1024px)";
-$mq-xl: "only screen and (min-width: 1524px)";
+$mq-xl: "only screen and (min-width: 1400px)";
 
 /* Colour scheme */
 $color1: rgb(149,158,167);
@@ -48,11 +48,6 @@ $colorOpp: rgb(255,255,0);
         -ms-animation: fadein 0.5s;
          -o-animation: fadein 0.5s;
             animation: fadein 0.5s;
-	-webkit-transition: opacity 0.5s ease-in;
-       -moz-transition: opacity 0.5s ease-in;
-        -ms-transition: opacity 0.5s ease-in;
-         -o-transition: opacity 0.5s ease-in;
-            transition: opacity 0.5s ease-in;
 }
 
 @mixin fadeOut {
@@ -105,11 +100,7 @@ $colorOpp: rgb(255,255,0);
 ***********************/
 
 html {
-  -webkit-animation: fadein 0.5s;
-  -moz-animation: fadein 0.5s;
-  -ms-animation: fadein 0.5s;
-  -o-animation: fadein 0.5s;
-  animation: fadein 0.5s;
+  @include fadeIn;
   height: 100%;
   min-width: 320px;
   width: 100%;
@@ -169,14 +160,22 @@ section {
   flex: 1;
 }
 
-.hide {
+.hide,
+.hide.hide-b-sm,
+.hide.hide-b-md,
+.hide.hide-b-lg,
+.hide.hide-b-xl {
+  display: none;
+}
+
+.hide-opacity {
 	@include fadeOut;
 	opacity: 0;
 
 	a { cursor: default; } // faking it
 }
 
-.show {
+.show-opacity {
 	@include fadeIn;
 	opacity: 1;
 }
@@ -271,8 +270,7 @@ nav .container {
 
     li {
       display: list-item;
-      margin: 0;
-      padding: 0.5em 0;
+      margin: 0 0 1em;
     }
   }
 }
@@ -291,6 +289,7 @@ nav .container {
 }
 
 .thumb {
+  @include fadeIn;
   background-size: cover;
   background-position: center;
   display: inline-block;
@@ -316,12 +315,12 @@ nav .container {
 ****** Thumbnails ******
 ***********************/
 
-.thumb1 { background-image: url("../img/portfolio/ttc-new.jpg"); }
-.thumb2 { background-image: url("../img/portfolio/robot1.jpg"); }
-.thumb3 { background-image: url("../img/portfolio/toskyline1.jpg"); }
-.thumb4 { background-image: url("../img/portfolio/thread1.jpg"); }
-.thumb5 { background-image: url("../img/portfolio/red2.jpg"); }
-.thumb6 { background-image: url("../img/portfolio/tabbit1.jpg"); }
+.thumb1 { background-image: url("../img/portfolio/red2.jpg"); }
+.thumb2 { background-image: url("../img/portfolio/thread1.jpg"); }
+.thumb3 { background-image: url("../img/portfolio/robot1.jpg"); }
+.thumb4 { background-image: url("../img/portfolio/ttc-new.jpg"); }
+.thumb5 { background-image: url("../img/portfolio/tabbit1.jpg"); }
+.thumb6 { background-image: url("../img/portfolio/connect-welcome.jpg"); }
 
 /***********************
 ******* Projects *******
