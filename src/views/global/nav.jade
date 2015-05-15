@@ -1,4 +1,4 @@
-nav(class = expandNav ? "expand" : undefined)
+nav(class= expandNav ? "expand" : undefined)
   .container
     h1
       a(href="index.html") M
@@ -30,3 +30,5 @@ nav(class = expandNav ? "expand" : undefined)
         a(href="mailto:me@melodykuo.com")
           i.fa.fa-fw.fa-envelope-o
           span.link-desc.hide-b-sm  me@melodykuo.com
+    a.hide-b-lg(href="index.html" class= backBtn ? undefined : "hide")
+      i.fa.fa-fw.fa-long-arrow-left

@@ -1,0 +1,22 @@
+-var backBtn = true;
+
+include ./head.jade
+
+body
+  include ./nav.jade
+
+  section.project
+    .container
+      .main
+        block main
+
+      .details
+        block title
+          .title No Title
+        block subTitle
+          .sub-title
+        block description
+          .description
+        block links
+          a.link(href="")
+            i.fa.fa-external-link

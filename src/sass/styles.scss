@@ -26,7 +26,7 @@ $heading-font-family: 'Chunk', 'Open Sans', sans-serif;
 $mq-sm: "only screen and (min-width: 480px)";
 $mq-md: "only screen and (min-width: 768px)";
 $mq-lg: "only screen and (min-width: 1024px)";
-$mq-xl: "only screen and (min-width: 1824px)";
+$mq-xl: "only screen and (min-width: 1524px)";
 
 /* Colour scheme */
 $color1: rgb(149,158,167);
@@ -196,11 +196,17 @@ html {
   width: 100%;
 
 	::selection {
-    color: $color5;
+    background-color: $color4;
+    color: white;
   }
 
 	::-moz-selection {
-    color: $color5;
+    background-color: $color4;
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -240,6 +246,10 @@ p {
   margin: 1em 0;
 }
 
+section {
+  flex: 1;
+}
+
 .hide {
 	@include fadeOut;
 	opacity: 0;
@@ -277,6 +287,7 @@ p {
 }
 
 .container {
+  box-sizing: border-box;
   padding: 1em;
 }
 
@@ -288,12 +299,13 @@ nav {
   background-color: $color4;
   color: white;
   transition: width 0.5s; /* improve */
-  width: 6em;
+  width: 100%;
 
   @media #{$mq-lg} {
     align-items: center;
     display: flex;
     height: 100%;
+    width: 6em;
   }
 }
 
@@ -307,8 +319,7 @@ nav:not(.expand) {
   .about,
   .link-desc { display: none; }
 
-  h1,
-  li { text-align: center; }
+  > * { text-align: center; }
 }
 
 nav .container {
@@ -332,7 +343,7 @@ nav .container {
     margin: 0 15%;
 
     > * {
-      margin: 1em 0;
+      margin: 1rem 0;
       width: 100%;
     }
 
@@ -354,7 +365,6 @@ nav .container {
   @media #{$mq-lg} {
     overflow: auto;
     padding: 3em;
-    width: 50%;
   }
 }
 
@@ -374,6 +384,10 @@ nav .container {
   }
 
   @media #{$mq-md} { height: 250px; }
+
+  @media #{$mq-lg} { width: 100%; }
+
+  @media #{$mq-xl} { width: 46%; }
 }
 
 /***********************
@@ -385,3 +399,74 @@ nav .container {
 .thumb3 { background-image: url("../img/portfolio/toskyline1.jpg"); }
 .thumb4 { background-image: url("../img/portfolio/thread1.jpg"); }
 .thumb5 { background-image: url("../img/portfolio/red2.jpg"); }
+.thumb6 { background-image: url("../img/portfolio/tabbit1.jpg"); }
+
+/***********************
+******* Projects *******
+***********************/
+
+.project .container {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  position: absolute;
+
+  @media #{$mq-lg} {
+    flex-direction: row;
+  }
+}
+
+.project .main {
+  flex: 1;
+  padding: 1em;
+
+  @media #{$mq-lg} {
+    overflow: auto;
+  }
+}
+
+.project .main {
+  img {
+    margin: 1em 0;
+    width: 100%;
+  }
+}
+
+.project .details {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  line-height: 1.5;
+  min-width: 200px;
+  padding: 1em;
+  width: 100%;
+
+  @media #{$mq-lg} {
+    padding: 3em 2em;
+    width: 25%;
+  }
+}
+
+.project .details {
+  > * {
+    color: $color3;
+    display: block;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .sub-title {
+    font-size: 0.75em;
+  }
+
+  .description {
+    margin: 1em 0;
+  }
+
+  .link {
+    margin-bottom: 0.25em;
+
+    i { margin-right: 0.5em; }
+  }
+}
