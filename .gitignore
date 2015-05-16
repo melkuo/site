@@ -2,5 +2,5 @@
 node_modules
 temp
 dist
-config.rb
+src/melodykuo.pdf
 src/img/portfolio
