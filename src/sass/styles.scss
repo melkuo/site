@@ -393,7 +393,6 @@ nav .container {
 
     img:first-of-type {
       margin-right: 0.25em;
-
       @media #{$mq-md} { margin-right: 0.5em; }
     }
 
@@ -468,9 +467,8 @@ nav .container {
 
     @media #{$mq-lg} {
       bottom: 0;
-      left: 0;
     }
   }
 
-  .link.back:not(.hide) ~ .link.next { left: 3em; }
+  .link.back:not(.hide) ~ .link.next { left: 4em; }
 }
