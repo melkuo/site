@@ -247,7 +247,6 @@ nav .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 600px;
   width: 100%;
 
   * { color: white; }
@@ -263,6 +262,7 @@ nav .container {
     flex-direction: column;
     justify-content: center;
     margin: 0 15%;
+    max-width: 600px;
 
     > * {
       margin: 1rem 0;
@@ -392,13 +392,19 @@ nav .container {
     }
 
     img:first-of-type {
-      margin-right: 0.5em;
+      margin-right: 0.25em;
+
+      @media #{$mq-md} { margin-right: 0.5em; }
     }
 
     .caption {
-      display: inline-block;
+      display: block;
       margin-left: 0;
       vertical-align: 1em; /* since no negative margins */
+
+      @media #{$mq-md} {
+        display: inline-block;
+      }
     }
 
     .caption:first-of-type:before {
@@ -407,7 +413,7 @@ nav .container {
 
     .caption:last-of-type:before {
       content: "Right: ";
-      margin-left: 0.5em;
+      @media #{$mq-md} { margin-left: 0.5em; }
     }
   }
 }
@@ -456,10 +462,15 @@ nav .container {
 .project .project-nav {
   .link.back,
   .link.next {
-    bottom: 0;
-    left: 0;
+    bottom: -1em;
+    left: 1em;
     position: absolute;
+
+    @media #{$mq-lg} {
+      bottom: 0;
+      left: 0;
+    }
   }
 
-  .link.next { left: 3em; }
+  .link.back:not(.hide) ~ .link.next { left: 3em; }
 }
