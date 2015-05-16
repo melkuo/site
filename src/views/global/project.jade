@@ -18,10 +18,10 @@ body
         block description
           .description
         block links
-          //- a.link(href="")
-          //-   i.fa.fa-external-link
-        block nav
-          //- a.link.back(href="")
-          //-   i.fa.fa-long-arrow-left
-          //- a.link.next(href="")
-          //-   i.fa.fa-long-arrow-right
+        .project-nav
+          a.link.back.hide(role="prev-proj")
+            i.fa.fa-long-arrow-left
+          a.link.next.hide(role="next-proj")
+            i.fa.fa-long-arrow-right
+
+  script(src="js/scripts.js")

@@ -422,9 +422,8 @@ nav .container {
   width: 100%;
 
   @media #{$mq-lg} {
-    max-width: 25rem;
     padding: 3em 2em;
-    width: auto;
+    width: 25rem;
   }
 }
 
@@ -452,13 +451,15 @@ nav .container {
 
     i { margin-right: 0.5em; }
   }
+}
 
+.project .project-nav {
   .link.back,
   .link.next {
     bottom: 0;
+    left: 0;
     position: absolute;
-    right: 0;
   }
 
-  .link.back { right: 3em; }
+  .link.next { left: 3em; }
 }
