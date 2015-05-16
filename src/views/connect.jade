@@ -1,0 +1,58 @@
+extends ./global/project.jade
+
+block main
+  p My most recent work term was at 
+    a(href="http://monstercat.com") Monstercat
+    | , an independent edm record label. Monstercat has a music streaming web app, 
+    a(href="http://connect.monstercat.com") Connect
+    | , which holds all the tracks that have been released through the label.
+  img.screenie(src="img/portfolio/connect-welcome-fold.jpg")
+  p.caption Connect's landing page.
+  p I worked primarily on the front end of the site, using my technical skills to add new features and functions or redesign pages.
+  img.screenie(src="img/portfolio/connect-catalog.jpg")
+  p.caption The catalog.
+  p I've touched every single page of the site in one way or another, both 
+    span.nowrap user-facing 
+    | and 
+    span.nowrap admin-only, 
+    | whether it's changing a component or completely redesigning the page.
+  p For example, there used to be two music players: a mini-player in the top header with a smaller set of player controls, like play/pause, next/previous song, and a full player, with additional options to seek and shuffle, that opened from the right of the page. We deemed two players redundant and unnecessary and decided to have one universal, 
+    span.nowrap non-collapsible 
+    | player at the bottom of the page.
+  img.screenie(src="img/portfolio/connect-player-playlist.jpg")
+  p.caption Music player with playlist opened.
+  p This worked really well for mobile too. (I also mobilized the entire site so that it worked and no longer looked broken on phones and tablets.)
+  img.screenie.w50(src="img/portfolio/connect-catalog-mobile.png")
+  p.caption Music player and catalog on mobile.
+  p I've also completely changed pages like the Dashboard, where users can see our most recent releases. I created a blog functionality, so that we can keep users updated about changes and new features to the site.
+  img.screenie(src="img/portfolio/connect-dashboard.jpg")
+  p I had the opportunity to perform a UX audit of the site, using design principles, conducting user interviews and creating Hierarchical Task Analyses (HTA) to analyze the site for user experience issues. I made recommendations from this analysis then implemented those changes. For example, the music player update came from this audit.
+  p The landing page used to look similar to the current one, except it was a single page that filled the screen with two buttons that took you to separate sub-pages for our different subscription services. From user interviews and HTA's, we realized this was a lot of work users. To explore their options, they had to click one sub-page to find out more about it, and then have to navigate back to the main page before they could click the other.
+  .dual
+    img.screenie(src="img/portfolio/connect-ux-gist.jpg")
+    img.screenie(src="img/portfolio/connect-welcome-hta.jpg")
+    p.caption Snippet of recommendations.
+    p.caption HTA of sign-up process.
+  p We added a brief description of each subscription type to the main page, with a button to "Learn More" that takes the user to the more detailed sub-page. We also added a sign up form at the bottom of the page so that users could sign up right from this page.
+  img.screenie(src="img/portfolio/connect-welcome.jpg")
+  p.caption Redesigned landing page. Some parts were cropped out for brevity. For full landing page, visit 
+    a(href="http://connect.monstercat.com") Connect
+    | .
+
+block title
+  .title Monstercat Connect
+
+block subTitle
+  .sub-title January&ndash;April 2015
+  .sub-title Jade, CSS, Less, CoffeeScript, Backbone, Express, Node, MongoDB
+
+block description
+  .description Monstercat's music streaming web application.
+
+block links
+  a.link(href="http://connect.monstercat.com")
+    i.fa.fa-fw.fa-external-link
+    span Link to Connect.
+  a.link(href="http://www.monstercat.com")
+    i.fa.fa-fw.fa-external-link
+    span About Monstercat.

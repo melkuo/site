@@ -132,7 +132,7 @@ body {
 
 a {
 	@include transitionAll;
-	color: $color2;
+	color: $color4;
 	text-decoration: none;
 
 	&:hover { opacity: 0.5; }
@@ -317,11 +317,13 @@ nav .container {
 ***********************/
 
 .thumb1 { background-image: url("../img/portfolio/red2.jpg"); }
-.thumb2 { background-image: url("../img/portfolio/thread1.jpg"); }
-.thumb3 { background-image: url("../img/portfolio/robot1.jpg"); }
-.thumb4 { background-image: url("../img/portfolio/ttc-new.jpg"); }
-.thumb5 { background-image: url("../img/portfolio/tabbit1.jpg"); }
-.thumb6 { background-image: url("../img/portfolio/connect-welcome.jpg"); }
+.thumb2 { background-image: url("../img/portfolio/toskyline2.jpg"); }
+.thumb3 { background-image: url("../img/portfolio/thread1.jpg"); }
+.thumb4 { background-image: url("../img/portfolio/robot1.jpg"); }
+.thumb5 { background-image: url("../img/portfolio/ttc-new.jpg"); }
+.thumb6 { background-image: url("../img/portfolio/contrave-fold.jpg"); }
+.thumb7 { background-image: url("../img/portfolio/tabbit1.jpg"); }
+.thumb8 { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
 
 /***********************
 ******* Projects *******
@@ -352,12 +354,61 @@ nav .container {
     color: $color3;
     line-height: 1.5;
     max-width: 700px;
-    margin: 1em 0 1em 2em;
+    margin: 1rem 0 1rem 2rem;
   }
 
   img {
+    display: block;
     margin: 1em 0;
     width: 100%;
+  }
+
+  img.screenie {
+    border: 1px solid $color2;
+    box-shadow: 5px 5px $color2semitrans;
+  }
+
+  img.w50 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .caption {
+    font-size: 0.75em;
+    font-style: italic;
+    margin-top: -0.5em;
+  }
+
+  .caption:before { content: "Above: "; }
+
+  .dual {
+    img {
+      box-shadow: none;
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 49%;
+    }
+
+    img:first-of-type {
+      margin-right: 0.5em;
+    }
+
+    .caption {
+      display: inline-block;
+      margin-left: 0;
+      vertical-align: 1em; /* since no negative margins */
+    }
+
+    .caption:first-of-type:before {
+      content: "Left: ";
+    }
+
+    .caption:last-of-type:before {
+      content: "Right: ";
+      margin-left: 0.5em;
+    }
   }
 }
 
@@ -371,8 +422,9 @@ nav .container {
   width: 100%;
 
   @media #{$mq-lg} {
+    max-width: 25rem;
     padding: 3em 2em;
-    width: 25%;
+    width: auto;
   }
 }
 
@@ -388,6 +440,7 @@ nav .container {
 
   .sub-title {
     font-size: 0.75em;
+    margin: 0.25em 0;
   }
 
   .description {

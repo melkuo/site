@@ -1,17 +1,20 @@
 extends ./global/project.jade
 
 block main
-  img(src="img/portfolio/tabbit1.jpg")
-  img(src="img/portfolio/tabbit2.jpg")
+  img.screenie(src="img/portfolio/tabbit1.jpg")
+  p.caption From /r/EarthPorn.
+  img.screenie(src="img/portfolio/tabbit2.jpg")
+  p.caption From /r/FoodPorn.
 
 block title
   .title Tabbit
 
 block subTitle
-  .sub-title January 2015–Present
+  .sub-title January 2015&endash;Present
+  .sub-title HTML, CSS, JavaScript
 
 block description
-  .description A Chrome extension that takes the top image from a Reddit subreddit or multireddit and sets it as the background of the new tab page.
+  .description A Chrome extension that takes the top image from a Reddit subreddit or multireddit and sets it as the background of the new tab page, along with the time and date. 
 
 block links
   a.link(href="http://github.com/melodyk/Tabbit")
