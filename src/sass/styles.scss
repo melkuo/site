@@ -247,6 +247,7 @@ nav .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 600px;
   width: 100%;
 
   * { color: white; }
@@ -347,6 +348,13 @@ nav .container {
 }
 
 .project .main {
+  p {
+    color: $color3;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 1em 0 1em 2em;
+  }
+
   img {
     margin: 1em 0;
     width: 100%;
