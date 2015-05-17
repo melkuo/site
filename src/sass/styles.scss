@@ -353,8 +353,12 @@ nav .container {
   p {
     color: $color3;
     line-height: 1.5;
-    max-width: 700px;
-    margin: 1rem 0 1rem 2rem;
+    margin: 1rem 0;
+
+    @media #{$mq-lg} {
+      margin: 1rem 0 1rem 2rem;
+      max-width: 700px;
+    }
   }
 
   img {
@@ -435,7 +439,6 @@ nav .container {
 .project .details {
   > * {
     color: $color3;
-    display: block;
   }
 
   .title {
@@ -459,14 +462,24 @@ nav .container {
 }
 
 .project .project-nav {
+  padding-top: 1em;
+  text-align: center;
+
+  @media #{$mq-lg} {
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+.project .project-nav {
   .link.back,
   .link.next {
-    bottom: -1em;
-    left: 1em;
-    position: absolute;
+    margin: 0 0.5em;;
 
     @media #{$mq-lg} {
       bottom: 0;
+      left: 1em;
+      position: absolute;
     }
   }
 
