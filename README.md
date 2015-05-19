@@ -1,4 +1,10 @@
 # [melodykuo.com](http://melodykuo.com)
-Hello! Welcome to my code! 
+I built this site using [Jade](http://jade-lang.com), [Sass](http://sass-lang.com/) and JavaScript. I also use [Grunt](http://gruntjs.com/) for development.
 
-I built this site using [Sass](http://sass-lang.com/), [jQuery](http://jquery.com/) and plain old HTML. I incorporated [Grunt](http://gruntjs.com/) into my workflow to ease development and testing. 
+> grunt dev
+
+During development.
+
+> grunt build
+
+When finished.
