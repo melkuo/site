@@ -127,7 +127,10 @@ body {
   line-height: normal;
   width: 100%;
 
-  @media #{$mq-lg} { display: flex; }
+  @media #{$mq-lg} {
+    display: -webkit-flex;
+    display: flex;
+  }
 }
 
 a {
@@ -157,6 +160,7 @@ p {
 }
 
 section {
+  -webkit-flex: 1;
   flex: 1;
 }
 
@@ -221,6 +225,7 @@ nav {
 
   @media #{$mq-lg} {
     align-items: center;
+    display: -webkit-flex;
     display: flex;
     height: 100%;
     width: 6em;
@@ -243,9 +248,12 @@ nav:not(.expand) {
 }
 
 nav .container {
+  -webkit-align-items: center;
   align-items: center;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   width: 100%;
 
@@ -259,7 +267,9 @@ nav .container {
   }
 
   @media #{$mq-lg} {
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: center;
     justify-content: center;
     margin: 0 15%;
     max-width: 600px;
@@ -285,6 +295,7 @@ nav .container {
 
   @media #{$mq-lg} {
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 3em;
   }
 }
@@ -330,22 +341,27 @@ nav .container {
 ***********************/
 
 .project .container {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column-reverse;
   flex-direction: column-reverse;
   height: 100%;
   position: absolute;
 
   @media #{$mq-lg} {
+    -webkit-flex-direction: row;
     flex-direction: row;
   }
 }
 
 .project .main {
+  -webkit-flex: 1;
   flex: 1;
   padding: 1em;
 
   @media #{$mq-lg} {
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
