@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var order = ["connect", "tabbit", "contrave", "ttc", "robot", "thread", "skyline", "red"],
+  var order = ["connect", "tabbit", "contrave", "robot", "thread", "red"],
     prevEl = document.querySelector("[role='prev-proj']"),
     nextEl = document.querySelector("[role='next-proj']"),
     path = (/\/([^]*)\.html/).exec(window.location.pathname)[1],

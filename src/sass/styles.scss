@@ -488,7 +488,7 @@ nav .container {
 .project .project-nav {
   .link.back,
   .link.next {
-    margin: 0 0.5em;;
+    margin: 0 0.5em;
 
     @media #{$mq-lg} {
       bottom: 0;
@@ -497,5 +497,8 @@ nav .container {
     }
   }
 
-  .link.back:not(.hide) ~ .link.next { left: 4em; }
+  .link.back:after { content: 'Previous'; }
+  .link.next:before { content: 'Next'; }
+  .link.next i { margin-left: 0.5em; }
+  .link.back:not(.hide) ~ .link.next { left: 8em; }
 }
