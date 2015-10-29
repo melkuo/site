@@ -194,6 +194,16 @@ section {
 	@media #{$mq-sm} { display: none; }
 }
 
+.hide-b-md {
+  display: none;
+  @media #{$mq-md} { display: initial; }
+}
+
+.hide-a-md {
+  display: initial;
+  @media #{$mq-md} { display: none; }
+}
+
 .hide-b-lg {
 	display: none;
 	@media #{$mq-lg} { display: initial; }
