@@ -25,11 +25,5 @@ head
 
   script.
     var trackOutboundLink = function(url) {
-      console.log("1");
-       ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
-         function () {
-         console.log("worked?");
-         window.open(url,'_blank');
-         }
-       });
+      ga('send', 'event', 'outbound', 'click', url);
     }

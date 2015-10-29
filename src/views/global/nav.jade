@@ -18,19 +18,19 @@ nav(class= expandNav ? "expand" : undefined)
         span.nowrap I say that.
     ul
       li
-        a(href="melodykuo.pdf" target="_blank" onclick="trackOutboundLink(\'http://www.melodykuo.com/melodykuo.pdf\'); return false;")
+        a(href="melodykuo.pdf" target="_blank" onclick="trackOutboundLink(this.href);")
           i.fa.fa-fw.fa-file-text-o
           span.link-desc.hide-b-md  Resum&eacute;
       li
-        a(href="https://github.com/melkuo" onclick="trackOutboundLink(\'https://github.com/melkuo\'); return false;")
+        a(href="https://github.com/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
           i.fa.fa-fw.fa-github
           span.link-desc.hide-b-md  GitHub
       li
-        a(href="https://ca.linkedin.com/in/melkuo" target="_blank" onclick="trackOutboundLink(\'https://ca.linkedin.com/in/melkuo\'); return false;")
+        a(href="https://ca.linkedin.com/in/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
           i.fa.fa-fw.fa-linkedin
           span.link-desc.hide-b-md  LinkedIn
       li
-        a(href="https://instagram.com/melku0" target="_blank" onclick="trackOutboundLink(\'https://instagram.com/melku0\'); return false;")
+        a(href="https://instagram.com/melku0" target="_blank" onclick="trackOutboundLink(this.href);")
           i.fa.fa-fw.fa-instagram
           span.link-desc.hide-b-md  Instagram
       li
