@@ -22,3 +22,14 @@ head
 
     ga('create', 'UA-45141851-1', 'auto');
     ga('send', 'pageview');
+
+  script.
+    var trackOutboundLink = function(url) {
+      console.log("1");
+       ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+         function () {
+         console.log("worked?");
+         window.open(url,'_blank');
+         }
+       });
+    }
