@@ -1,7 +1,7 @@
 nav(class= expandNav ? "expand" : undefined)
   .container
-    h1
-      a(href="index.html") M
+    a(href="index.html" role="to-index").hide
+      i.fa.fa-fw.fa-lg.fa-home
     .about.hide-b-lg
       h1 Hello, my name is 
         span.nowrap Melody Kuo
@@ -19,21 +19,16 @@ nav(class= expandNav ? "expand" : undefined)
     ul
       li
         a(href="melodykuo.pdf" target="_blank" onclick="trackOutboundLink(this.href);")
-          i.fa.fa-fw.fa-file-text-o
-          span.link-desc.hide-b-md  Resum&eacute;
+          i.fa.fa-fw.fa-lg.fa-file-pdf-o
       li
         a(href="https://github.com/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
-          i.fa.fa-fw.fa-github
-          span.link-desc.hide-b-md  GitHub
+          i.fa.fa-fw.fa-lg.fa-github
       li
         a(href="https://ca.linkedin.com/in/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
-          i.fa.fa-fw.fa-linkedin
-          span.link-desc.hide-b-md  LinkedIn
+          i.fa.fa-fw.fa-lg.fa-linkedin
       li
         a(href="https://instagram.com/melku0" target="_blank" onclick="trackOutboundLink(this.href);")
-          i.fa.fa-fw.fa-instagram
-          span.link-desc.hide-b-md  Instagram
+          i.fa.fa-fw.fa-lg.fa-instagram
       li
         a(href="mailto:me@melodykuo.com")
-          i.fa.fa-fw.fa-envelope-o
-          span.link-desc.hide-b-md  Email
+          i.fa.fa-fw.fa-lg.fa-envelope-o

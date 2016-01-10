@@ -5,9 +5,6 @@ body
 
   section.project
     .container
-      .main
-        block main
-
       .details
         block title
           .title No Title
@@ -21,5 +18,8 @@ body
             i.fa.fa-long-arrow-left
           a.link.next.hide(role="next-proj")
             i.fa.fa-long-arrow-right
+
+      .main
+        block main
 
   script(src="js/scripts.js")
