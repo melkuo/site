@@ -146,6 +146,16 @@ p {
   margin: 0 0 1em;
 }
 
+blockquote {
+  box-sizing: border-box;
+  font-style: italic;
+  padding: 0 1rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
 section {
   -webkit-flex: 1;
   flex: 1;
@@ -337,6 +347,7 @@ body:not(.home) nav li {
   margin: 0;
   opacity: 0;
   padding: 1em 0.75em 0.5em;
+  text-align: center;
   width: 100%;
 
   > * {
@@ -355,12 +366,9 @@ body:not(.home) nav li {
 ****** Thumbnails ******
 ***********************/
 
-.thumb1 { background-image: url("../img/portfolio/red2.jpg"); }
-.thumb3 { background-image: url("../img/portfolio/thread1.jpg"); }
-.thumb4 { background-image: url("../img/portfolio/robot1.jpg"); }
-.thumb6 { background-image: url("../img/portfolio/contrave-fold.jpg"); }
-.thumb7 { background-image: url("../img/portfolio/tabbit1.jpg"); }
+.thumb7 { background-image: url("../img/portfolio/tabbit4.png"); }
 .thumb8 { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
+.thumb9 { background-image: url("../img/portfolio/docscom-home.png"); }
 
 /***********************
 ******* Projects *******
@@ -402,15 +410,24 @@ body:not(.home) nav li {
     max-width: 64rem;
   }
 
-  p {
+  h2,h3,h4,h5,h6 { margin-top: 1rem; }
+
+  p,
+  blockquote {
     color: $color3;
     line-height: 1.5;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 
     @media #{$mq-lg} {
       margin-top: 0;
       max-width: 700px;
     }
+  }
+
+  ol {
+    color: $color3;
+    list-style-type: decimal;
+    margin: 0 0 0.5rem 1.5em;
   }
 
   img {
