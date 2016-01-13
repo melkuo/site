@@ -6,28 +6,12 @@ block main
     | by Microsoft is a site to publish Office documents without losing animations or formatting.
   img.screenie(src="img/portfolio/docscom-home.png")
   p.caption Docs.com's homepage.
-  p I was given the task of exploring the social experience for authors on Docs.com. That is, 
-  blockquote How can we leverage social to encourage more authors to publish on Docs.com?
-
-  h2 Hypotheses
-  p My first task was to brainstorm hypotheses on how to achieve our goal. Through talking with others on the team, ultimately, the one I landed on was:
-  blockquote "Authors want their egos stroked. Positive engagement from readers (views, likes, comments) makes authors feel good, encouraging them to post more."
-
-  h2 Validation
-  p I needed to test my hypothesis to see if it would hold. So, I created some fake accounts and left comments on content I'd find to see if I could get a response. Currently, notifications aren't sent out through email, so if the author responded, it means they're engaged enough that they returned to the site, which we assume means they're more likely to return.
-
-  h2 Pivot
-  p Through my comment creeping, I discovered that authors were more likely to respond if I found their content through Twitter, as opposed to our internal RSS feed of new content. Users only responded to engagement if they were actively seeking it. So, I changed the hypothesis accordingly:
-  blockquote "Authors want their egos stroked 
-    strong if they ask for it
-    | ."
-  p If we can encourage authors to share their work after publishing content, they have a greater chance of getting engagement from readers. If they get more engagement from readers, it leaves a positive impression of Docs.com, so they're more likely to post again in the future.
-  p So how do we get authors to share their work after publishing? A first thought might be to have a pop-up or dialog appear afterwards that's like "Hey share your work to your friends!", but other sites don't seem to need to do that. Perhaps we just needed to improve our upload process altogether.
+  p I redesigned the upload process, the user flow for publishing a document onto the site.
 
   h2 Current Upload Process
   img.screenie(src="img/portfolio/docscom-current.png")
   p.caption The existing upload process.
-  p The current upload process has four steps:
+  p When a user presses "Publish", they're taken through four steps:
   ol
     li
       strong Upload 
@@ -42,12 +26,16 @@ block main
       strong profile page
       | .
 
-  h2 User Studies
-  p I used interviews to ask users of their opinion of each step in the process. Most users found the "Edit Details" page overwhelming and confusing, which is unsurprising with the amount of information that is laid out in a non-linear fashion.
-  p We also noticed that no where in the actual process can users actually see their document. Users can't see their document in the Docs.com UI and be assured that it looks as it's intended. How can we expect users to share their work out to the world if they don't even know what it looks like? So again, our hypothesis evolved.
+  h2 Hypotheses and Rationale
+  p The ultimate goal is to increase the number of published documents. Retention is a huge part of that; we want authors who have published once to come back and publish again. Through data, we found that a user was more likely to return to the site if they saw their profile page or document. That makes sense intuitively - those who abandon the upload experience and never reach Step 4 probably had some negative experience deterring them from their site. Our goal was to see if we could increase the number of people who complete the upload process and see their profile page.
+  blockquote "Authors who see their profile page in Month A are more likely to return in Month B."
+  p We also noticed that no where in the actual process can users actually see their document. Users can't see their document in the Docs.com UI and be assured that it looks as it's intended. How can we expect users to share their work out to the world in Step 3 if they don't even know what it looks like? We created another hypothesis:
   blockquote "Authors want to see their content before sharing it out to others."
 
-  h2 Redesigning
+  h2 User Studies
+  p I used interviews to ask users of their opinion of each step in the current upload process. The most valuable information we learned is that most users found the "Edit Details" page overwhelming and confusing, which is unsurprising with the amount of information that is laid out in a non-linear fashion. I then set out to redesign it.
+
+  h2 Redesigning the "Edit Details" Page
   p I looked at different sites and their upload processes. How did they split up their steps? How did they layout their version of the "Edit Details" page? How did they do it on mobile? From that research, I created three mockups.
   .dual
     img.screenie(src="img/portfolio/docscom-mockup-classic.png")
@@ -58,22 +46,28 @@ block main
   p.caption The modal. A modal pop ups with the options separated into tabs.
   p Again, I used user studies to gather feedback. Overwhelmingly, users hated the modal, thinking of it as a "pop-up". Also, by splitting up the form into tabs, users considered that as extra steps they had to take to accomplish the task.
   p Users seemed to like the WYSIWYG version the best, saying that they liked being able to see their document concurrently and that they liked the large visual. We decided to use these benefits in our redesign.
-  img.screenie(src="img/portfolio/docscom-redesign.png")
-  p.caption The proposed redesign is reduced to three steps.
   img.screenie(src="img/portfolio/docscom-edit-details.png")
   p.caption A proposal of the new Edit Details page.
 
+  h2 Redesigning the Flow
+  p From examining other sites, I noticed that none of them had an explicit share dialog screen like we did. If we took it out, we could decrease the number of steps in the process, making it easier for users to complete. In lieu of an explicit screen, we could just take the users to their document view, where share options exists.
+  img.screenie(src="img/portfolio/docscom-redesign.png")
+  p.caption The proposed redesign is reduced to three steps.
+
   h2 Validation Plan
+  p The plan is to A/B test different changes to the upload process over multiple iterations, and compare results against our goal.
+  blockquote "Authors who see their profile page in Month A are more likely to return in Month B."
+  p Our overall goal is month over month retention, so monitoring the return rate for authors after a smaller number of days is a good indication of that. We already have some data to backup this claim, but it'll be interesting to see if it's a correlation or a causation. If this redesign leads to more users seeing their profile page but retention hasn't improved, then we can deduce that it was just a correlation, and we'll need to revist our hypothesis.
   blockquote "Authors want to see their content before sharing it out to others."
-  p The plan is to A/B test different changes to the upload process over multiple iterations. Overall though, we want to see how sharing after publishing is effective, especially by removing the share screen.
-  p Our overall goal is month over month retention, so monitoring the return rate for authors after a smaller number of days is a good indication of that.
-  p Although this hasn't been implemented yet, it'll be interesting to see how this data will change and improve further iterations of this design. 
+  p We'll be monitoring the "shares" of a document through the A/B tests as well. Will seeing the document during the upload process help? Will removing the share dialog have any effect?
+  p Although this hasn't been implemented yet, it'll be interesting to see how the designs change with further iterations.
 
 block title
   .title Docs.com
 
 block subTitle
   .sub-title September&ndash;December 2015
+  .sub-title User surveys, A/B testing, Moqups, Invision
 
 block description
   .description Re-designing the upload process of Docs.com.

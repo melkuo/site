@@ -334,6 +334,8 @@ body:not(.home) nav li {
   @media #{$mq-lg} { width: 100%; }
 }
 
+.thumb.thumb-left { background-position-x: left; }
+
 .thumb-desc {
   @include transitionAll;
   align-items: center;
@@ -366,9 +368,9 @@ body:not(.home) nav li {
 ****** Thumbnails ******
 ***********************/
 
-.thumb7 { background-image: url("../img/portfolio/tabbit4.png"); }
+.thumb7 { background-image: url("../img/portfolio/tabbit1.png"); }
 .thumb8 { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
-.thumb9 { background-image: url("../img/portfolio/docscom-home.png"); }
+.thumb9 { background-image: url("../img/portfolio/docscom-home-custom.png"); }
 
 /***********************
 ******* Projects *******
@@ -497,6 +499,10 @@ body:not(.home) nav li {
 
   @media #{$mq-lg} {
     border-bottom: none;
+    width: 20rem;
+  }
+
+  @media #{$mq-xl} {
     width: 25rem;
   }
 }
