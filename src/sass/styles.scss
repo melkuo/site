@@ -370,7 +370,8 @@ body:not(.home) nav li {
 
 .thumb7 { background-image: url("../img/portfolio/tabbit1.png"); }
 .thumb8 { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
-.thumb9 { background-image: url("../img/portfolio/docscom-home-custom.png"); }
+.thumb9 { background-image: url("../img/portfolio/docscom-logo.jpg"); }
+.thumb10 { background-image: url("../img/portfolio/beacon-thumb.png"); }
 
 /***********************
 ******* Projects *******
@@ -412,7 +413,7 @@ body:not(.home) nav li {
     max-width: 64rem;
   }
 
-  h2,h3,h4,h5,h6 { margin-top: 1rem; }
+  h2,h3,h4,h5,h6 { margin-top: 2rem; }
 
   p,
   blockquote {
@@ -443,13 +444,14 @@ body:not(.home) nav li {
     box-shadow: 5px 5px $color2semitrans;
   }
 
-  .screenie.w50 {
+  .w50 {
     width: 50%;
   }
 
   .caption {
     font-family: $caption-font-family;
     font-size: 0.75em;
+    margin-bottom: 1rem;
   }
 
   .dual {

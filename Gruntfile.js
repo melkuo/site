@@ -56,6 +56,17 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.src %>/img',
+          src: '**/*.{gif,jpg,jpeg,png,svg}',
+          dest: '<%= paths.dist %>/img'
+        }]
+      }
+    },
+
     jade: {
       temp: {
         options: {
@@ -66,7 +77,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= paths.src %>/views',
-          src: '**/*.jade',
+          src: ['**/*.jade', '!archive/*.jade'],
           dest: '<%= paths.temp %>',
           ext: '.html'
         }]
@@ -80,7 +91,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= paths.src %>/views',
-          src: '**/*.jade',
+          src: ['**/*.jade', '!archive/*.jade'],
           dest: '<%= paths.dist %>',
           ext: '.html'
         }]
@@ -181,10 +192,11 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean',      // delete temp and dist directories
-    'jade:dist',  // compile jade and place in temp directory
-    'sass:dist',  // compile sass and place in dist directory
-    'copy:dist',  // copy the rest of the files from src to dist
-    'uglify'      // minify js
+    'clean',        // delete temp and dist directories
+    'imagemin',     // minify images
+    'jade:dist',    // compile jade and place in dist directory
+    'sass:dist',    // compile sass and place in dist directory
+    'copy:dist',    // copy the rest of the files from src to dist
+    'uglify'        // minify js
   ]);
 };
