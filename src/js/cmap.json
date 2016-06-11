@@ -1,0 +1,7 @@
+cmap = {
+  "beacon": "Beacon",
+  "camabis": "Camabis",
+  "connect": "Connect",
+  "docscom": "Docs.com",
+  "tabbit": "Tabbit"
+}

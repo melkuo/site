@@ -27,16 +27,14 @@ block main
       | .
 
   h2 Hypotheses and Rationale
-  p The ultimate goal is to increase the number of published documents. Retention is a huge part of that; we want authors who have published once to come back and publish again. Through data, we found that a user was more likely to return to the site if they saw their profile page or document. That makes sense intuitively - those who abandon the upload experience and never reach Step 4 probably had some negative experience deterring them from their site. Our goal was to see if we could increase the number of people who complete the upload process and see their profile page.
+  p The ultimate goal is to increase the number of published documents. Retention is a huge part of that; we want authors who have published once to come back and publish again. Through data, we found that a user was more likely to return to the site if they saw their profile page or document. Our goal was to increase the number of people who complete the upload process and see their profile page.
   blockquote "Authors who see their profile page in Month A are more likely to return in Month B."
-  p We also noticed that no where in the actual process can users actually see their document. Users can't see their document in the Docs.com UI and be assured that it looks as it's intended. How can we expect users to share their work out to the world in Step 3 if they don't even know what it looks like? We created another hypothesis:
-  blockquote "Authors want to see their content before sharing it out to others."
 
   h2 User Studies
-  p I used interviews to ask users of their opinion of each step in the current upload process. The most valuable information we learned is that most users found the "Edit Details" page overwhelming and confusing, which is unsurprising with the amount of information that is laid out in a non-linear fashion. I then set out to redesign it.
+  p I used anonymous user surveys to get feedback on the current upload process. We learned that most users found the "Edit Details" page overwhelming and confusing. I then set out to redesign it.
 
   h2 Redesigning the "Edit Details" Page
-  p I looked at different sites and their upload processes. How did they split up their steps? How did they layout their version of the "Edit Details" page? How did they do it on mobile? From that research, I created three mockups.
+  p I looked at different sites and their upload processes. From that research, I created three mockups.
   .dual
     img.screenie(src="img/portfolio/docscom-mockup-classic.png")
     img.screenie(src="img/portfolio/docscom-mockup-wysiwyg.png")
@@ -50,17 +48,20 @@ block main
   p.caption A proposal of the new Edit Details page.
 
   h2 Redesigning the Flow
-  p From examining other sites, I noticed that none of them had an explicit share dialog screen like we did. If we took it out, we could decrease the number of steps in the process, making it easier for users to complete. In lieu of an explicit screen, we could just take the users to their document view, where share options exists.
+  p From examining competitors, I noticed that none of them had an explicit share dialog screen like we did. Removing it decreases the number of steps in the process, making it easier for users to complete. In lieu of an explicit screen, we could just take the users to their document view, where share options exists.
   img.screenie(src="img/portfolio/docscom-redesign.png")
   p.caption The proposed redesign is reduced to three steps.
 
-  h2 Validation Plan
-  p The plan is to A/B test different changes to the upload process over multiple iterations, and compare results against our goal.
-  blockquote "Authors who see their profile page in Month A are more likely to return in Month B."
-  p Our overall goal is month over month retention, so monitoring the return rate for authors after a smaller number of days is a good indication of that. We already have some data to backup this claim, but it'll be interesting to see if it's a correlation or a causation. If this redesign leads to more users seeing their profile page but retention hasn't improved, then we can deduce that it was just a correlation, and we'll need to revist our hypothesis.
-  blockquote "Authors want to see their content before sharing it out to others."
-  p We'll be monitoring the "shares" of a document through the A/B tests as well. Will seeing the document during the upload process help? Will removing the share dialog have any effect?
-  p Although this hasn't been implemented yet, it'll be interesting to see how the designs change with further iterations.
+  h2 Results
+  img.screenie(src="img/portfolio/docscom-implementation.png")
+  p.caption Implementation of the Edit Details page. Description field shows hover state.
+  p The redesign was A/B tested. This first iteration led to 
+    strong 3% increase in completed uploads
+    |  and 
+    strong 4% increase in week-over-week retention
+    | . By increasing the number of successful uploads, more users saw their profile page, thus retention increased.
+  p This was only the first iteration. Future iterations will hopefully see continual growth.
+
 
 block title
   .title Docs.com
@@ -76,12 +77,8 @@ block description
 block links
   a.link(href="http://docs.com" target="_blank")
     i.fa.fa-fw.fa-external-link
-    span Docs.com.
+    span Docs.com
   br
   a.link(href="http://docs.com/melody" target="_blank")
     i.fa.fa-fw.fa-external-link
-    span Docs.com profile.
-  br
-  a.link(href="https://www.office.com/" target="_blank")
-    i.fa.fa-fw.fa-external-link
-    span About Microsoft Office.
+    span Docs.com profile

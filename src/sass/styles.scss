@@ -561,17 +561,9 @@ body:not(.home) nav li {
     }
   }
 
-  .link.next {
+  .link.back {
     @media #{$mq-lg} {
-      left: initial;
-      right: 0;
-    }
-
-    i {
-      margin-left: 0.5em;
+      bottom: 2em;
     }
   }
-
-  .link.back:after { content: 'Previous Project'; }
-  .link.next:before { content: 'Next Project'; }
 }
