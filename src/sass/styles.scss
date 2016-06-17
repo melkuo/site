@@ -221,6 +221,18 @@ section {
   width: 100%;
 }
 
+img.w25 {
+  width: 25%;
+}
+
+img.w50 {
+  width: 50%;
+}
+
+img.w75 {
+  width: 75%;
+}
+
 /***********************
 ********* Nav **********
 ***********************/
@@ -368,10 +380,11 @@ body:not(.home) nav li {
 ****** Thumbnails ******
 ***********************/
 
-.thumb7 { background-image: url("../img/portfolio/tabbit1.png"); }
-.thumb8 { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
-.thumb9 { background-image: url("../img/portfolio/docscom-logo.jpg"); }
-.thumb10 { background-image: url("../img/portfolio/beacon-thumb.png"); }
+.thumb-tabbit { background-image: url("../img/portfolio/tabbit1.png"); }
+.thumb-connect { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
+.thumb-docscom { background-image: url("../img/portfolio/docscom-logo.jpg"); }
+.thumb-beacon { background-image: url("../img/portfolio/beacon-thumb.png"); }
+.thumb-camabis { background-image: url("../img/portfolio/camabis-thumb.png"); }
 
 /***********************
 ******* Projects *******
@@ -436,16 +449,12 @@ body:not(.home) nav li {
   img {
     display: block;
     margin: 1em 0 0.5em;
-    width: 100%;
+    max-width: 100%;
   }
 
   img.screenie {
     border: 1px solid $color2;
     box-shadow: 5px 5px $color2semitrans;
-  }
-
-  .w50 {
-    width: 50%;
   }
 
   .caption {
@@ -510,7 +519,8 @@ body:not(.home) nav li {
 }
 
 .project .details {
-  > * {
+  > *,
+  ul a {
     color: $color3;
   }
 

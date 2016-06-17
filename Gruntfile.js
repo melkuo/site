@@ -31,7 +31,7 @@ module.exports = function(grunt) {
           src: [
             'css/*.css',
             'fonts/*.{eot,svg,ttf,woff}',
-            'js/*.js',
+            'js/*.{js,json}',
             'img/**',
             '*.html',
             '*.pdf'
@@ -46,7 +46,6 @@ module.exports = function(grunt) {
           src: [
             'css/*.css',
             'fonts/*.{eot,svg,ttf,woff}',
-            'js/*.js',
             'img/**',
             '*.html',
             '*.pdf'
@@ -144,7 +143,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= paths.src %>',
           src: [
-            'js/*.js'
+            'js/*.{js,json}'
           ],
           dest: '<%= paths.dist %>'
         }]
@@ -160,7 +159,7 @@ module.exports = function(grunt) {
           '<%= paths.src %>/css/**/*.css',
           '<%= paths.src %>/fonts/**/*.{eot,svg,ttf,woff}',
           '<%= paths.src %>/img/**',
-          '<%= paths.src %>/js/**/*.js',
+          '<%= paths.src %>/js/**/*.{js,json}',
           '<%= paths.src %>/*.html'
         ],
         tasks: ['sync']

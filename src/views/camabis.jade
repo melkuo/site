@@ -1,0 +1,78 @@
+extends ./global/project.jade
+
+block main
+  p For a third year design project, my group created 
+    a(href="http://camabis.herokuapp.com") Camabis
+    | , a cannabis disease detection system.
+  p Cannabis is primarily grown indoors. As with any indoor plant, a catastrophic point of failure is with bugs and diseases. The goal of this project is to develop an image processing algorithm specific to cannabis and use it for early disease detection.
+  p For the prototype, the focus was on identifying yellow tips, a general sign of malnutrition in plants.
+
+  h2 How it Works
+  p Camabis is composed of three components:
+  ol
+    li A mechanical arm
+    li Image processing algorithm
+    li A user interface
+  img.screenie(src="img/portfolio/camabis-how-it-works.png")
+  p.caption Diagram of how Camabis works
+
+  h2 Usability process
+  p
+    strong User interviews
+    |  were conducted early on in the design process. Different cannabis farms were contacted to learn about their struggles. From these, it was discovered that bugs and diseases are one of the largest problems, so the scope was narrowed down as a direct result.
+  p The design team then conducted a 
+    strong guided tour
+    |  of 
+    a(href="http://www.tweed.com") Tweed's
+    |  facilities, one of the largest marijuana farms in Canada. This tour allowed us to immerse ourselves in a cannabis grower's world, learn about their practices and struggles, and helped shape our design solution in order to work for our actual users.
+  img.screenie.w50(src="img/portfolio/camabis-tweed.jpg")
+  p.caption Outside of Tweed's facilities
+  p
+    strong User personas
+    |  were created early on in the design process. The primary persona for this project is a technologically-open cannabis grower, one who is eager to adopt new technologies.
+  img.screenie.w75(src="img/portfolio/camabis-persona.png")
+  p.caption Primary persona
+  p Personas were quite useful in other design activities. For example, when drafting an initial prototype of the web application, a modified 
+    strong design walkthrough
+    |  was used. The goal of this was to determine features and functionalities that the web app might have. Different UI elements were drawn on sticky notes. Participants used the personas in order to imagine themselves as cannabis growers and understand their pains and struggles. They then placed the sticky notes on an empty computer screen and asked to describe how they would want the web app to look.
+  img.screenie(src="img/portfolio/camabis-design-walkthrough.jpg")
+  p.caption UI elements for design walkthrough
+  p With many features brainstormed, in order to determine the most important ones to include in the prototype, a 
+    strong story mapping
+    |  exercise was used. A user's journey was mapped out by two participants, starting from when the system detects a new infected disease until the infected plant is destroyed. These journeys were then consolidated into one.
+  img.screenie.w50(src="img/portfolio/camabis-storymap.jpg")
+  p.caption User tasks in storymap
+  p The tasks that were related to the web app were identified. From these, the most important tasks were identified.
+  p Mockups for the app's pages and flows were then created and iterated upon by the design team.
+  img.screenie(src="img/portfolio/camabis-mockup-flow.jpg")
+
+  h2 Result
+  p
+    a(href="http://camabis.herokuapp.com") Camabis
+    |  was implemented using Angular and deployed on Heroku.
+  img.screenie(src="img/portfolio/camabis-home.png")
+  p.caption Camabis homepage
+  img.screenie.w75(src="img/portfolio/camabis-software-architecture.png")
+  p.caption Software architecture
+
+block title
+  .title Camabis
+
+block subTitle
+  .sub-title January&ndash;April 2016
+  .sub-title School project
+  .sub-title Design methods, Jade, Less, JavaScript, Angular, Node, Heroku
+
+block description
+  .description User interface for a plant disease detection system.
+
+block links
+  ul
+    li
+      a.link(href="http://github.com/melkuo/camabis" target="_blank")
+        i.fa.fa-fw.fa-github
+        span Check out on GitHub
+    li
+      a.link(href="http://camabis.herokuapp.com" target="_blank")
+        i.fa.fa-fw.fa-external-link
+        span Camabis
