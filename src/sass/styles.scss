@@ -428,9 +428,7 @@ body:not(.home) nav li {
 }
 
 .project .main {
-  > * {
-    max-width: 64rem;
-  }
+  max-width: 72rem;
 
   h2,h3,h4,h5,h6 { margin-top: 3rem; }
 
@@ -482,35 +480,6 @@ body:not(.home) nav li {
     font-family: $caption-font-family;
     font-size: 0.75em;
     margin-bottom: 1.5rem;
-  }
-
-  .dual {
-    img {
-      box-shadow: none;
-      box-sizing: border-box;
-      display: inline-block;
-      vertical-align: bottom;
-      width: 49%;
-    }
-
-    .caption {
-      display: block;
-      margin-left: 0;
-      vertical-align: 1em; /* since no negative margins */
-
-      @media #{$mq-md} {
-        display: inline-block;
-      }
-    }
-
-    .caption:first-of-type:before {
-      content: "Left: ";
-    }
-
-    .caption:last-of-type:before {
-      content: "Right: ";
-      @media #{$mq-md} { margin-left: 0.5em; }
-    }
   }
 }
 
