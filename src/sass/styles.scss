@@ -225,6 +225,10 @@ img.w25 {
   width: 25%;
 }
 
+img.w33 {
+  width: 33%;
+}
+
 img.w50 {
   width: 50%;
 }
@@ -257,13 +261,9 @@ nav {
 nav.expand {
   width: 100%;
 
+  .about { display: initial; }
+
   @media #{$mq-lg} { width: 50%; }
-}
-
-nav:not(.expand) {
-  .about { display: none; }
-
-  > * { text-align: center; }
 }
 
 .home nav {
@@ -271,12 +271,10 @@ nav:not(.expand) {
 }
 
 nav .container {
-  -webkit-align-items: center;
   align-items: center;
   display: -webkit-flex;
   display: flex;
   flex-direction: row;
-  -webkit-justify-content: space-between;
   justify-content: space-between;
 
   * { color: white; }
@@ -296,18 +294,26 @@ nav .container {
   }
 
   @media #{$mq-lg} {
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-    margin: 0 15%;
-    max-width: 42em;
+    text-align: center;
 
     > * {
       margin: 1rem 0;
       width: 100%;
     }
   }
+}
+
+nav.expand .container {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5em 15%;
+  text-align: left;
+}
+
+nav .about {
+  display: none;
 }
 
 body:not(.home) nav li {
@@ -329,7 +335,7 @@ body:not(.home) nav li {
 }
 
 .thumb-container {
-  margin: 1.5em 15%;
+  margin: 2em 15%;
 }
 
 .thumb {
@@ -367,7 +373,7 @@ body:not(.home) nav li {
   > * {
     color: $color2;
     margin: 0;
-    padding: 0 1em;
+    padding: 0 1rem;
   }
 }
 
@@ -426,7 +432,7 @@ body:not(.home) nav li {
     max-width: 64rem;
   }
 
-  h2,h3,h4,h5,h6 { margin-top: 2rem; }
+  h2,h3,h4,h5,h6 { margin-top: 3rem; }
 
   p,
   blockquote {
@@ -457,10 +463,25 @@ body:not(.home) nav li {
     box-shadow: 5px 5px $color2semitrans;
   }
 
+  .screenie-group {
+    align-items: baseline;
+    display: flex;
+    overflow-x: scroll;
+
+    img {
+      display: inline-block;
+      margin-right: 1em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
   .caption {
     font-family: $caption-font-family;
     font-size: 0.75em;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .dual {
@@ -470,11 +491,6 @@ body:not(.home) nav li {
       display: inline-block;
       vertical-align: bottom;
       width: 49%;
-    }
-
-    img:first-of-type {
-      margin-right: 0.25em;
-      @media #{$mq-md} { margin-right: 0.5em; }
     }
 
     .caption {

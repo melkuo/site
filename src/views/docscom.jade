@@ -35,13 +35,16 @@ block main
 
   h2 Redesigning the "Edit Details" Page
   p I looked at different sites and their upload processes. From that research, I created three mockups.
-  .dual
-    img.screenie(src="img/portfolio/docscom-mockup-classic.png")
-    img.screenie(src="img/portfolio/docscom-mockup-wysiwyg.png")
-    p.caption The classic. Similar to the current version but laid out neater.
-    p.caption WYSIWYG. Users see their document as they would normally on Docs.com, but in "Edit" mode.
-  img.screenie.w50(src="img/portfolio/docscom-mockup-speedy.png")
-  p.caption The modal. A modal pop ups with the options separated into tabs.
+  .screenie-group
+    img.screenie.w50(src="img/portfolio/docscom-mockup-classic.png")
+    img.screenie.w50(src="img/portfolio/docscom-mockup-wysiwyg.png")
+    img.screenie.w50(src="img/portfolio/docscom-mockup-speedy.png")
+  p.caption
+    | 1. The classic. Similar to the current version but laid out neater.
+    br
+    | 2. WYSIWYG. Users see their document as they would normally on Docs.com, but in "Edit" mode.
+    br
+    | 3. The modal. A modal pop ups with the options separated into tabs.
   p Again, I used user studies to gather feedback. Overwhelmingly, users hated the modal, thinking of it as a "pop-up". Also, by splitting up the form into tabs, users considered that as extra steps they had to take to accomplish the task.
   p Users seemed to like the WYSIWYG version the best, saying that they liked being able to see their document concurrently and that they liked the large visual. We decided to use these benefits in our redesign.
   img.screenie(src="img/portfolio/docscom-edit-details.png")
