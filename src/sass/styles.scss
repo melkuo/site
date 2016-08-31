@@ -386,11 +386,12 @@ body:not(.home) nav li {
 ****** Thumbnails ******
 ***********************/
 
-.thumb-tabbit { background-image: url("../img/portfolio/tabbit1.png"); }
-.thumb-connect { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
-.thumb-docscom { background-image: url("../img/portfolio/docscom-logo.jpg"); }
 .thumb-beacon { background-image: url("../img/portfolio/beacon-thumb.png"); }
 .thumb-camabis { background-image: url("../img/portfolio/camabis-thumb.png"); }
+.thumb-connect { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
+.thumb-docscom { background-image: url("../img/portfolio/docscom-logo.jpg"); }
+.thumb-shopify { background-image: url("../img/portfolio/shopify-thumb.png"); }
+.thumb-tabbit { background-image: url("../img/portfolio/tabbit1.png"); }
 
 /***********************
 ******* Projects *******
@@ -428,8 +429,6 @@ body:not(.home) nav li {
 }
 
 .project .main {
-  max-width: 72rem;
-
   h2,h3,h4,h5,h6 { margin-top: 3rem; }
 
   p,
@@ -453,7 +452,7 @@ body:not(.home) nav li {
   img {
     display: block;
     margin: 1em 0 0.5em;
-    max-width: 100%;
+    max-width: 72rem;
   }
 
   img.screenie {
@@ -469,6 +468,7 @@ body:not(.home) nav li {
     img {
       display: inline-block;
       margin-right: 1em;
+      max-height: 400px;
 
       &:last-of-type {
         margin-right: 0;
@@ -479,7 +479,7 @@ body:not(.home) nav li {
   .caption {
     font-family: $caption-font-family;
     font-size: 0.75em;
-    margin-bottom: 1.5rem;
+    margin: 0.5rem 0 1.5rem;
   }
 }
 
