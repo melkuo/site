@@ -112,6 +112,7 @@ body {
   font-size: $base-font-size;
   height: 100%;
   line-height: normal;
+  margin: 0;
   width: 100%;
 
   @media #{$mq-lg} {
@@ -145,6 +146,9 @@ p {
   line-height: 1.5;
   margin: 0 0 1em;
 }
+
+ul,
+ol { padding: 0; }
 
 blockquote {
   box-sizing: border-box;
@@ -283,6 +287,7 @@ nav .container {
 
   li {
     display: inline-block;
+    list-style-type: none;
     margin-left: 1em;
 
     &:first-child { margin-left: 0; }
@@ -429,7 +434,7 @@ body:not(.home) nav li {
 }
 
 .project .main {
-  h2,h3,h4,h5,h6 { margin-top: 3rem; }
+  h2,h3,h4,h5,h6 { margin: 3rem 0 0.25rem; }
 
   p,
   blockquote {
@@ -443,9 +448,9 @@ body:not(.home) nav li {
     }
   }
 
-  ol {
+  ol,
+  ul {
     color: $color3;
-    list-style-type: decimal;
     margin: 0 0 0.5rem 1.5em;
   }
 
@@ -508,6 +513,8 @@ body:not(.home) nav li {
   ul a {
     color: $color3;
   }
+
+  li { list-style-type: none; }
 
   .title {
     font-weight: bold;
