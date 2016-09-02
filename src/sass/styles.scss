@@ -42,11 +42,11 @@ $color5: rgb(20,20,20);
 }
 
 @mixin transitionAll {
-	-webkit-transition: all 0.25s ease-in-out;
-       -moz-transition: all 0.25s ease-in-out;
-        -ms-transition: all 0.25s ease-in-out;
-         -o-transition: all 0.25s ease-in-out;
-            transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
 }
 
 /***********************
@@ -267,8 +267,6 @@ nav {
 nav.expand {
   width: 100%;
 
-  ul { margin-top: 3rem; }
-
   .about { display: initial; }
 
   @media #{$mq-lg} { width: 50%; }
@@ -352,7 +350,7 @@ body:not(.home) nav li {
   align-items: center;
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 100vmax rgba($color5, 0.2);
+  box-shadow: inset 0 0 0 100vmax rgba($color5, 0.15);
   color: white;
   display: flex;
   flex-grow: 1;
@@ -447,7 +445,6 @@ body:not(.home) nav li {
     display: block;
     margin: 1em 0 0.5em;
     max-width: 72rem;
-    width: 100%;
   }
 
   img.screenie {
@@ -463,7 +460,7 @@ body:not(.home) nav li {
     img {
       display: inline-block;
       margin-right: 1em;
-      max-height: 400px;
+      max-height: 500px;
 
       &:last-of-type {
         margin-right: 0;
