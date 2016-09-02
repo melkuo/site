@@ -16,13 +16,9 @@ $mq-xl: "only screen and (min-width: 1400px)";
 /* Colour scheme */
 $color1: rgb(149,158,167);
 $color2: rgb(213,217,220);
-$color2semitrans: rgba(227,227,232,0.8);
 $color3: rgb(90,99,108);
-$color3semitrans: rgba(90,99,108,0.7);
 $color4: rgb(127,158,189);
 $color5: rgb(20,20,20);
-$color5semitrans: rgba(20,20,20,0.9);
-$colorOpp: rgb(255,255,0);
 
 
 /***********************
@@ -128,7 +124,6 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $color3;
 	font-family: $heading-font-family;
   font-weight: 700;
 }
@@ -225,6 +220,13 @@ section {
   width: 100%;
 }
 
+.text-impactful {
+  font-family: 'PT Sans Narrow';
+  font-size: 2rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
 img.w25 {
   width: 25%;
 }
@@ -265,6 +267,8 @@ nav {
 nav.expand {
   width: 100%;
 
+  ul { margin-top: 3rem; }
+
   .about { display: initial; }
 
   @media #{$mq-lg} { width: 50%; }
@@ -281,8 +285,6 @@ nav .container {
   flex-direction: row;
   justify-content: space-between;
 
-  * { color: white; }
-
   h1 { margin-bottom: 1em; }
 
   li {
@@ -293,9 +295,11 @@ nav .container {
     &:first-child { margin-left: 0; }
   }
 
+  a { color: white; }
+
   a:hover i {
     @include transitionAll;
-    color: $color2semitrans;
+    color: rgba($color2, 0.8);
   }
 
   @media #{$mq-lg} {
@@ -333,58 +337,40 @@ body:not(.home) nav li {
 ***********************/
 
 .portfolio {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
   @media #{$mq-lg} {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
 
-.thumb-container {
-  margin: 2em 15%;
-}
-
 .thumb {
   @include fadeIn;
+  align-items: center;
   background-size: cover;
   background-position: center;
-  display: inline-block;
-  height: 200px;
-  min-width: 200px;
+  box-shadow: inset 0 0 0 100vmax rgba($color5, 0.2);
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
   transition: all 0.25s;
   width: 100%;
 
-  @media #{$mq-md} { height: 250px; }
-  @media #{$mq-lg} { width: 100%; }
+  &:hover {
+    box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
+    flex-grow: 2;
+  }
 }
 
 .thumb.thumb-left { background-position-x: left; }
 
-.thumb-desc {
-  @include transitionAll;
-  align-items: center;
-  background: $color5semitrans;
-  box-sizing: border-box;
-  display: flex;
-  font-size: 1.25em;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  margin: 0;
-  opacity: 0;
-  padding: 1em 0.75em 0.5em;
-  text-align: center;
-  width: 100%;
-
-  > * {
-    color: $color2;
-    margin: 0;
-    padding: 0 1rem;
-  }
-}
-
-.thumb:hover .thumb-desc {
-  font-size: 1em;
-  opacity: 1;
+.thumb-desc > * {
+   margin: 0;
 }
 
 /***********************
@@ -393,8 +379,8 @@ body:not(.home) nav li {
 
 .thumb-beacon { background-image: url("../img/portfolio/beacon-thumb.png"); }
 .thumb-camabis { background-image: url("../img/portfolio/camabis-thumb.png"); }
-.thumb-connect { background-image: url("../img/portfolio/connect-welcome-fold.jpg"); }
-.thumb-docscom { background-image: url("../img/portfolio/docscom-logo.jpg"); }
+.thumb-connect { background-image: url("../img/portfolio/connect-thumb.png"); }
+.thumb-docscom { background-image: url("../img/portfolio/docscom-thumb.png"); }
 .thumb-shopify { background-image: url("../img/portfolio/shopify-thumb.png"); }
 .thumb-tabbit { background-image: url("../img/portfolio/tabbit1.png"); }
 
@@ -403,7 +389,7 @@ body:not(.home) nav li {
 ***********************/
 
 .project a:hover {
-  background-color: $color2semitrans;
+  background-color: rgba($color2, 0.8);
   opacity: 1;
 }
 
@@ -434,7 +420,10 @@ body:not(.home) nav li {
 }
 
 .project .main {
-  h2,h3,h4,h5,h6 { margin: 3rem 0 0.25rem; }
+  h2,h3,h4,h5,h6 {
+    color: $color3;
+    margin: 3rem 0 0.25rem;
+  }
 
   p,
   blockquote {
@@ -458,11 +447,12 @@ body:not(.home) nav li {
     display: block;
     margin: 1em 0 0.5em;
     max-width: 72rem;
+    width: 100%;
   }
 
   img.screenie {
     border: 1px solid $color2;
-    box-shadow: 5px 5px $color2semitrans;
+    box-shadow: 5px 5px rgba($color2, 0.8);
   }
 
   .screenie-group {
