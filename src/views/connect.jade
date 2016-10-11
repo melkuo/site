@@ -8,36 +8,45 @@ block main
     |  which contains all the tracks that have been released through the label.
   img.screenie(src="img/portfolio/connect-welcome-fold.jpg")
   p.caption Connect's landing page.
-  h2 Front End Development
-  p I was a developer working primarily on the front end of the site, using my technical skills to add new features and functions, and redesign pages.
-  img.screenie(src="img/portfolio/connect-catalog.jpg")
-  p.caption The catalog.
-  p I've touched every single page of the site in one way or another, from  
+  p I was a developer working primarily on the front end of the site, using my technical skills to add new features and functions, and redesign pages. I've touched every single page of the site in one way or another, from  
     span.nowrap user-facing 
     | to 
     span.nowrap admin-only, 
-    | whether it's changing a single component or completely redesigning a page. I loved the creative freedom that comes with taking charge of the entire process, from sketches on paper to code on the screen. This meant that I always had to put myself in the mindset of our users.
-  p For example, there used to be two music players: a mini-player in the top header with a basic set of controls and a full player that opened from the right of the page. We deemed two players redundant and unnecessary and decided to have one universal, 
+    | whether it's changing a single component or completely redesigning a page. I took charge of the entire process, from sketches on paper to code on the screen.
+
+  h2 Music Player
+  p There used to be two music players: a mini-player in the top header with a basic set of controls and a full player that opened from the right of the page. We deemed two players redundant and unnecessary.
+  img.screenie.w75(src="img/portfolio/connect-catalog-old.jpg")
+  p.caption A drawing of the original music player.
+  p After performing a competitive analysis, examining other music streaming sites and apps, we decided to have one universal, 
     span.nowrap non-collapsible 
     | player at the bottom of the page.
+  img.screenie(src="img/portfolio/connect-catalog.jpg")
+  p.caption The catalog.
   img.screenie(src="img/portfolio/connect-player-playlist.jpg")
   p.caption Music player with playlist opened.
-  p Putting a universal player at the bottom worked really well for mobile too.
+  p Putting a universal player at the bottom worked really well for mobile too; the controls and actions were more easily accessible.
   img.screenie.w50(src="img/portfolio/connect-catalog-mobile.png")
   p.caption Music player and catalog on mobile.
-  p I've also completely overhauled pages like the Dashboard, where users can see our most recent releases. I created a blog functionality so that we can keep users updated about changes and new features added to the site.
-  img.screenie(src="img/portfolio/connect-dashboard.jpg")
-  p.caption The dashboard, showing Monstercat's most recent releases and updates for Connect.
-  h2 User Experience
-  p One of my favourite projects was performing a UX audit of the site. I used design principles, conducted user interviews and created Hierarchical Task Analyses (HTA) to analyze the site for user experience issues. I made recommendations from these and then implemented those changes. For example, the music player update came from this audit.
-  p As another example, the landing page used to be a single page with two buttons that took you to separate sub-pages for our different subscription services. From user interviews and HTA's, we realized that this was a lot of unnecessary work for users. To explore their options and learn about our subscription types, users had to click one sub-page, read it, then have to navigate back to the main page before they could click and read the other.
+
+  h2 Landing Page
+  p I undertook a project to perform a UX audit of the site. I did this in two main ways:
+  ul
+    li
+      strong Heuristic evaluations
+      |  &ndash; I individually evaluated the site against basic design principles, such as 
+      a(href="https://www.nngroup.com/articles/ten-usability-heuristics/") Nielson's 10 Usability Heuristics
+      | . I also created a hierarchical task analysis for the main functions of the site, to identify points of failure or improvement.
+    li
+      strong Informal user interviews
+      |  &ndash; I identified a set of core user scenarios: sign-up, finding a particular song to play, creating a playlist, and downloading a track. I asked friends to complete these tasks, and noted points of confusion and struggle.
+  p Using these methods, I came up with a list of recommendations, then implemented those changes.
   img.screenie.w50(src="img/portfolio/connect-ux-gist.jpg")
   p.caption Snippet of recommendations.
+  p For example, the landing page used to be a single page with two buttons that took you to separate sub-pages for our different subscription services. We realized that this was a lot of unnecessary work for users. To explore their options and learn about our subscription types, users had to click one sub-page, read it, then have to navigate back to the main page before they could click and read the other.
   p So, I added a brief description of each subscription type to the main page, with a "Learn More" button that takes the user to the more detailed sub-page. Having this information helped prevent users from clicking the wrong sub-page. We also added a sign up form at the bottom so that users could sign up right from this page if they already knew what subscription they wanted.
   img.screenie.w50(src="img/portfolio/connect-welcome.jpg")
-  p.caption Redesigned landing page. Some parts were cropped out. For full landing page, visit 
-    a(href="http://connect.monstercat.com") Connect
-    | .
+  p.caption Redesigned landing page.
 
 block title
   .title Monstercat Connect

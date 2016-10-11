@@ -265,15 +265,12 @@ nav {
 }
 
 nav.expand {
+  align-items: center;
   width: 100%;
 
   .about { display: initial; }
 
   @media #{$mq-lg} { width: 50%; }
-}
-
-.home nav {
-  align-items: center;
 }
 
 nav .container {
@@ -285,7 +282,7 @@ nav .container {
 
   h1 { margin-bottom: 1em; }
 
-  ul { margin: 0; }
+  ul { margin: 1rem 0 0; }
 
   li {
     display: inline-block;
@@ -322,7 +319,7 @@ nav.expand .container {
   text-align: left;
 
   ul {
-    margin-top: 1rem;
+    margin-top: 0;
     width: 100%;
   }
 }
@@ -435,6 +432,7 @@ body:not(.home) nav li {
 
   p,
   blockquote,
+  em,
   ul,
   ol {
     color: $color3;
