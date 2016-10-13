@@ -355,7 +355,7 @@ body:not(.home) nav li {
   align-items: center;
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 100vmax rgba($color5, 0.15);
+  box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
   color: white;
   display: flex;
   flex-grow: 1;
@@ -364,18 +364,22 @@ body:not(.home) nav li {
   transition: all 0.25s;
   width: 100%;
 
-  &.thumb-dark { box-shadow: inset 0 0 0 100vmax rgba($color5, 0.4); }
+  @media #{$mq-lg} {
+    box-shadow: inset 45rem 0 20rem -15rem white;
+    color: $color4;
+    justify-content: initial;
+    text-align: left;
 
-  &:hover {
-    box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
-    flex-grow: 2;
+    &:hover {
+      box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
+      color: white;
+      flex-grow: 2;
+    }
   }
 }
 
-.thumb.thumb-left { background-position-x: left; }
-
 .thumb-desc > * {
-   margin: 0;
+   margin: 0 0 0 3rem;
 }
 
 /***********************
@@ -383,9 +387,9 @@ body:not(.home) nav li {
 ***********************/
 
 .thumb-beacon { background-image: url("../img/portfolio/beacon-thumb.png"); }
-.thumb-camabis { background-image: url("../img/portfolio/camabis-thumb.png"); }
-.thumb-connect { background-image: url("../img/portfolio/connect-thumb.jpg"); }
-.thumb-docscom { background-image: url("../img/portfolio/docscom-thumb.png"); }
+.thumb-camabis { background-image: url("../img/portfolio/camabis-thumb-2.png"); }
+.thumb-connect { background-image: url("../img/portfolio/connect-thumb-2.png"); }
+.thumb-docscom { background-image: url("../img/portfolio/docscom-thumb-2.png"); }
 .thumb-shopify { background-image: url("../img/portfolio/shopify-thumb.png"); }
 .thumb-tabbit { background-image: url("../img/portfolio/tabbit1.png"); }
 
