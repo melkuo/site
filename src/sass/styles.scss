@@ -14,7 +14,7 @@ $mq-lg: "only screen and (min-width: 1024px)";
 $mq-xl: "only screen and (min-width: 1400px)";
 
 /* Colour scheme */
-$color1: rgb(149,158,167);
+$color1: rgb(234,236,238);
 $color2: rgb(213,217,220);
 $color3: rgb(90,99,108);
 $color4: rgb(127,158,189);
@@ -210,14 +210,14 @@ section {
 	@media #{$mq-lg} { display: none; }
 }
 
-.nowrap {
-	white-space: nowrap;
-}
-
 .container {
   box-sizing: border-box;
   padding: 1em;
   width: 100%;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .text-impactful {
@@ -225,6 +225,10 @@ section {
   font-size: 2rem;
   letter-spacing: 0.08rem;
   text-transform: uppercase;
+}
+
+.no-m-top {
+  margin-top: 0;
 }
 
 img.w25 {
@@ -282,7 +286,7 @@ nav .container {
 
   h1 { margin-bottom: 1em; }
 
-  ul { margin: 1rem 0 0; }
+  ul { margin: 2rem 0 0; }
 
   li {
     display: inline-block;
@@ -300,12 +304,13 @@ nav .container {
     color: rgba($color2, 0.8);
   }
 
+  .about { margin: 1rem 0; }
+
   @media #{$mq-lg} {
     flex-direction: column;
     text-align: center;
 
     > * {
-      margin: 1rem 0;
       width: 100%;
     }
   }
@@ -339,10 +344,16 @@ body:not(.home) nav li {
 ****** Portfolio *******
 ***********************/
 
-.portfolio {
+.portfolio .container {
   display: flex;
-  height: 100vh;
   flex-direction: column;
+  max-height: 100vh;
+  padding: 5rem 2rem;
+
+  @media #{$mq-sm} {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
 
   @media #{$mq-lg} {
     overflow-y: auto;
@@ -352,34 +363,27 @@ body:not(.home) nav li {
 
 .thumb {
   @include fadeIn;
-  align-items: center;
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
-  color: white;
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  text-align: center;
+  min-height: 300px;
   transition: all 0.25s;
   width: 100%;
 
-  @media #{$mq-lg} {
-    box-shadow: inset 45rem 0 20rem -15rem white;
-    color: $color4;
-    justify-content: initial;
-    text-align: left;
-
-    &:hover {
-      box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
-      color: white;
-      flex-grow: 2;
-    }
+  &:hover {
+    box-shadow: inset 0 0 0 100vmax rgba($color5, 0.8);
   }
 }
 
-.thumb-desc > * {
-   margin: 0 0 0 3rem;
+.thumb-desc {
+  color: $color3;
+  margin: 0.5rem 0 3rem;
+  text-align: left;
+
+  &:last-of-type { margin-bottom: 0; }
+
+  > * {
+    margin: 0;
+  }
 }
 
 /***********************
@@ -431,8 +435,15 @@ body:not(.home) nav li {
 .project .main {
   h2,h3,h4,h5,h6 {
     color: $color3;
-    margin: 3rem 0 0.25rem;
+    margin: 1rem 0 0.25rem;
+
+    &.no-m-top {
+      margin-top: 0;
+    }
   }
+
+  h2 { margin-top: 3rem; }
+  h3 { font-size: 1rem; }
 
   p,
   blockquote,
@@ -490,6 +501,13 @@ body:not(.home) nav li {
     font-family: $caption-font-family;
     font-size: 0.75em;
     margin: 0.5rem 0 1.5rem;
+  }
+
+  .problem {
+    background-color: $color1;
+    border-radius: 0.25em;
+    margin: 1em 0;
+    padding: 2rem;
   }
 }
 

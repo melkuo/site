@@ -1,32 +1,34 @@
 extends ./global/project.jade
 
 block main
+  h2.no-m-top Background
   p At 
     a(href="http://www.shopify.com") Shopify
-    | , I was a product designer working with a team including another designer on the 
+    | , I was a product designer working with another designer and a team of other people on the 
     a(href="http://themes.shopify.com") Themes Store
     | .
+  p Merchants go to Themes Store to find a theme for their online store. But finding a theme is hard. We know this because of the number of support tickets we receive with merchants asking us to help them choose their theme.
+  p Additionally, the theme editor is being completely rehauled. Themes will slowly be converted to be compatible with the new editor. We want to encourage merchants to user themes that are compatible with the new editor.
+  img.screenie.w50(src="img/portfolio/shopify-original.png")
+  p.caption Original design
 
-  h2 Context
-  p Finding a theme is hard. We know this because of the number of support tickets we receive with merchants asking us to help them choose their theme. Additionally, with the upcoming release of a new theme editor, we want to be able to highlight themes that are compatible with it.
+  h2 Defining the Problem
+  p We kicked off the project with a workshop, inviting people across all disciplines. Participants were randomly given scenarios based on user personas and were tasked with finding a theme and each created their own use rjourney.
+  img.screenie.w50(src="img/portfolio/shopify-kickoff-workshop.jpg")
+  p.caption Participants' journeys as they tried to find a theme.
+  p We consolidated journeys, identified common pain points and in the end, came out with a list of problems. We prioritized problems to solve using a 
+    a(href="https://en.wikipedia.org/wiki/Decision_matrix") weighted decision matrix
+    | . I was tackling problems with the catalog page.
+  p.problem The Theme Store should encourage merchants to use themes that are compatible with the new theme editor.
 
   h2 Metrics
+  p We'll know we've succeeded when we see:
   ul
     li A decrease in support tickets for theme recommendation.
     li Ultimately, a quicker time to first sale.
 
-  h2 Defining the Problem
-  p We kicked off the project with a workshop, inviting people across all disciplines. Participants were randomly given scenarios based on user personas and were tasked with finding a theme. Journeys were documented and then consolidated.
-  img.screenie.w50(src="img/portfolio/shopify-kickoff-workshop.jpg")
-  p.caption Participants' journeys as they tried to find a theme.
-  p In the end, we came up with a list of 8 problems which we then used a 
-    a(href="https://en.wikipedia.org/wiki/Decision_matrix") decision matrix
-    |  to priotize. Problem we're trying to solve now: 
-    strong encourage merchants to use themes that are compatible with the new editor
-    | .
-
   h2 Exploration and Research
-  p We performed a competitve analysis, examining the landscape and seeing what other theme stores were like. Using information from support, we also found what merchants were looking for in a theme.
+  p We performed a competitive analysis, examining the landscape and seeing what other theme stores were like. Using information from support tickets, we also learned about what merchants were looking for in a theme.
 
   h2 Initial Prototyping
   p We approached the designs from 
@@ -34,7 +36,9 @@ block main
     | : a rational user, one who knows what they want and wants to make the experience as efficient as possible, and an emotional user, one who is open to explore and be inspired.
   img.screenie.w50(src="img/portfolio/shopify-shopping-modes.jpg")
   p.caption When shopping, there's a range of behaviour from completely emotional to completely rational.
-  p We started with mockups in Balsamiq and then moved to a higher fidelity in Sketch. Eventually the emotional approach became the landing page and the rational approach the catalog page. [TODO invision link?]
+  p We started with mockups in Balsamiq and then moved to a higher fidelity in Sketch. Eventually the emotional approach became the landing page.
+  img.screenie.w50(src="img/portfolio/shopify-emotional-user.png")
+  p.caption Emotional user as landing page
 
   h2 User Research
   p Teaming up with the user research team, we showed our designs to merchants.
@@ -48,7 +52,8 @@ block main
     li There was mixed reviews for information like "All themes are mobile-friendly". Some already knew that while others didn't.
 
   h2 Iterate, Iterate, Iterate
-  p Taking feedback from user research, we iterated on the homepage.
+  h3 All About The Editor
+  p Taking feedback from user research, I iterated on the homepage. I tried talking about all the benefits of the new theme editor and our themes. For featured themes, I pulled an accent colour to add more visual interest to the page.
   img.screenie.w50(src="img/portfolio/shopify-marketing-page.png")
   p.caption Direction 1: marketing page as a landing page
   p Pros for marketing page as a landing page:
@@ -60,8 +65,9 @@ block main
     li There is a lot of scrolling before reaching the actual content, the themes. More scrolling = more dropoffs.
     li This moves away from the utilitarian aspect of the Theme Store.
     li Is all the information being presented in the theme featurette necessary at this point in the decision making process?
-  br
-  p So, we decided to consolidate all the marketing into the hero. We also tried to intersperse theme featurettes with themes, to break up monotony and highlight specific themes.
+
+  h3 Marketing Hero
+  p So I decided to consolidate all the marketing into the hero. I also tried to intersperse theme featurettes with themes, to break up monotony and highlight specific themes.
   img.screenie.w50(src="img/portfolio/shopify-marketing-hero.png")
   p.caption Direction 2: marketing in hero
   p Pros for marketing in hero:
@@ -74,7 +80,8 @@ block main
       | ? Can we just talk about the themes themselves?
     li Themes below the featurette were being confused with the featurette itself.
     li Still doesn't feel like a store.
-  br
+
+  h3 Back to Themes
   p Back to the drawing board. Pairing with another designer, we took a step back and re-examined everything that worked and didn't work in past designs. We spent the afternoon hashing out a new solution.
   img.screenie.w50(src="img/portfolio/shopify-featured-hero.png")
   p.caption Direction #3: featured themes in hero
@@ -87,7 +94,7 @@ block main
     li Page felt a little short, like the quantity of themes wasn't being conveyed.
 
   h2 Next Steps
-  p There are still some smaller UI issues left on this screen. For example, there's some unsure behaviour on mobile (how does the badge work if it's off the grid?) but I'm pretty happy with it overall. Next steps are to polish it off, implement it, and see how it does. And then onto the next problem to tackle.
+  p This screen is about 90% finished. There are still some smaller UI issues left on this screen. For example, there's some unsure behaviour on mobile (how does the badge work if it's off the grid?) but I'm pretty happy with it overall. Next steps are to polish it off, implement it, and see how it does.
 
 block title
   .title Shopify

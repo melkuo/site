@@ -1,6 +1,7 @@
 extends ./global/project.jade
 
 block main
+  h2.no-m-top Background
   p
     a(href="http://monstercat.com" target="_blank") Monstercat 
     | is an independent edm record label. They have a music streaming web application called 
@@ -15,9 +16,11 @@ block main
     | whether it's changing a single component or completely redesigning a page. I took charge of the entire process, from sketches on paper to code on the screen.
 
   h2 Music Player
-  p There used to be two music players: a mini-player in the top header with a basic set of controls and a full player that opened from the right of the page. We deemed two players redundant and unnecessary.
+  p There used to be two music players: a mini-player in the top header and a full player that opened from the right of the page.
   img.screenie.w75(src="img/portfolio/connect-catalog-old.jpg")
   p.caption A drawing of the original music player.
+  p The mini player offered easily accessible player controls, like play, pause, forward and back. The full player offered further controls, like playlist options. However, two players is redundant from the code's perspective and unnecessary from a user's perspective (why are there two options to pause music at once?).
+  p.problem Two music players are redundant and unnecessary. The goal is to create one universal player with easily accessible player controls, that still offers full playlist control.
   p After performing a competitive analysis, examining other music streaming sites and apps, we decided to have one universal, 
     span.nowrap non-collapsible 
     | player at the bottom of the page.
@@ -44,7 +47,9 @@ block main
   img.screenie.w50(src="img/portfolio/connect-ux-gist.jpg")
   p.caption Snippet of recommendations.
   p For example, the landing page used to be a single page with two buttons that took you to separate sub-pages for our different subscription services. We realized that this was a lot of unnecessary work for users. To explore their options and learn about our subscription types, users had to click one sub-page, read it, then have to navigate back to the main page before they could click and read the other.
-  p So, I added a brief description of each subscription type to the main page, with a "Learn More" button that takes the user to the more detailed sub-page. Having this information helped prevent users from clicking the wrong sub-page. We also added a sign up form at the bottom so that users could sign up right from this page if they already knew what subscription they wanted.
+  p.problem Learning about and comparing subscription types is a current pain point for users. The goal is to educate users on the two subscription types from the landing page.
+  p So, I added a brief description of each subscription type to the main page, with a "Learn More" button that takes the user to the more detailed sub-page. Having this information helped prevent users from clicking the wrong sub-page.
+  p We also added a sign up form at the bottom so that users could sign up immediately if they know what subscription they want. Placing them side by side further allowed users to compare their features more easily.
   img.screenie.w50(src="img/portfolio/connect-welcome.jpg")
   p.caption Redesigned landing page.
 

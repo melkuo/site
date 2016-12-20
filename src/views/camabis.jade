@@ -1,11 +1,11 @@
 extends ./global/project.jade
 
 block main
+  h2.no-m-top Background
   p For a third year design project, my group created 
     a(href="http://camabis.herokuapp.com" target="_blank") Camabis
     | , a cannabis disease detection system.
-  p Cannabis is primarily grown indoors. As with any indoor plant, a catastrophic point of failure is with bugs and diseases. The goal of this project is to develop an image processing algorithm specific to cannabis and use it for early disease detection.
-  p For the prototype, the focus was on identifying yellow tips, a general sign of malnutrition in plants.
+  p Cannabis is primarily grown indoors. As with any indoor plant, bugs and diseases are a catastrophic point of failure. This can result in huge losses for cannabis farms. The goal of this project is to develop an image processing algorithm specific to cannabis and use it for early disease detection.
 
   h2 How it Works
   p Camabis is composed of three components:
@@ -15,6 +15,9 @@ block main
     li A user interface
   img.screenie(src="img/portfolio/camabis-how-it-works.png")
   p.caption Diagram of how Camabis works
+
+  h2 Problem Statement
+  p.problem A system is needed to identify and classify cannabis diseases at an early stage to mitigate huge losses. This disease information needs to be presented to cannabis farmers effectively and in a way that integrates well with their current processes.
 
   h2 Usability Process
   p
