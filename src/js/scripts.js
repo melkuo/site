@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     i = order.indexOf(path);
 
   document.querySelector("[role='to-index']").classList.remove("hide");
+  document.title = document.title + " | " + cmap[order[i]];
 
   if (order[i-1]) {
     prevEl.setAttribute("href", order[i-1].concat(".html"));
