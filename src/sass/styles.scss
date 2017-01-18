@@ -97,10 +97,6 @@ html {
     background-color: $color4;
     color: white;
   }
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 body {
@@ -283,11 +279,16 @@ nav .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 2em;
 
   h1 { margin-bottom: 1em; }
 
-  ul { margin: 2rem 0 0; }
+  ul {
+    margin: 0;
+
+    @media #{$mq-lg} {
+      margin-top: 2rem;
+    }
+  }
 
   li {
     display: inline-block;
@@ -309,6 +310,7 @@ nav .container {
 
   @media #{$mq-lg} {
     flex-direction: column;
+    padding-top: 2em;
     text-align: center;
 
     > * {
@@ -367,10 +369,13 @@ body:not(.home) nav li {
   background-size: 100%;
   background-position: center;
   margin-bottom: 5rem;
-  min-height: 300px;
+  min-height: 225px;
   transition: all 0.35s;
   width: 100%;
 
+  @media #{$mq-lg} {
+    min-height: 300px;
+  }
 }
 
 .thumb-desc {
@@ -416,6 +421,7 @@ body:not(.home) nav li {
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  padding-right: 0;
   position: absolute;
   width: initial;
 
@@ -508,11 +514,13 @@ body:not(.home) nav li {
   }
 
   .problem {
-    background-color: $color1;
     border-radius: 0.25em;
+    font-size: 1.25em;
+    font-style: italic;
     margin: 1em 0;
     max-width: 530px;
     padding: 2rem;
+    text-align: center;
   }
 }
 
