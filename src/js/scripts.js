@@ -1,22 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile
+  if (window.isMobile) { document.documentElement.classList.add('mobile'); }
+
   // Table of contents
-  // var toHeadingEls = document.querySelectorAll("[role='toHeading']");
-
-  // for (var i = 0; i < toHeadingEls.length; i++) {
-  //   toHeadingEls[i].addEventListener('click', function() {
-  //     if (this.classList.contains('active')) { return; }
-
-  //     for (var j = 0; j < toHeadingEls.length; j++) {
-  //       toHeadingEls[j].classList.remove('active');
-  //     }
-  //     this.classList.add('active');
-  //   });
-  // }
-
-  var spy = new ScrollSpy('#js-scrollspy', '#js-scrollspy-scroller', {
-    nav: '.js-scrollspy-nav > li > a',
-    className: 'active'
-  });
+  if (!window.isMobile) {
+    var spy = new ScrollSpy('#js-scrollspy', '#js-scrollspy-scroller', {
+      nav: '.js-scrollspy-nav > li > a',
+      className: 'active'
+    });
+  }
 
   // Next / previous page
   var order = ["shopify", "docscom", "connect", "camabis"],
