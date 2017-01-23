@@ -1,7 +1,7 @@
 extends ./global/project.jade
 
 block main
-  h2.no-m-top Background
+  h2#background.no-m-top Background
   p At 
     a(href="http://www.shopify.com") Shopify
     | , I worked alongside another product designer on the 
@@ -12,7 +12,7 @@ block main
   img.screenie.w50(src="img/portfolio/shopify-original.png")
   p.caption Original design
 
-  h2 Defining the Problem
+  h2#problem Defining the problem
   p We kicked off the project with a workshop, inviting people across all disciplines to take part. Participants were given scenarios and tasked with finding a theme and recording their journey.
   img.screenie.w50(src="img/portfolio/shopify-kickoff-workshop.jpg")
   p.caption Participants' journeys as they tried to find a theme.
@@ -21,16 +21,16 @@ block main
     | . I was tackling problems with the catalog page.
   p.problem The Themes Store should encourage merchants to use themes that are compatible with the new theme editor.
 
-  h2 Metrics
+  h2#metrics Metrics
   p We'll know we've succeeded when we see:
   ul
     li A decrease in support tickets for theme recommendation.
     li Ultimately, a quicker time to first sale.
 
-  h2 Exploration and Research
+  h2#exploration Exploration and Research
   p We performed a competitive analysis to see what other theme stores were like. We also learned about what merchants were looking for in a theme through support tickets.
 
-  h2 Initial Prototyping
+  h2#initial-prototype Initial prototyping
   p We approached the designs from 
     a(href="https://www.nngroup.com/articles/ecommerce-shoppers/") two different perspectives
     | : a rational user, one who knows what they want and wants to make the experience as efficient as possible, and an emotional user, one who is open to explore.
@@ -40,7 +40,7 @@ block main
   img.screenie.w50(src="img/portfolio/shopify-emotional-user.png")
   p.caption Emotional user as landing page
 
-  h2 User Research
+  h2#user-research User research
   p Teaming up with the user research team, we showed our designs to merchants.
   p Pros:
   ul
@@ -51,7 +51,7 @@ block main
     li Users weren't sure what clicking the heart icon would actually do.
     li There was mixed reviews for information like "All themes are mobile-friendly". Some already knew this while others didn't.
 
-  h2 Iterate, Iterate, Iterate
+  h2#iterate Iterate, iterate, iterate
   h3 All About The Editor
   p Taking feedback from user research, I iterated on the homepage. I tried talking about all the benefits of the new theme editor and our themes. For featured themes, I pulled an accent colour to add more visual interest to the page.
   img.screenie.w50(src="img/portfolio/shopify-marketing-page.png")
@@ -93,23 +93,42 @@ block main
   ul
     li Page felt a little short, like the quantity of themes wasn't being conveyed.
 
-  h2 Next Steps
+  h2#next-steps Next steps
   p This screen is about 90% finished. There are still some smaller UI issues left on this screen. For example, there's some unsure behaviour on mobile (how does the badge work if it's off the grid?) but I'm pretty happy with it overall. Next steps are to polish it off, implement it, and see how it does.
 
 block title
-  .title Shopify
+  h1.title Shopify
 
 block subTitle
-  .sub-title May&ndash;August 2016
-  .sub-title Role: Product Designer
-  .sub-title Balsamiq, Invision, Sketch
+  span.sub-title May&ndash;August 2016
+  br
+  span.sub-title Role: Product Designer
+  br
+  span.sub-title Balsamiq, Invision, Sketch
 
 block description
-  .description Making it easier to select a theme.
+  p.description Making it easier to select a theme.
 
 block links
-  ul
-    li
-      a.link(href="http://themes.shopify.com" target="_blank")
-        i.fa.fa-fw.fa-external-link
-        span Shopify Theme Store
+  li
+    a.link(href="http://themes.shopify.com" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span Shopify Theme Store
+
+block tableOfContents
+  li
+    a(href="#background" role="toHeading") Background
+  li
+    a(href="#problem" role="toHeading") Defining the problem
+  li
+    a(href="#metrics" role="toHeading") Metrics
+  li
+    a(href="#exploration" role="toHeading") Exploration and research
+  li
+    a(href="#initial-prototype" role="toHeading") Initial prototyping
+  li
+    a(href="#user-research" role="toHeading") User research
+  li
+    a(href="#iterate" role="toHeading") Iterate, iterate, iterate
+  li
+    a(href="#next-steps" role="toHeading") Next steps

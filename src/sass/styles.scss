@@ -97,6 +97,10 @@ html {
     background-color: $color4;
     color: white;
   }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
@@ -131,6 +135,16 @@ h1 {
 
 h2 {
   font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
 p {
@@ -550,19 +564,38 @@ body:not(.home) nav li {
     color: $color3;
   }
 
-  li { list-style-type: none; }
+  li {
+    list-style-type: none;
+    margin-bottom: 0.1em;
+  }
 
   .title {
+    font-size: 1em;
     font-weight: bold;
+    margin: 0;
   }
 
   .sub-title {
-    font-size: 0.75em;
-    margin: 0.25em 0;
+    font-size: 0.8em;
   }
 
   .description {
     margin: 1em 0;
+  }
+}
+
+.project .table-of-contents {
+  border-top: 1px solid $color2;
+  margin-top: 1.5rem;
+
+  h4 {
+    margin-top: 1.5rem;
+  }
+
+  .active,
+  .active:hover {
+    background-color: initial;
+    color: $color4;
   }
 }
 

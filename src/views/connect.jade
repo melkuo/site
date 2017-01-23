@@ -1,7 +1,7 @@
 extends ./global/project.jade
 
 block main
-  h2.no-m-top Background
+  h2.no-m-top#background Background
   p
     a(href="http://monstercat.com" target="_blank") Monstercat 
     | is an independent edm record label. I worked on a music streaming web application,
@@ -15,7 +15,7 @@ block main
     span.nowrap admin-only
     | . I took charge of the entire process, from sketches on paper to code on the screen.
 
-  h2 Music Player
+  h2#player Music player
   p There used to be two music players: a mini-player in the top header and a full player that opened from the right of the page.
   img.screenie.w75(src="img/portfolio/connect-catalog-old.jpg")
   p.caption A drawing of the original music player.
@@ -30,7 +30,7 @@ block main
   img.screenie.w50(src="img/portfolio/connect-catalog-mobile.png")
   p.caption Music player and catalog on mobile.
 
-  h2 Landing Page
+  h2#landing-page Landing page
   p I undertook a project to perform a UX audit of the site. I did this in two main ways:
   ul
     li
@@ -63,12 +63,19 @@ block description
   .description Monstercat's music streaming web application.
 
 block links
-  ul
-    li
-      a.link(href="http://connect.monstercat.com" target="_blank")
-        i.fa.fa-fw.fa-external-link
-        span Connect
-    li
-      a.link(href="http://www.monstercat.com" target="_blank")
-        i.fa.fa-fw.fa-external-link
-        span About Monstercat
+  li
+    a.link(href="http://connect.monstercat.com" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span Connect
+  li
+    a.link(href="http://www.monstercat.com" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span About Monstercat
+
+block tableOfContents
+  li
+    a(href="#background") Background
+  li
+    a(href="#player") Music player
+  li
+    a(href="#landing-page") Landing page
