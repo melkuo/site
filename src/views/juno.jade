@@ -1,0 +1,57 @@
+extends ./global/project.jade
+
+block main
+  h2#background.no-m-top Background
+  p Sexual health education is proven to contribute to disease prevention and overall well-being. Current solutions of seeking health information lack credibility, availability or are subject to technical medical jargon. The goal is to design Juno – an interactive, autonomous chatbot that provides understandable and credible information about sexual health to young adults seeking answers.
+  p Juno will learn to answer users' using machine learning algorithms. To do this, it needs to be trained with questions and answers. These answers need to be verified by medical professionals.
+  p.problem The developing team needs an internal tool to view and manage questions and answers. Medical professionals need a simple way to verify these answers.
+
+  h2#requirements User requirements
+  p Use cases for the two user types were developed using a task analysis.
+  img.screenie(src="img/portfolio/juno-use-cases.png")
+  p.caption Task analysis for dev team and medical professionals.
+  p From this, the functionality of the system emerges:
+  p Questions
+  ul
+    li Add question
+    li Edit question
+    li Delete question
+    li Answer question
+  p Answers
+  ul
+    li Edit answer
+    li Verify answer
+
+  h2#nav Navigation
+  p First, the navigation structure was developed. Originally, I thought to organize it like:
+  img.screenie.w15(src="img/portfolio/juno-nav-v1.jpg")
+  p However, after a card sorting exercise with a classmate, I realized that answers are always linked to questions.
+  img.screenie.w25(src="img/portfolio/juno-card-sort.jpg")
+
+block title
+  h1.title Juno
+
+block subTitle
+  p.sub-title
+    | Jan 2017&ndash;present
+    br
+    | School project
+    br
+    | HTML, Less, Python, Flask, Heroku
+
+block description
+  p.description Designing an admin dashboard for a sexual health chatbot
+
+block links
+  li
+    a.link(href="http://talktojuno.herokuapp.com" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span Juno dashboard
+
+block tableOfContents
+  li
+    a(href="#background") Background
+  li
+    a(href="#requirements") User requirements
+  li
+    a(href="#nav") Navigation

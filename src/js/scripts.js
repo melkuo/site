@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Next / previous page
-  var order = ["shopify", "camabis"],
+  var order = ["juno", "shopify", "camabis"],
     prevEl = document.querySelector("[role='prev-proj']"),
     nextEl = document.querySelector("[role='next-proj']"),
     path = (/\/([^]*)\.html/).exec(window.location.pathname)[1], /* 0 = match, 1 = capture */

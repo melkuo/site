@@ -241,6 +241,10 @@ section {
   margin-top: 0;
 }
 
+img.w15 {
+  width: 15%;
+}
+
 img.w25 {
   width: 25%;
 }
@@ -417,6 +421,7 @@ body:not(.home) nav li {
 .thumb-camabis { background-image: url("../img/portfolio/camabis-thumb-2.png"); }
 .thumb-connect { background-image: url("../img/portfolio/connect-thumb-2.png"); }
 .thumb-docscom { background-image: url("../img/portfolio/docscom-thumb-2.png"); }
+.thumb-juno { background-image: url("../img/portfolio/juno-thumb.png"); }
 .thumb-shopify { background-image: url("../img/portfolio/shopify-thumb.png"); }
 .thumb-tabbit { background-image: url("../img/portfolio/tabbit1.png"); }
 
@@ -507,6 +512,10 @@ body:not(.home) nav li {
     @media #{$mq-lg} {
       margin: initial;
     }
+  }
+
+  img + p {
+    margin-top: 1rem;
   }
 
   .screenie-group {
