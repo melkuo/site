@@ -137,6 +137,16 @@ h2 {
   font-size: 1.25em;
 }
 
+h3 {
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
 p {
   line-height: 1.5;
   margin: 0 0 1em;
@@ -283,11 +293,16 @@ nav .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 2em;
 
   h1 { margin-bottom: 1em; }
 
-  ul { margin: 2rem 0 0; }
+  ul {
+    margin: 0;
+
+    @media #{$mq-lg} {
+      margin-top: 2rem;
+    }
+  }
 
   li {
     display: inline-block;
@@ -309,6 +324,7 @@ nav .container {
 
   @media #{$mq-lg} {
     flex-direction: column;
+    padding-top: 2em;
     text-align: center;
 
     > * {
@@ -367,10 +383,13 @@ body:not(.home) nav li {
   background-size: 100%;
   background-position: center;
   margin-bottom: 5rem;
-  min-height: 300px;
+  min-height: 225px;
   transition: all 0.35s;
   width: 100%;
 
+  @media #{$mq-lg} {
+    min-height: 300px;
+  }
 }
 
 .thumb-desc {
@@ -416,6 +435,7 @@ body:not(.home) nav li {
   -webkit-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  padding-right: 0;
   position: absolute;
   width: initial;
 
@@ -508,11 +528,13 @@ body:not(.home) nav li {
   }
 
   .problem {
-    background-color: $color1;
     border-radius: 0.25em;
+    font-size: 1.25em;
+    font-style: italic;
     margin: 1em 0;
     max-width: 530px;
     padding: 2rem;
+    text-align: center;
   }
 }
 
@@ -542,19 +564,38 @@ body:not(.home) nav li {
     color: $color3;
   }
 
-  li { list-style-type: none; }
+  li {
+    list-style-type: none;
+    margin-bottom: 0.1em;
+  }
 
   .title {
+    font-size: 1em;
     font-weight: bold;
+    margin: 0;
   }
 
   .sub-title {
-    font-size: 0.75em;
-    margin: 0.25em 0;
+    font-size: 0.8em;
   }
 
   .description {
     margin: 1em 0;
+  }
+}
+
+.project .table-of-contents {
+  border-top: 1px solid $color2;
+  margin-top: 1.5rem;
+
+  h4 {
+    margin-top: 1.5rem;
+  }
+
+  .active,
+  .active:hover {
+    background-color: initial;
+    color: $color4;
   }
 }
 

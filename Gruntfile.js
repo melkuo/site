@@ -192,7 +192,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean',        // delete temp and dist directories
-    'imagemin',     // minify images
+    //'imagemin',     // minify images
     'jade:dist',    // compile jade and place in dist directory
     'sass:dist',    // compile sass and place in dist directory
     'copy:dist',    // copy the rest of the files from src to dist

@@ -10,15 +10,21 @@ body
           .title No Title
         block subTitle
         block description
-        block links
+        ul
+          block links
+        .table-of-contents#js-scrollspy
+          h4 Table of contents
+          ul.js-scrollspy-nav
+            block tableOfContents
         .project-nav
           a.link.back.hide(role="prev-proj")
             i.fa.fa-long-arrow-left
           a.link.next.hide(role="next-proj")
             i.fa.fa-long-arrow-right
 
-      .main
+      .main#js-scrollspy-scroller
         block main
 
   script(src="js/cmap.json")
+  script(src="js/scrollspy.js")
   script(src="js/scripts.js")

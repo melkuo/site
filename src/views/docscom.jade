@@ -1,12 +1,12 @@
 extends ./global/project.jade
 
 block main
-  h2.no-m-top Background
+  h2.no-m-top#background Background
   p
     a(href="http://docs.com" target="_blank") Docs.com 
     | is a site to publish Office documents without losing animations or formatting. As a Program Manager, I redesigned the user flow for publishing a document onto the site.
 
-  h2 Current Upload Process
+  h2#current Current upload process
   img.screenie(src="img/portfolio/docscom-current.png")
   p.caption The existing upload process.
   p When a user presses "Publish", they're taken through four steps:
@@ -24,18 +24,18 @@ block main
       strong profile page
       | .
 
-  h2 Hypotheses and Rationale
+  h2#hypotheses Hypotheses and rationale
   p The ultimate goal is to increase the number of published documents. We were tackling retention; we want authors who have published once to publish again. Examining data, we found that a user was more likely to return to the site if they saw their profile page or document.
   blockquote "Authors who see their profile page in Month A are more likely to return in Month B."
   p Our goal was to increase the number of people who complete the upload process and see their profile page.
 
-  h2 User Studies
+  h2#user-studies User studies
   p I used anonymous user surveys to get feedback on the current upload process. We learned that most users found the "Edit Details" page overwhelming and confusing. I then set out to redesign it.
 
-  h2 Problem Statement
+  h2#problem Problem statement
   p.problem The current upload process is overwhelming and confusing. The goal is to increase the number of users who complete the upload process, increasing the number of published documents, and ultimately improving user retention.
 
-  h2 Redesigning the "Edit Details" Page
+  h2#redesign-details Redesigning details page
   p I looked at different sites and their upload processes. From that research, I created three mockups.
   .screenie-group
     img.screenie.w50(src="img/portfolio/docscom-mockup-classic.png")
@@ -52,12 +52,12 @@ block main
   img.screenie(src="img/portfolio/docscom-edit-details.png")
   p.caption A proposal of the new Edit Details page.
 
-  h2 Redesigning the Flow
+  h2#redesign-flow Redesigning the flow
   p From examining competitors, I noticed that none had an explicit share dialog screen. Removing it decreases the number of steps in the process. Instead an explicit screen, we could just go straight to the document view, where share options exists.
   img.screenie(src="img/portfolio/docscom-redesign.png")
   p.caption The proposed redesign is reduced to three steps.
 
-  h2 Results
+  h2#results Results
   img.screenie(src="img/portfolio/docscom-implementation.png")
   p.caption Implementation of the Edit Details page. Description field shows hover state.
   p The redesign was A/B tested. This first iteration led to 
@@ -80,12 +80,29 @@ block description
   .description Re-designing the upload process of Docs.com.
 
 block links
-  ul
-    li
-      a.link(href="http://docs.com" target="_blank")
-        i.fa.fa-fw.fa-external-link
-        span Docs.com
-    li
-      a.link(href="http://docs.com/melody" target="_blank")
-        i.fa.fa-fw.fa-external-link
-        span Docs.com profile
+  li
+    a.link(href="http://docs.com" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span Docs.com
+  li
+    a.link(href="http://docs.com/melody" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span Docs.com profile
+
+block tableOfContents
+  li
+    a(href="#background") Background
+  li
+    a(href="#current") Current upload process
+  li
+    a(href="#hypotheses") Hypotheses and rationale
+  li
+    a(href="#user-studies") User studies
+  li
+    a(href="#problem") Problem statement
+  li
+    a(href="#redesign-details") Redesigning details page
+  li
+    a(href="#redesign-flow") Redesigning the flow
+  li
+    a(href="#results") Results

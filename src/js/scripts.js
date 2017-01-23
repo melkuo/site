@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Table of contents
+  var spy = new ScrollSpy('#js-scrollspy', '#js-scrollspy-scroller', {
+    nav: '.js-scrollspy-nav > li > a',
+    className: 'active'
+  });
+
+  // Next / previous page
   var order = ["shopify", "camabis"],
     prevEl = document.querySelector("[role='prev-proj']"),
     nextEl = document.querySelector("[role='next-proj']"),

@@ -1,13 +1,13 @@
 extends ./global/project.jade
 
 block main
-  h2.no-m-top Background
+  h2.no-m-top#background Background
   p For a third year design project, we created 
     a(href="http://camabis.herokuapp.com" target="_blank") Camabis
     | , a cannabis disease detection system.
   p Cannabis is primarily grown indoors. As with any indoor plant, bugs and diseases are a catastrophic point of failure. This can result in huge losses for cannabis farms. The goal of this project is to develop an image processing algorithm specific to cannabis and use it for early disease detection.
 
-  h2 How it Works
+  h2#how-it-works How it works
   p Camabis is composed of three components:
   ol
     li A mechanical arm
@@ -16,10 +16,10 @@ block main
   img.screenie(src="img/portfolio/camabis-how-it-works.png")
   p.caption Diagram of how Camabis works
 
-  h2 Problem Statement
+  h2#problem Problem statement
   p.problem A system is needed to identify and classify cannabis diseases at an early stage to mitigate huge losses. This disease information needs to be effectively presented to cannabis farmers and integrated with their day-to-day routines.
 
-  h2 Usability Process
+  h2#process Usability process
   p
     strong User interviews
     |  were conducted early on in the design process. Different cannabis farms were contacted to learn about their struggles. From these, it was discovered that bugs and diseases are one of the largest problems, so the scope was narrowed down to this.
@@ -49,7 +49,7 @@ block main
   p Mockups for the app's pages and flows were then created and iterated upon by the design team.
   img.screenie(src="img/portfolio/camabis-mockup-flow.jpg")
 
-  h2 Result
+  h2#result Result
   p
     a(href="http://camabis.herokuapp.com" target="_blank") Camabis
     |  was implemented using Jade, Less and Angular, and deployed on Heroku.
@@ -58,7 +58,7 @@ block main
   img.screenie.w75(src="img/portfolio/camabis-software-architecture.png")
   p.caption Software architecture
 
-  h2 Recommendations
+  h2#recommendations Recommendations
   p While I'm extremely happy with the user centered design and research methods used to create Camabis, I think the final implementation could display stronger visual design.
   ul
     li
@@ -85,12 +85,25 @@ block description
   .description User interface for a plant disease detection system.
 
 block links
-  ul
-    li
-      a.link(href="http://github.com/melkuo/camabis" target="_blank")
-        i.fa.fa-fw.fa-github
-        span GitHub repo
-    li
-      a.link(href="http://camabis.herokuapp.com" target="_blank")
-        i.fa.fa-fw.fa-external-link
-        span Camabis
+  li
+    a.link(href="http://github.com/melkuo/camabis" target="_blank")
+      i.fa.fa-fw.fa-github
+      span GitHub repo
+  li
+    a.link(href="http://camabis.herokuapp.com" target="_blank")
+      i.fa.fa-fw.fa-external-link
+      span Camabis
+
+block tableOfContents
+  li
+    a(href="#background") Background
+  li
+    a(href="#how-it-works") How it works
+  li
+    a(href="#problem") Problem statement
+  li
+    a(href="#process") Usability process
+  li
+    a(href="#result") Result
+  li
+    a(href="#recommendations") Recommendations
