@@ -502,7 +502,11 @@ body:not(.home) nav li {
 
   img.screenie {
     border: 1px solid $color2;
-    box-shadow: 5px 5px rgba($color2, 0.8);
+    margin: 0 auto;
+
+    @media #{$mq-lg} {
+      margin: initial;
+    }
   }
 
   .screenie-group {
@@ -525,6 +529,11 @@ body:not(.home) nav li {
     font-family: $caption-font-family;
     font-size: 0.75em;
     margin: 0.5rem 0 1.5rem;
+    text-align: center;
+
+    @media #{$mq-lg} {
+      text-align: left;
+    }
   }
 
   .problem {
@@ -532,9 +541,12 @@ body:not(.home) nav li {
     font-size: 1.25em;
     font-style: italic;
     margin: 1em 0;
-    max-width: 530px;
     padding: 2rem;
     text-align: center;
+
+    @media #{$mq-lg} {
+      max-width: 530px;
+    }
   }
 }
 
@@ -599,6 +611,10 @@ body:not(.home) nav li {
   }
 }
 
+.mobile .table-of-contents {
+  display: none;
+}
+
 .project .project-nav {
   padding-top: 1em;
   text-align: center;
@@ -607,6 +623,10 @@ body:not(.home) nav li {
     padding-top: 0;
     text-align: left;
   }
+}
+
+.mobile .project-nav {
+  display: none;
 }
 
 .project .project-nav {

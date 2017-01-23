@@ -1,9 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Mobile
+  if (window.isMobile) { document.documentElement.classList.add('mobile'); }
+
   // Table of contents
-  var spy = new ScrollSpy('#js-scrollspy', '#js-scrollspy-scroller', {
-    nav: '.js-scrollspy-nav > li > a',
-    className: 'active'
-  });
+  if (!window.isMobile) {
+    var spy = new ScrollSpy('#js-scrollspy', '#js-scrollspy-scroller', {
+      nav: '.js-scrollspy-nav > li > a',
+      className: 'active'
+    });
+  }
 
   // Next / previous page
   var order = ["shopify", "camabis"],
