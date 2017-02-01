@@ -1,77 +1,83 @@
 extends ./global/project.jade
 
 block main
-  h2.no-m-top#background Background
-  p For a third year design project, we created 
-    a(href="http://camabis.herokuapp.com" target="_blank") Camabis
-    | , a cannabis disease detection system.
-  p Cannabis is primarily grown indoors. As with any indoor plant, bugs and diseases are a catastrophic point of failure. This can result in huge losses for cannabis farms. The goal of this project is to develop an image processing algorithm specific to cannabis and use it for early disease detection.
+  #background
+    h2.no-m-top Background
+    p For a third year design project, we created 
+      a(href="http://camabis.herokuapp.com" target="_blank") Camabis
+      | , a cannabis disease detection system.
+    p Cannabis is primarily grown indoors. As with any indoor plant, bugs and diseases are a catastrophic point of failure. This can result in huge losses for cannabis farms. The goal of this project is to develop an image processing algorithm specific to cannabis and use it for early disease detection.
 
-  h2#how-it-works How it works
-  p Camabis is composed of three components:
-  ol
-    li A mechanical arm
-    li Image processing algorithm
-    li A user interface
-  img.screenie(src="img/portfolio/camabis-how-it-works.png")
-  p.caption Diagram of how Camabis works
+  #how-it-works
+    h2 How it works
+    p Camabis is composed of three components:
+    ol
+      li A mechanical arm
+      li Image processing algorithm
+      li A user interface
+    img.screenie(src="img/portfolio/camabis-how-it-works.png")
+    p.caption Diagram of how Camabis works
 
-  h2#problem Problem statement
-  p.problem A system is needed to identify and classify cannabis diseases at an early stage to mitigate huge losses. This disease information needs to be effectively presented to cannabis farmers and integrated with their day-to-day routines.
+  #problem
+    h2 Problem statement
+    p.problem A system is needed to identify and classify cannabis diseases at an early stage to mitigate huge losses. This disease information needs to be effectively presented to cannabis farmers and integrated with their day-to-day routines.
 
-  h2#process Usability process
-  p
-    strong User interviews
-    |  were conducted early on in the design process. Different cannabis farms were contacted to learn about their struggles. From these, it was discovered that bugs and diseases are one of the largest problems, so the scope was narrowed down to this.
-  p The design team then conducted a 
-    strong guided tour
-    |  of 
-    a(href="http://www.tweed.com" target="_blank") Tweed's
-    |  facilities, one of the largest marijuana farms in Canada. This tour allowed us to immerse ourselves in a cannabis grower's routines, learn about their practices and struggles, and shape our design solution.
-  img.screenie.w50(src="img/portfolio/camabis-tweed.jpg")
-  p.caption Outside of Tweed's facilities
-  p
-    strong User personas
-    |  were created early on in the design process. The primary persona for this project is a technologically-open cannabis grower, one who is eager to adopt new technologies.
-  img.screenie.w75(src="img/portfolio/camabis-persona.png")
-  p.caption Primary persona
-  p Personas were quite useful in other design activities. For example, when drafting an initial prototype of the web application, a modified 
-    strong design walkthrough
-    |  was used. The goal of this was to determine features and functionalities that the web app might have. Different UI elements were drawn on sticky notes. Participants used the personas to imagine themselves as cannabis growers. They then placed the sticky notes on an empty computer screen and asked to describe how they would want the web app to work.
-  img.screenie.w50(src="img/portfolio/camabis-design-walkthrough.jpg")
-  p.caption UI elements for design walkthrough
-  p To determine the most important features to include in the prototype, a 
-    strong story mapping
-    |  exercise was used. Participants mapped a user's journey, starting from disease detection until the infected plant is destroyed. These journeys were then consolidated into one.
-  img.screenie.w50(src="img/portfolio/camabis-storymap.jpg")
-  p.caption User tasks in storymap
-  p The tasks related to the web app were identified. From these, the most important tasks were identified.
-  p Mockups for the app's pages and flows were then created and iterated upon by the design team.
-  img.screenie(src="img/portfolio/camabis-mockup-flow.jpg")
+  #process
+    h2 Usability process
+    p
+      strong User interviews
+      |  were conducted early on in the design process. Different cannabis farms were contacted to learn about their struggles. From these, it was discovered that bugs and diseases are one of the largest problems, so the scope was narrowed down to this.
+    p The design team then conducted a 
+      strong guided tour
+      |  of 
+      a(href="http://www.tweed.com" target="_blank") Tweed's
+      |  facilities, one of the largest marijuana farms in Canada. This tour allowed us to immerse ourselves in a cannabis grower's routines, learn about their practices and struggles, and shape our design solution.
+    img.screenie.w50(src="img/portfolio/camabis-tweed.jpg")
+    p.caption Outside of Tweed's facilities
+    p
+      strong User personas
+      |  were created early on in the design process. The primary persona for this project is a technologically-open cannabis grower, one who is eager to adopt new technologies.
+    img.screenie.w75(src="img/portfolio/camabis-persona.png")
+    p.caption Primary persona
+    p Personas were quite useful in other design activities. For example, when drafting an initial prototype of the web application, a modified 
+      strong design walkthrough
+      |  was used. The goal of this was to determine features and functionalities that the web app might have. Different UI elements were drawn on sticky notes. Participants used the personas to imagine themselves as cannabis growers. They then placed the sticky notes on an empty computer screen and asked to describe how they would want the web app to work.
+    img.screenie.w50(src="img/portfolio/camabis-design-walkthrough.jpg")
+    p.caption UI elements for design walkthrough
+    p To determine the most important features to include in the prototype, a 
+      strong story mapping
+      |  exercise was used. Participants mapped a user's journey, starting from disease detection until the infected plant is destroyed. These journeys were then consolidated into one.
+    img.screenie.w50(src="img/portfolio/camabis-storymap.jpg")
+    p.caption User tasks in storymap
+    p The tasks related to the web app were identified. From these, the most important tasks were identified.
+    p Mockups for the app's pages and flows were then created and iterated upon by the design team.
+    img.screenie(src="img/portfolio/camabis-mockup-flow.jpg")
 
-  h2#result Result
-  p
-    a(href="http://camabis.herokuapp.com" target="_blank") Camabis
-    |  was implemented using Jade, Less and Angular, and deployed on Heroku.
-  img.screenie(src="img/portfolio/camabis-home.png")
-  p.caption Camabis homepage
-  img.screenie.w75(src="img/portfolio/camabis-software-architecture.png")
-  p.caption Software architecture
+  #result
+    h2 Result
+    p
+      a(href="http://camabis.herokuapp.com" target="_blank") Camabis
+      |  was implemented using Jade, Less and Angular, and deployed on Heroku.
+    img.screenie(src="img/portfolio/camabis-home.png")
+    p.caption Camabis homepage
+    img.screenie.w75(src="img/portfolio/camabis-software-architecture.png")
+    p.caption Software architecture
 
-  h2#recommendations Recommendations
-  p While I'm extremely happy with the user centered design and research methods used to create Camabis, I think the final implementation could display stronger visual design.
-  ul
-    li
-      strong Accordion vs modal
-      |  - an accordion was used, but this allows users to scroll through other issues while one is open. A modal would allow users to focus on one issue at a time, giving it their undivided attention as they decide if it is an actual issue or not.
-    li
-      strong Placement of severity
-      |  - the placement of severity, the coloured dot to indicate the predicted severity of the issue, is awkward.
-    li
-      strong Profile orientation
-      |  - pictures in profile orientation are poorly handled, and are more often than not larger than the screen.
-  img.screenie.w75(src="img/portfolio/camabis-recommendation-severity.png")
-  p.caption A quick fix for severity placement that's more visually balanced.
+  #recommendations
+    h2 Recommendations
+    p While I'm extremely happy with the user centered design and research methods used to create Camabis, I think the final implementation could display stronger visual design.
+    ul
+      li
+        strong Accordion vs modal
+        |  - an accordion was used, but this allows users to scroll through other issues while one is open. A modal would allow users to focus on one issue at a time, giving it their undivided attention as they decide if it is an actual issue or not.
+      li
+        strong Placement of severity
+        |  - the placement of severity, the coloured dot to indicate the predicted severity of the issue, is awkward.
+      li
+        strong Profile orientation
+        |  - pictures in profile orientation are poorly handled, and are more often than not larger than the screen.
+    img.screenie.w75(src="img/portfolio/camabis-recommendation-severity.png")
+    p.caption A quick fix for severity placement that's more visually balanced.
 
 block title
   .title Camabis
