@@ -1,55 +1,58 @@
 extends ./global/project.jade
 
 block main
-  h2.no-m-top#background Background
-  p
-    a(href="http://monstercat.com" target="_blank") Monstercat 
-    | is an independent edm record label. I worked on a music streaming web application,
-    a(href="http://connect.monstercat.com" target="_blank") Connect
-    | , which contains all the tracks that have been released through the label.
-  img.screenie(src="img/portfolio/connect-welcome-fold.jpg")
-  p.caption Connect's landing page.
-  p I was a developer working primarily on the front end of the site, using my technical skills to add new features and functions, and redesign pages. I've touched every single page of the site in one way or another, from  
-    span.nowrap user-facing 
-    | to 
-    span.nowrap admin-only
-    | . I took charge of the entire process, from sketches on paper to code on the screen.
+  #background
+    h2.no-m-top Background
+    p
+      a(href="http://monstercat.com" target="_blank") Monstercat 
+      | is an independent edm record label. I worked on a music streaming web application,
+      a(href="http://connect.monstercat.com" target="_blank") Connect
+      | , which contains all the tracks that have been released through the label.
+    img.screenie(src="img/portfolio/connect-welcome-fold.jpg")
+    p.caption Connect's landing page.
+    p I was a developer working primarily on the front end of the site, using my technical skills to add new features and functions, and redesign pages. I've touched every single page of the site in one way or another, from  
+      span.nowrap user-facing 
+      | to 
+      span.nowrap admin-only
+      | . I took charge of the entire process, from sketches on paper to code on the screen.
 
-  h2#player Music player
-  p There used to be two music players: a mini-player in the top header and a full player that opened from the right of the page.
-  img.screenie.w75(src="img/portfolio/connect-catalog-old.jpg")
-  p.caption A drawing of the original music player.
-  p The mini player offered easily accessible player controls, like play, pause, forward and back. The full player offered further controls, like playlist options. However, two players is redundant from both the code's and user's perspective.
-  p.problem Two music players are redundant and unnecessary. The goal is to create a universal, full-feature player with easily accessible player controls.
-  p After performing a competitive analysis, examining other music streaming sites and apps, we decided on a fixed player at the bottom of the page.
-  img.screenie(src="img/portfolio/connect-catalog.jpg")
-  p.caption The catalog.
-  img.screenie(src="img/portfolio/connect-player-playlist.jpg")
-  p.caption Music player with playlist opened.
-  p A universal player at the bottom worked really well for mobile too; the controls and actions were easily accessible.
-  img.screenie.w50(src="img/portfolio/connect-catalog-mobile.png")
-  p.caption Music player and catalog on mobile.
+  #player
+    h2 Music player
+    p There used to be two music players: a mini-player in the top header and a full player that opened from the right of the page.
+    img.screenie.w75(src="img/portfolio/connect-catalog-old.jpg")
+    p.caption A drawing of the original music player.
+    p The mini player offered easily accessible player controls, like play, pause, forward and back. The full player offered further controls, like playlist options. However, two players is redundant from both the code's and user's perspective.
+    p.problem Two music players are redundant and unnecessary. The goal is to create a universal, full-feature player with easily accessible player controls.
+    p After performing a competitive analysis, examining other music streaming sites and apps, we decided on a fixed player at the bottom of the page.
+    img.screenie(src="img/portfolio/connect-catalog.jpg")
+    p.caption The catalog.
+    img.screenie(src="img/portfolio/connect-player-playlist.jpg")
+    p.caption Music player with playlist opened.
+    p A universal player at the bottom worked really well for mobile too; the controls and actions were easily accessible.
+    img.screenie.w50(src="img/portfolio/connect-catalog-mobile.png")
+    p.caption Music player and catalog on mobile.
 
-  h2#landing-page Landing page
-  p I undertook a project to perform a UX audit of the site. I did this in two main ways:
-  ul
-    li
-      strong Heuristic evaluations
-      |  &ndash; I individually evaluated the site against basic design principles, such as 
-      a(href="https://www.nngroup.com/articles/ten-usability-heuristics/") Nielson's 10 Usability Heuristics
-      | . I also identified primary user scenarios: sign-up, finding a particular song to play, creating a playlist, and downloading a track. I created a hierarchical task analysis for these scenarios to identify points of failure or improvement.
-    li
-      strong Informal user interviews
-      |  &ndash; I asked friends to go through these scenarios, and noted points of confusion and struggle.
-  p From these methods, I came up with a list of recommendations and implemented them.
-  img.screenie.w50(src="img/portfolio/connect-ux-gist.jpg")
-  p.caption Snippet of recommendations.
-  p For example, the landing page used to be a single page with two buttons. These buttons took users to separate sub-pages for our different subscription services. We realized that this was a lot of unnecessary work for users. To explore their options, users had to click one sub-page, read it, then navigate back to the main page before they could click and read the other.
-  p.problem Learning about and comparing subscription types is a current pain point for users. Information about subscription types should be easily accessible.
-  p So, I added a brief description of each subscription type to the main page, with a "Learn More" button that takes the user to the more detailed sub-page.
-  p We also added a sign up form at the bottom so that users could sign up immediately from the main landing page. Placing them side by side further allowed users to compare their features more easily.
-  img.screenie.w50(src="img/portfolio/connect-welcome.jpg")
-  p.caption Redesigned landing page.
+  #landing-page
+    h2 Landing page
+    p I undertook a project to perform a UX audit of the site. I did this in two main ways:
+    ul
+      li
+        strong Heuristic evaluations
+        |  &ndash; I individually evaluated the site against basic design principles, such as 
+        a(href="https://www.nngroup.com/articles/ten-usability-heuristics/") Nielson's 10 Usability Heuristics
+        | . I also identified primary user scenarios: sign-up, finding a particular song to play, creating a playlist, and downloading a track. I created a hierarchical task analysis for these scenarios to identify points of failure or improvement.
+      li
+        strong Informal user interviews
+        |  &ndash; I asked friends to go through these scenarios, and noted points of confusion and struggle.
+    p From these methods, I came up with a list of recommendations and implemented them.
+    img.screenie.w50(src="img/portfolio/connect-ux-gist.jpg")
+    p.caption Snippet of recommendations.
+    p For example, the landing page used to be a single page with two buttons. These buttons took users to separate sub-pages for our different subscription services. We realized that this was a lot of unnecessary work for users. To explore their options, users had to click one sub-page, read it, then navigate back to the main page before they could click and read the other.
+    p.problem Learning about and comparing subscription types is a current pain point for users. Information about subscription types should be easily accessible.
+    p So, I added a brief description of each subscription type to the main page, with a "Learn More" button that takes the user to the more detailed sub-page.
+    p We also added a sign up form at the bottom so that users could sign up immediately from the main landing page. Placing them side by side further allowed users to compare their features more easily.
+    img.screenie.w50(src="img/portfolio/connect-welcome.jpg")
+    p.caption Redesigned landing page.
 
 block title
   .title Monstercat Connect
