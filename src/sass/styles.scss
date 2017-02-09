@@ -527,6 +527,7 @@ body:not(.home) nav li {
       display: inline-block;
       margin-right: 1em;
       max-height: 500px;
+      width: auto;
 
       &:last-of-type {
         margin-right: 0;

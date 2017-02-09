@@ -1,32 +1,58 @@
 extends ./global/project.jade
 
 block main
-  h2#background.no-m-top Background
-  p Sexual health education is proven to contribute to disease prevention and overall well-being. Current solutions of seeking health information lack credibility, availability or are subject to technical medical jargon. The goal is to design Juno – an interactive, autonomous chatbot that provides understandable and credible information about sexual health to young adults seeking answers.
-  p Juno will learn to answer users' using machine learning algorithms. To do this, it needs to be trained with questions and answers. These answers need to be verified by medical professionals.
-  p.problem The developing team needs an internal tool to view and manage questions and answers. Medical professionals need a simple way to verify these answers.
+  #background
+    h2.no-m-top Background
+    p Sexual health education is proven to contribute to disease prevention and overall well-being. Current solutions of seeking health information lack credibility, availability or are subject to technical medical jargon. The goal is to design Juno – an interactive, autonomous chatbot that provides understandable and credible information about sexual health to young adults seeking answers.
+    p Juno will learn to answer users' using machine learning algorithms. To do this, it needs to be trained with questions and answers. These answers need to be verified by medical professionals.
+    p.problem The developing team needs an internal tool to view and manage questions and answers. Medical professionals need a simple way to verify these answers.
 
-  h2#requirements User requirements
-  p Use cases for the two user types were developed using a task analysis.
-  img.screenie(src="img/portfolio/juno-use-cases.png")
-  p.caption Task analysis for dev team and medical professionals.
-  p From this, the functionality of the system emerges:
-  p Questions
-  ul
-    li Add question
-    li Edit question
-    li Delete question
-    li Answer question
-  p Answers
-  ul
-    li Edit answer
-    li Verify answer
+  #requirements
+    h2 User requirements
+    p Use cases for the two user types were developed using a task analysis.
+    img.screenie(src="img/portfolio/juno-use-cases.png")
+    p.caption Task analysis for dev team and medical professionals.
+    p From this, the functionality of the system emerges:
+    p Questions
+    ul
+      li Add question
+      li Edit question
+      li Delete question
+      li Answer question
+    p Answers
+    ul
+      li Edit answer
+      li Verify answer
 
-  h2#nav Navigation
-  p First, the navigation structure was developed. Originally, I thought to organize it like:
-  img.screenie.w15(src="img/portfolio/juno-nav-v1.jpg")
-  p However, after a card sorting exercise with a classmate, I realized that answers are always linked to questions.
-  img.screenie.w25(src="img/portfolio/juno-card-sort.jpg")
+  #nav
+    h2 Navigation
+    p First, the navigation structure was developed. Originally, I thought to organize it like:
+    img.screenie.w15(src="img/portfolio/juno-nav-v1.jpg")
+    p Using a card sorting exercise with a classmate, I realized that answers are always linked to questions.
+    img.screenie.w25(src="img/portfolio/juno-card-sort.jpg")
+    p For example, "answer question" will always be linked with "all questions". The nav structure will actually be much simpler.
+    ul
+      li All questions (answer, edit, delete)
+      li Add question
+      li All answers (edit, delete)
+
+  #wireframing
+    h2 Wireframing
+    p I did some sketches with pen and paper to get a sense of the layout.
+    .screenie-group
+      img.screenie(src="img/portfolio/juno-wireframe-1.jpg")
+      img.screenie(src="img/portfolio/juno-wireframe-2.jpg")
+    p.caption Sketching out screens
+    p As I began to visualize the questions themselves, I wanted them to have a max width, so that there aren't too many words per line, to make it easier to read.
+    img.screenie.w50(src="img/portfolio/juno-question-sketch.jpg")
+    p.caption Sketch of questions
+    p The overall structure of the page had to change accordingly to stay balanced.
+    img.screenie.w50(src="img/portfolio/juno-wireframe-3.jpg")
+    p.caption More sketches
+    p I was happy enough with this direction and implemented it to see how it would actually look.
+    img.screenie.w75(src="img/portfolio/juno-questions-1.png")
+    p.caption Initial implementation of questions page
+
 
 block title
   h1.title Juno
@@ -55,3 +81,7 @@ block tableOfContents
     a(href="#requirements") User requirements
   li
     a(href="#nav") Navigation
+  li
+    a(href="#wireframing") Wireframing
+  li
+    a(href="#iteration") Iteration
