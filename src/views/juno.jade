@@ -3,31 +3,25 @@ extends ./global/project.jade
 block main
   #background
     h2.no-m-top Background
-    p Sexual health education is proven to contribute to disease prevention and overall well-being. Current solutions of seeking health information lack credibility, availability or are subject to technical medical jargon. The goal is to design Juno – an interactive, autonomous chatbot that provides understandable and credible information about sexual health to young adults seeking answers.
-    p Juno will learn to answer users' using machine learning algorithms. To do this, it needs to be trained with questions and answers. These answers need to be verified by medical professionals.
-    p.problem The developing team needs an internal tool to view and manage questions and answers. Medical professionals need a simple way to verify these answers.
+    p Research shows that sexual health education reduces the risk of infection and improves overall well-being. But current methods of seeking health information lack credibility, availability, or contains complex medical jargons. That's why my team is building Juno – an interactive, autonomous Facebook Messenger chatbot that engages in real-time conversations about sexual health to educate young adults.
+    p To build Juno, we need to collect a lot of questions and answers. These answers need to be verified by external medical professionals.
+    p.problem The dev team need a way to answer and manage questions. Medical professionals need a simple way to verify answers.
 
   #requirements
     h2 User requirements
-    p Use cases for the two user types were developed using a task analysis.
+    p Use cases for the two user types were developed using a task analysis. The functionality of the system emerges in the bottom row.
     img.screenie(src="img/portfolio/juno-use-cases.png")
     p.caption Task analysis for dev team and medical professionals.
-    p From this, the functionality of the system emerges:
-    p Questions
-    ul
-      li Add question
-      li Edit question
-      li Delete question
-      li Answer question
-    p Answers
-    ul
-      li Edit answer
-      li Verify answer
 
   #nav
     h2 Navigation
     p First, the navigation structure was developed. Originally, I thought to organize it like:
-    img.screenie.w15(src="img/portfolio/juno-nav-v1.jpg")
+    ul
+      li All questions
+      li Add question
+      li All answers
+      li Add answer
+      li Verify answer
     p Using a card sorting exercise with a classmate, I realized that answers are always linked to questions.
     img.screenie.w25(src="img/portfolio/juno-card-sort.jpg")
     p For example, "answer question" will always be linked with "all questions". The nav structure will actually be much simpler.
@@ -53,19 +47,33 @@ block main
     img.screenie.w75(src="img/portfolio/juno-questions-1.png")
     p.caption Initial implementation of questions page
 
-  #fonts
-    h2 Colours, icons and fonts
+  #styleguide
+    h2 Styleguide
     p For colours, I was inspired by another designer's 
       a(href="http://www.vanschneider.com/colors/" target="_blank") collection of colour combinations
-      | .
-    p For icons, I used a popular 
+      | . For icons, I used a popular 
       a(href="fontawesome.io/icons") font icon library
-      |  for its simplicity and robustness.
-    p For fonts, I drew inspiration from 
+      |  for its simplicity and robustness. For fonts, I drew inspiration from 
       a(href="typ.io/libraries/google") font pairing sites
       | .
-    img.screenie.w75(src="img/portfolio/juno-questions-2.png")
-    p.caption Questions page with colour and font update
+    img.screenie.w33(src="img/portfolio/juno-styleguide.png")
+    p.caption Typography and buttons under new styleguide
+
+  #user-feedback
+    h2 User feedback
+    p We had our friends help us answer questions. We received feedback on what:
+    ul
+      li Need a way to filter unanswered questions
+      li Should return to same page after answering a question
+    p The tool was also launched to medical professionals. Their feedback after using it was:
+    ul
+      li Need a way to filter unverified answers
+      li Answer box could be larger
+    p I incorporated the feedback. 
+      a(href="https://invis.io/GRAPTLG96") Flows of the web app are on Invision
+      | .
+    img.screenie.w75(src="img/portfolio/juno-questions-3.png")
+    p.caption Questions page after user feedback
 
 
 block title
@@ -98,4 +106,6 @@ block tableOfContents
   li
     a(href="#wireframing") Wireframing
   li
-    a(href="#fonts") Colours, icons and fonts
+    a(href="#styleguide") Styleguide
+  li
+    a(href="#user-feedback") User feedback
