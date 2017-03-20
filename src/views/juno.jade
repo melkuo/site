@@ -3,13 +3,14 @@ extends ./global/project.jade
 block main
   #background
     h2.no-m-top Background
-    p Research shows that sexual health education reduces the risk of infection and improves overall well-being. But current methods of seeking health information lack credibility, availability, or contains complex medical jargons. That's why my team is building Juno – an interactive, autonomous Facebook Messenger chatbot that engages in real-time conversations about sexual health to educate young adults.
-    p To build Juno, we need to collect a lot of questions and answers. These answers need to be verified by external medical professionals.
-    p.problem The dev team need a way to answer and manage questions. Medical professionals need a simple way to verify answers.
+    p What do you do when you have questions about your sexual health? You might turn to Google, only to be bombarded by potentially uncredible information riddled with complex medical terms. Ideally you'd be able to go to your doctor, but the time and cost might not be worth it for one-off questions.
+    p That's why my team is building Juno – an autonomous Facebook Messenger chatbot that engages in real-time conversations about sexual health to educate young adults.
+    p To build Juno, we need to collect a lot of questions and answers. These answers need to be verified by external medical professionals. We built an admin dashboard to do so.
+    p.problem The dev team needs a way to answer and manage questions. Medical professionals need a simple way to verify answers.
 
   #requirements
     h2 User requirements
-    p Use cases for the two user types were developed using a task analysis. The functionality of the system emerges in the bottom row.
+    p Use cases for the two user types were explored using a modified task analysis. The functionality of the system emerges in the bottom row.
     img.screenie(src="img/portfolio/juno-use-cases.png")
     p.caption Task analysis for dev team and medical professionals.
 
@@ -22,9 +23,7 @@ block main
       li All answers
       li Add answer
       li Verify answer
-    p Using a card sorting exercise with a classmate, I realized that answers are always linked to questions.
-    img.screenie.w25(src="img/portfolio/juno-card-sort.jpg")
-    p For example, "answer question" will always be linked with "all questions". The nav structure will actually be much simpler.
+    p After feedback from a classmate, I realized that answers are always linked to questions; it's no use seeing an answer without its question. The nav structure will actually be much simpler.
     ul
       li All questions (answer, edit, delete)
       li Add question
@@ -37,21 +36,21 @@ block main
       img.screenie(src="img/portfolio/juno-wireframe-1.jpg")
       img.screenie(src="img/portfolio/juno-wireframe-2.jpg")
     p.caption Sketching out screens
-    p As I began to visualize the questions themselves, I wanted them to have a max width, so that there aren't too many words per line, to make it easier to read.
+    p As I began to visualize the questions themselves, I realized they needed a max width, so that there aren't too many words per line, to make it easier to read.
     img.screenie.w50(src="img/portfolio/juno-question-sketch.jpg")
     p.caption Sketch of questions
     p The overall structure of the page had to change accordingly to stay balanced.
     img.screenie.w50(src="img/portfolio/juno-wireframe-3.jpg")
     p.caption More sketches
-    p I was happy enough with this direction and implemented it to see how it would actually look.
+    p Due to the urgency with which we needed the dashboard, I went straight to code once I was happy enough with this direction.
     img.screenie.w75(src="img/portfolio/juno-questions-1.png")
     p.caption Initial implementation of questions page
 
   #styleguide
     h2 Styleguide
-    p For colours, I was inspired by another designer's 
+    p I wanted a soft, warm colour as primary colour. Pink seemed overly feminine, so I chose orange, which is often associated with liveliness. I was inspired by another designer's 
       a(href="http://www.vanschneider.com/colors/" target="_blank") collection of colour combinations
-      | . For icons, I used a popular 
+      |  for this orange in particular. For icons, I used a popular 
       a(href="fontawesome.io/icons") font icon library
       |  for its simplicity and robustness. For fonts, I drew inspiration from 
       a(href="typ.io/libraries/google") font pairing sites
@@ -61,11 +60,13 @@ block main
 
   #user-feedback
     h2 User feedback
-    p We had our friends help us answer questions. We received feedback on what:
+    p The web app is continually iterated upon based on quick and informal user feedback.
+    p For example, we had a large answer crowd-sourcing event planned, where we going to have a lot of people come in and help us answer questions. In preparation for it, we had our friends help us answer questions and get feedback on the web app:
     ul
+      li Better error handling with sign up flows
       li Need a way to filter unanswered questions
       li Should return to same page after answering a question
-    p The tool was also launched to medical professionals. Their feedback after using it was:
+    p The tool was also launched to medical professionals:
     ul
       li Need a way to filter unverified answers
       li Answer box could be larger
@@ -74,6 +75,16 @@ block main
       | .
     img.screenie.w75(src="img/portfolio/juno-questions-3.png")
     p.caption Questions page after user feedback
+
+  #next-steps
+    h2 Recommendations and next steps
+    p The main goal at the beginning of building this web app was to build a web app that contained the basic functionality–answering and verifying questions–in a simple way.
+    p Now that core functionality is in place, I think the goal should be re-evaluated, so that we think more about providing a frictionless experience:
+    ul
+      li How might we make answering questions as fast and easy as possible?
+      li How might we make verifying answers as fast and easy as possible?
+    p With these goals in mind, I can imagine more robust filters and search functionality being added, grouping of questions and answers by topic to make answering similar questions easier, and more.
+    p We also didn't define explicit success metrics when developing the dashboard; it was more of a binary yes/no it contained this functionality. In the future, we could conduct more formal user research using metrics like SUS. Or measure task completion times, like time to answer a question, to measure the dashboard's usability.
 
 
 block title
@@ -109,3 +120,5 @@ block tableOfContents
     a(href="#styleguide") Styleguide
   li
     a(href="#user-feedback") User feedback
+  li
+    a(href="#user-feedback") Recommendations and next steps
