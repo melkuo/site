@@ -1,28 +1,35 @@
--var expandNav = true
+<!DOCTYPE html>
+html(lang="en")
+  include ./global/head.jade
 
-include ./global/head.jade
-body.home
-  include ./global/nav.jade
-
-  section.portfolio
-    .container
-      a(href="shopify.html")
-        .thumb-desc
-          h2 Shopify
-          p Making it easier to select a theme
-        .thumb.thumb-shopify
-      a(href="docscom.html")
-        .thumb-desc
-          h2 Docs.com by Microsoft
-          p Redesigning the upload process
-        .thumb.thumb-docscom
-      a(href="connect.html")
-        .thumb-desc
-          h2 Monstercat Connect
-          p Developing a music streaming web app
-        .thumb.thumb-connect
-      a(href="camabis.html")
-        .thumb-desc
-          h2 Camabis
-          p Prototyping a plant disease detection system
-        .thumb.thumb-camabis
+  body.v2.flex
+    div
+      h1 Melody Kuo
+      ul.roles
+        li currently
+          ul
+            li apm @uber
+        li previously
+          ul
+            li design @shopify
+            li product @microsoft
+            li dev @monstercat
+        li
+          ul
+            li systems design engineering @uwaterloo
+      ul.links
+        li
+          a(href="https://twitter.com/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
+            i.fab.fa-fw.fa-lg.fa-twitter
+        li
+          a(href="https://goodreads.com/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
+            i.fab.fa-fw.fa-lg.fa-goodreads
+        li
+          a(href="https://github.com/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
+            i.fab.fa-fw.fa-lg.fa-github
+        li
+          a(href="https://ca.linkedin.com/in/melkuo" target="_blank" onclick="trackOutboundLink(this.href);")
+            i.fab.fa-fw.fa-lg.fa-linkedin
+        li
+          a(href="mailto:hi@melodykuo.com" onclick="trackOutboundLink(this.href);")
+            i.far.fa-fw.fa-lg.fa-envelope
