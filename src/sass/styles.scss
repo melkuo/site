@@ -686,7 +686,7 @@ body:not(.home) nav li {
   }
 
   .roles > li:first-of-type li {
-    color: $color5;
+    color: black;
   }
 
   .roles > li {
@@ -695,11 +695,12 @@ body:not(.home) nav li {
 
   .roles li li {
     color: $color3;
+    margin-bottom: 0.2em;
   }
 
   .links li {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 1.5em;
   }
 
   a {
