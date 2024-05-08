@@ -6,6 +6,7 @@
 html {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 body {
@@ -17,22 +18,16 @@ body {
 p {
   color: #5a636c;
   font-weight: 300;
-  line-height: 1.5;
   margin-bottom: 10px;
 }
 
 a {
-  background-image: linear-gradient(to right, #a0f1ff 0%, #a0f1ff 100%);
-  background-position: 0 88%;
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  color: inherit;
-  transition: background-size 0.25s ease-in;
+  color: #5a636c;
   text-decoration: none;
 }
 
 a:hover {
-  background-size: 100% 88%;
+  text-decoration: underline;
 }
 
 .section {
@@ -49,7 +44,7 @@ a:hover {
 }
 
 .section > * {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .external-links a {
@@ -65,12 +60,18 @@ a:hover {
   font-weight: 600;
 }
 
-.work-team {
-  font-weight: 400;
+.work-headline a {
+  color: black;
 }
 
-.work-team:not(:first-of-type) {
+.work-team {
+  font-weight: 400;
   margin-top: 20px;
+}
+
+.work-icon {
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .work-meta {
