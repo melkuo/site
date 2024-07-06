@@ -13,6 +13,7 @@ html {
 body {
   margin: 0 auto;
   max-width: 600px;
+  padding: 20px;
 }
 
 h3 {
@@ -50,6 +51,7 @@ a.external:after {
   font-size: 0.6em;
   font-weight: 600;
   margin-left: 3px;
+  margin-bottom: 3px;
   vertical-align: middle;
 }
 
@@ -98,6 +100,7 @@ hr {
 
 .subheading {
   color: #858B91;
+  display: inline-block;
   font-size: 15px;
   font-style: italic;
 }
@@ -108,6 +111,7 @@ ul.blog-list {
 
 ul.blog-list a {
   margin-left: 10px;
+  text-decoration: underline;
 }
 
 .blog h2 {
@@ -137,6 +141,10 @@ ul.blog-list a {
   display: block;
   margin: auto;
   width: 350px;
+}
+
+.blog .subheading {
+  margin-bottom: 50px;
 }
 
 .blog .image-caption {
