@@ -67,7 +67,7 @@ li {
 
 img {
   border-radius: 8px;
-  width: 200px;
+  max-width: 200px;
 }
 
 hr {
@@ -109,6 +109,11 @@ ul.blog-list {
   list-style: none;
 }
 
+ul.blog-list span {
+  display: inline-block;
+  width: 100px;
+}
+
 ul.blog-list a {
   margin-left: 10px;
   text-decoration: underline;
@@ -140,7 +145,7 @@ ul.blog-list a {
 .blog img {
   display: block;
   margin: auto;
-  width: 350px;
+  max-width: 350px;
 }
 
 .blog .subheading {
@@ -150,4 +155,8 @@ ul.blog-list a {
 .blog .image-caption {
   font-size: 15px;
   text-align: center;
+}
+
+.blog .image-lg {
+  max-width: 500px;
 }
