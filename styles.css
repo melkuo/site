@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 * {
   margin: 0;
@@ -8,6 +8,10 @@
 html {
   font-family: "Source Sans 3", sans-serif;
   font-size: 16px;
+}
+
+h1, h2 {
+  font-family: "Source Serif 4", serif;
 }
 
 body {
@@ -105,17 +109,16 @@ hr {
   font-style: italic;
 }
 
-ul.blog-list {
+.blog-list ul {
   list-style: none;
 }
 
-ul.blog-list span {
+.blog-list span {
   display: inline-block;
-  width: 100px;
+  width: 110px;
 }
 
-ul.blog-list a {
-  margin-left: 10px;
+.blog-list a {
   text-decoration: underline;
 }
 
