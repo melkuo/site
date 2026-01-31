@@ -42,20 +42,10 @@ p {
 
 a {
   color: #5a636c;
+}
+
+.nav a {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a.external:after {
-  content: "↗";
-  font-size: 0.6em;
-  font-weight: 600;
-  margin-left: 3px;
-  margin-bottom: 3px;
-  vertical-align: middle;
 }
 
 h2 a,
